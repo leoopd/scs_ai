@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Was ist zu tun, wenn der Server nicht mehr erreichbar ist."><link rel="canonical" href="https://www.strato.de/faq/server/Mein-Server-ist-nicht-mehr-erreichbar-was-kann-ich-tun/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/server/Mein-Server-ist-nicht-mehr-erreichbar-was-kann-ich-tun/"><title> Mein Server ist nicht mehr erreichbar </title><meta property="og:title" content="Mein Server ist nicht mehr erreichbar"><meta name="og:description" content="Was ist zu tun, wenn der Server nicht mehr erreichbar ist."><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '3306',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/3306/',
+            'econda_pageid'                : 'FAQ/3306/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_3306 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_3306:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/943.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/943.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #3306 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Mein Server ist nicht mehr erreichbar - was kann ich tun? </h1><p dir="ltr"><a id="start"></a>Wenn ein Server nicht mehr antwortet, kann das unterschiedliche Ursachen haben. Daher gibt es verschiedene Schritte, die Sie durchgehen k&ouml;nnen, um wieder Kontakt zum Server zu bekommen:</p><ul><li><a href="#wartung">Findet gerade eine Wartung statt?</a></li><li><a href="#sperre">Ist der Server gesperrt?</a></li><li><a href="#canceled">Ist der Server gek&uuml;ndigt?</a></li><li><a href="#status">In welchem Status ist der Server?</a></li><li><a href="#noch_erreichbar">Wie ist der Server noch erreichbar?</a></li><li><a href="#reboot">Neu-Boot tut gut</a></li><li><a href="#rescue">Wie sieht es mit dem Rettungsmodus aus?</a></li><li><a href="#no_response">Auch im Rettungsmodus keine Reaktion des Servers?</a></li><li><a href="#proceed">Wie geht&rsquo;s jetzt weiter?</a></li><li><a href="#managed">Alles sch&ouml;n und gut, ich hab aber einen Managed Server &hellip;</a></li></ul><p dir="ltr">Wir haben verschiedene Server-Typen in unserem Programm, die sich teilweise erheblich in der Bedienung und den M&ouml;glichkeiten unterscheiden. Dies sind</p><ul><li dir="ltr"><strong>Dedizierte Server mit D in der Bezeichnung:</strong>&nbsp;Diese dedizierten Server werden &uuml;ber den Server-Login verwaltet. Sie sind f&uuml;r die Verwendung der Windows Server Betriebssysteme vorgesehen.</li><li dir="ltr"><strong>Dedizierte Server mit CP in der Bezeichnung:</strong> Die aktuellen Root-Server sind an dem CP im Namen erkennbar, z.B. &ldquo;Dedicated Windows Server CP410&rdquo;. Die Oberfl&auml;che unterscheidet sich hier erheblich von den bisherigen Servern. Die Verwaltung dieser Server findet im Cloud Panel statt.<strong><br/></strong></li><li dir="ltr"><strong>Server Cloud:</strong> Dies ist der Nachfolger der bisherigen Server Cloud. Auch hier handelt es sich um flexible Virtual-Server mit einer Voll-Virtualisierung, die man in der Verwaltung anlegen, &auml;ndern und l&ouml;schen kann. Die Verwaltung der Server findet &uuml;ber das Cloud Panel statt.</li><li dir="ltr"><strong>V-Server Linux&nbsp; und V-Server Windows (Bezeichnung Vxx):&nbsp;</strong>Dies sind unsere klassischen virtuellen Server. Hier l&auml;sst sich die Einstellung der virtuellen Hardware nicht &auml;ndern. Die V-Server Linux verwenden Virtuozzo als Virtualisierungs-Plattform, die V-Server Windows verwenden daf&uuml;r Hyper-V.</li><li dir="ltr"><strong>V-Server Windows (Bezeichnung VCxx):&nbsp;</strong>Die neue Generation der Windows V-Server wird komplett &uuml;ber das Kunden-Login verwaltet (kein separater Server-Login) und verwendet eine KVM-basierte Virtualisierung.</li></ul><h2 dir="ltr"><a id="wartung"></a>Findet gerade eine Wartung statt?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen au&szlig;er die neuen Server (Dediziert und VPS).</p><p dir="ltr">Wenn STRATO eine Wartung des Servers oder einer Netzwerk-Komponente durchf&uuml;hrt, finden Sie die Ank&uuml;ndigung in ihrem Server-Login im Bereich &ldquo;News &amp; Infos&rdquo;. Bitte schauen Sie hier immer als erstes nach, wenn Ihr Server nicht mehr reagiert.</p><p dir="ltr">Wenn Sie hier den Hinweis auf eine Wartung finden, bitten wir Sie, abzuwarten, bis das Zeitfenster der Wartung abgeschlossen ist. Erst wenn der Server nach Abschluss der Wartung weiter nicht erreichbar ist, gehen Sie bitte mit den folgenden Schritten weiter.</p><p dir="ltr">&nbsp;</p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><p><strong><b id="docs-internal-guid-6564abe1-7fff-1292-77f6-2e190601ca9d"></b><br class="Apple-interchange-newline"/></strong></p><h2 dir="ltr"><a id="sperre"></a>Ist der Server gesperrt?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen.</p><p dir="ltr">Wenn eine Sperrung durch STRATO vorgenommen wurde, erscheint dar&uuml;ber ein Hinweis sowohl im Kunden-Login (<a href="https://www.strato.de/faq/vertrag/der-strato-kunden-login/">FAQ: Der STRATO Kunden-Login</a>) als auch im Server-Login (<a href="https://www.strato.de/faq/server/erste-schritte-mit-ihrem-strato-server/">FAQ: Erste Schritte mit Ihrem STRATO-Server</a>). In diesem Fall erhalten Sie auch eine E-Mail an ihre hinterlegte Kontaktadresse (bitte &uuml;berpr&uuml;fen Sie ggf. auch ihren Spam-Ordner).</p><p dir="ltr"><strong><b>&nbsp;</b></strong>Bei einer <strong>Sperre aufgrund einer offenen Rechnung</strong>, schauen Sie bitte im Kunden-Login unter Rechnungen nach (<a href="https://www.strato.de/faq/vertrag/wo-kann-ich-meine-rechnungen-einsehen/">FAQ: Wo kann ich meine Rechnungen einsehen?</a>). Offene Rechnungen sind in der &Uuml;bersicht rot markiert.&nbsp;</p><p dir="ltr"><strong><b>&nbsp;</b></strong>Eine genaue Beschreibung, wie Sie mit offenen Rechnungen umgehen, finden Sie hier:&nbsp; <a href="https://www.strato.de/faq/vertrag/was-passiert-bei-unbezahlten-rechnungen-bzw-offenen-forderungen/">FAQ: Was passiert bei unbezahlten Rechnungen bzw. offenen Forderungen?</a></p><p dir="ltr"><strong><b>&nbsp;</b></strong>Bei einer <strong>Sperrung durch unsere Sicherheit</strong> erhalten Sie eine E-Mail von unserer Abuse-Abteilung (Absender: <a rel="nofollow" href="mailto:abuse-server@strato.de">abuse-server@strato.de</a>). In der E-Mail finden Sie die Informationen dar&uuml;ber, was zur Sperrung gef&uuml;hrt hat und wie das weitere Vorgehen zur Entsperrung des Servers aussieht. Eine Entsperrung kann in diesem Fall <strong>nur durch unsere Abuse-Abteilung</strong> vorgenommen werden.</p><div class="sf-status error"><b id="docs-internal-guid-2c837f86-7fff-b7c1-2b28-519319ac03f8">Bei einer Sperre durch unsere Abuse-Abteilung ist auch den Kollegen an der Hotline eine Entsperrung nicht m&ouml;glich!</b></div><p dir="ltr">&nbsp;</p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><h2 dir="ltr">&nbsp;</h2><h2 dir="ltr"><a id="canceled"></a>Ist der Server gek&uuml;ndigt?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen.</p><p dir="ltr"><b><b>&nbsp;</b></b></p><p dir="ltr">Ist ein Server gek&uuml;ndigt, wird er in der Paket&uuml;bersicht im Kunden-Login nicht mehr aufgef&uuml;hrt. Auch das Einloggen &uuml;ber den Server-Login ist nicht mehr m&ouml;glich.<b><b> <br/></b></b></p><p dir="ltr">Sie k&ouml;nnen ihren Server bis zu 7 Tage nach der Deaktivierung noch reaktivieren. Danach sind die Daten <strong>endg&uuml;ltig</strong> gel&ouml;scht. Wenn Sie ihren Server reaktivieren wollen und die Frist von 7 Tagen noch nicht abgelaufen ist , melden Sie sich bitte bei der unserer <a href="https://www.strato.de/faq/">Hotline</a>. Eine Reaktivierung wird individuell gepr&uuml;ft und besprochen.</p><p dir="ltr"><br class="Apple-interchange-newline"/><a href="#start">zur&uuml;ck nach oben</a><b><br/></b></p><p dir="ltr">&nbsp;</p><h2 dir="ltr"><a id="status"></a>In welchen Status ist der Server?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen.</p><p dir="ltr"><b><b>&nbsp;</b></b></p><p dir="ltr">Es findet keine Wartung statt, der Server ist nicht gesperrt und nicht gek&uuml;ndigt. An dieser Stelle geht es jetzt in die technische Pr&uuml;fung.</p><p dir="ltr">Als erstes gilt es zu pr&uuml;fen, welcher Server-Status angezeigt wird. Je nach Server-Typ k&ouml;nnen Sie den Status des Servers an unterschiedlichen Stellen einsehen:</p><ul><li dir="ltr"><strong>Root-Server Dxx und V-Server Linux:</strong><br/>Im Server-Login unter Mein Server &gt; Serverdaten</li><li dir="ltr"><strong>V-Server Windows (Vxx):</strong><br/>Im Server-Login unter Mein Server &gt; VM-&Uuml;bersicht</li><li dir="ltr"><strong>Root-Server (CPxx) und Server Cloud:</strong><br/>Im Cloud-Panel wird der Server unter "Infrastruktur &gt; Server" angezeigt (<a href="https://www.strato.de/faq/server/server-cloud-panel-infrastruktur/">FAQ: Server-Cloud-Panel - Infrastruktur</a>). Die Spalte &ldquo;Status&rdquo; zeigt den aktuelle Status des Servers an.</li><li dir="ltr"><strong>V-Server Windows (VCxx):</strong><br/>Hier wird der Status des Servers direkt im Kunden-Login in der &Uuml;bersicht des Paketes angezeigt.</li></ul><p dir="ltr">Wenn der Server normal am Laufen ist, wird der Status als &ldquo;Fertig eingerichtet&rdquo;, &ldquo;Gestartet und online&rdquo; oder eine gr&uuml;ne LED angezeigt.</p><p dir="ltr">Steht der Status auf &ldquo;Rettungsmodus gesetzt&rdquo;, ist der Server mit einem Minimalsystem zur Diagnose gestartet. Dabei ist er lediglich per SSH (Linux) oder Remote-Desktop (Windows) zu erreichen. Die dann g&uuml;ltigen Zugangsdaten sind auch beim Server-Status aufgef&uuml;hrt.</p><p dir="ltr">Jeder andere Status ist nur ein &Uuml;bergangs-Status. Wenn der Server l&auml;nger als eine Stunde in so einem Status feststeckt, ist es am besten, sich an den <a href="https://www.strato.de/faq/">Support</a> zu wenden.</p><p dir="ltr">&nbsp;</p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><p dir="ltr">&nbsp;</p><p dir="ltr">&nbsp;</p><h2 dir="ltr"><a id="noch_erreichbar"></a>Wie ist der Server eventuell noch erreichbar?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> dedizierte Server Linux und Windows und die Server Cloud 2.0.</p><p dir="ltr"><b><b>&nbsp;</b></b></p><p dir="ltr">Die Root-Server Linux und Windows (alt) verf&uuml;gen &uuml;ber eine Remote-Console. Dabei handelt es sich um einen separates Konsolen-System, dass &uuml;ber die serielle Schnittstelle Verbindung mit dem Server aufnimmt.<b><b> <br/></b></b></p><p dir="ltr"><a href="https://www.strato.de/faq/server/verbindung-zu-ihrem-server-ueber-die-remoteconsole/">So stellen Sie eine Verbindung zu Ihrem Server &uuml;ber die Remote Console (serielle Konsole) her.</a></p><p dir="ltr">Ist man hier erfolgreich eingeloggt, kann man pr&uuml;fen, ob z.B. eine Firewall die Anfragen blockiert oder ob die Netzwerkkarte korrekt erkannt wird. Eine Anleitung, wie Sie mit der SAC-Konsole unter Windows Verbindungsprobleme erkennen und beheben k&ouml;nnen finden Sie hier: <a href="https://www.strato.de/faq/server/ueber-sac-auf-den-server-zugreifen/">So stellen Sie den Zugriff auf den Server &uuml;ber SAC her</a></p><p dir="ltr">Funktioniert der Zugriff mit der Remote Console nicht, versuchen Sie bitte, den Server neu zu starten und ihn zu erreichen (siehe weiter unten).</p><p dir="ltr">Die neuen Root-Server Windows verf&uuml;gen anstelle der Remote Console &uuml;ber eine VNC-Konsole (<a href="https://www.strato.de/faq/server/VNC-Konsole-fuer-den-Server-Zugriff-einrichten/">FAQ: VNC-Konsole f&uuml;r den Server-Zugriff einrichten</a>), die Server der Server Cloud 2.0 &uuml;ber eine vergleichbare KVM-Konsole.</p><p dir="ltr">Bei beiden Konsolen wird die grafische Bildschirmausgabe des Servers &uuml;ber das Netzwerk geroutet.Hier kann man sich auch am Server anmelden und diesen auf eventuelle Fehler hin pr&uuml;fen, auch wenn keine Netzwerkverbindung mehr besteht.</p><p dir="ltr">&nbsp;</p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><p dir="ltr"><b><b id="docs-internal-guid-c5e29337-7fff-d2b9-c6d6-0fa7e0689271"></b><br class="Apple-interchange-newline"/></b></p><h2 dir="ltr"><a id="reboot"></a>Neu-Boot tut gut</h2><p dir="ltr">G&uuml;ltig f&uuml;r alle Servertypen</p><p dir="ltr"><b><b>&nbsp;</b></b></p><p dir="ltr">Der n&auml;chste Schritt ist es, den Server neu zu starten. Je nach Servertyp gibt es verschiedene Wege, den Neustart zu veranlassen:</p><ul><li dir="ltr"><strong>Root-Server Linux, bisherige Root-Server Windows und V-Server Linux:</strong><br/>Im Server-Login unter Backup &amp; Recovery &gt; Recovery Manager</li><li dir="ltr"><strong>alte V-Server Windows und alte Server Cloud:</strong><br/>Im Server-Login unter Mein Server &gt; VM-&Uuml;bersicht</li><li dir="ltr"><strong>neue Root-Server Windows und Server Cloud 2.0:</strong><br/>Im Cloud-Panel wird der Server unter Infrastruktur &gt; Server angezeigt (<a href="https://www.strato.de/faq/server/server-cloud-panel-infrastruktur/">FAQ: Server-Cloud-Panel - Infrastruktur</a>). Unter Aktion k&ouml;nnen Sie einen Neustart des Servers veranlassen.</li><li dir="ltr"><strong>neue V-Server Windows:</strong> <p dir="ltr">Hier wird der Status des Servers direkt im Kunden-Login in der &Uuml;bersicht des Paketes angezeigt.</p></li></ul><div class="sf-status info">Bitte beachten Sie, dass ein Neustart bei Performance-Problemen z.B. bei V-Servern unter Umst&auml;nden verschlimmern kann! Bitte nehmen Sie im Zweifel Kontakt zu unserem <a href="https://strato.de/faq/">Support</a> auf</div><p><a href="#start">zur&uuml;ck nach oben</a></p><h2 dir="ltr"><a id="rescue"></a>Wie sieht es mit dem Rettungs-Modus aus?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen bis auf Server Cloud</p><p><b>&nbsp;</b></p><p dir="ltr">Ein Server im Rettungsmodus wurde mit einem minimalen System gestartet. Das System selbst wird dabei von einem Server bei uns im Rechenzentrum bezogen.</p><p dir="ltr">Die Umstellung, z.B. vom Rettungs-Modus in den Normalen Modus oder umgekehrt geschieht im Server-Login. Die Einstellung ist unter <code>Backup &amp; Recovery &gt; RecoveryManager</code>, unter <code>Mein Server &gt; VM &Uuml;bersicht &gt; Recovery</code> oder (neue Root-Server Windows) unter <code>Infrastruktur &gt; Server &gt; Auswahl des Servers &gt; Aktion &gt; Neu starten</code> zu finden. Bitte beachten Sie, dass die Umstellung bis zu eine Stunde dauern kann.</p><p dir="ltr">Ein Linux-Server ist in diesem Modus &uuml;ber SSH erreichbar, ein Windows-Server per RDP-Desktopfreigabe. Die neuen dedizierten Windows Server sind auch in dem Modus &uuml;ber die VNC-Konsole erreichbar und bieten zus&auml;tzlich die Windows Repair Tools von Microsoft an.</p><p dir="ltr">Das Passwort f&uuml;r den Login in den Rettungsmodus ist in der Anzeige der Serverdaten zu finden. Hat man sich eingeloggt, kann man das eigentliche Live-System auf Fehlermeldungen, Logs und falsche Einstellungen pr&uuml;fen.</p><p dir="ltr">Die Live-Daten finden sich bei einem V-Server Linux unter <code>/repair</code>. Bei einem V-Server Windows werden die Live-Partitionen vom Laufwerksbuchstaben her verschoben: C wird zu E, D wird zu F. Bei den Root-Servern m&uuml;ssen die Partitionen manuell eingebunden werden. Das kann mit den Befehlen mount &amp; Co.(Linux) oder &uuml;ber die Datentr&auml;gerverwaltung (Windows) gemacht werden.</p><p><a href="#start">zur&uuml;ck nach oben</a></p><h2 dir="ltr"><a id="no_response"></a>Auch im Rettungsmodus keine Reaktion des Servers?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> dedizierte Server Linux und Windows</p><p dir="ltr"><b><b><b>&nbsp;</b></b></b></p><p dir="ltr">Bei einem Root-Server (Dxx) ist jetzt der Zeitpunkt gekommen, einen Hardware-Test zu starten. Der Hardware-Test ist im Server-Login unter <code>Backup &amp; Recovery &gt; Hardwaretest</code> zu finden. Der lange Test ist nur selten notwendig. Es reicht hier, den schnellen Test zu starten.</p><p dir="ltr">Wenn der Hardware-Test erfolgreich abgeschlossen wurde, aber in der Ereignis-Anzeige oder im Kernel-Log eindeutige Hinweise auf einen Hardware-Defekt zu finden sind, ist es am besten, sich ebenfalls mit der Hotline in Verbindung zu setzen. Stellen Sie bereits vorab so viele Informationen wie m&ouml;glich zusammen (z.B.die Seriennummern der Festplatten).</p><p dir="ltr">Bei den neuen dedizierten Servern (CPxx) steht kein Hardware-Test zur Verf&uuml;gung. Hier kann man in der Ereignisanzeige herausfinden, ob etwas auf eine defekte Hardware hindeutet. Auch eine Pr&uuml;fung des Raid-Controllers und des Festplattenstatus bietet sich an.</p><p dir="ltr"><b><b id="docs-internal-guid-fa8f4276-7fff-9523-1afa-7f814b53ffaa"><br class="Apple-interchange-newline"/></b></b><a href="#start">zur&uuml;ck nach oben</a><b><b id="docs-internal-guid-fa8f4276-7fff-9523-1afa-7f814b53ffaa"><br/></b></b></p><p dir="ltr">&nbsp;</p><h2 dir="ltr"><a id="proceed"></a>Wie geht's jetzt weiter?</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> alle Servertypen</p><p dir="ltr"><b><b><b>&nbsp;</b></b></b></p><p dir="ltr">An dieser Stelle ist ein Kontakt zum <a href="https://www.strato.de/faq/">Support</a> notwendig. Hier wird dann geschaut, ob direkt noch etwas zu machen ist. Eventuell wird ein Ticket er&ouml;ffnet, damit die Kollegen im Rechenzentrum nachschauen, was mit dem Server los ist.</p><p dir="ltr">&nbsp;</p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><p dir="ltr">&nbsp;</p><p dir="ltr">&nbsp;</p><h2 dir="ltr"><a id="managed"></a>Alles sch&ouml;n und gut, ich hab aber einen Managed Server &hellip;</h2><p dir="ltr"><strong>G&uuml;ltig f&uuml;r:</strong> Managed Server / Business Server</p><p dir="ltr"><b><b><b><b>&nbsp;</b></b></b></b></p><p dir="ltr">Die Managed Server nehmen eine Sonderstellung ein, da wir hier die Verwaltung f&uuml;r Sie &uuml;bernehmen. Hier wird die Hardware aktiv von uns &uuml;berwacht. Zeigt z.B. eine Festplatte erste Anzeichen eines Defektes wird diese von uns direkt getauscht.</p><p dir="ltr">Sollte es dennoch vorkommen, dass der Managed Server nicht mehr reagiert, stehen Ihnen die Kollegen der <a href="https://www.strato.de/faq/">Hotline</a> gerne zur Verf&uuml;gung.</p><p dir="ltr"><b><b><b><b id="docs-internal-guid-886577bb-7fff-765e-7e6f-bbb70fbf5f35"></b><br class="Apple-interchange-newline"/></b></b></b></p><p dir="ltr"><a href="#start">zur&uuml;ck nach oben</a></p><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">Wenn der Server normal am Laufen ist, wird der Status als &ldquo;Fertig eingerichtet&rdquo;, &ldquo;Gestartet und online&rdquo; oder eine gr&uuml;ne LED angezeigt.</div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="3306"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="3306"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Mein Server ist nicht mehr erreichbar - was kann ich tun? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="3306"> <input type="hidden" name="headline" value="Mein Server ist nicht mehr erreichbar - was kann ich tun?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/Mein-Server-ist-nicht-mehr-erreichbar-was-kann-ich-tun/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/Mein-Server-ist-nicht-mehr-erreichbar-was-kann-ich-tun/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

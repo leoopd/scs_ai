@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Hier erfahren Sie, wie Sie Ihr Microsoft 365 für die Nutzung Ihrer Domain sowie den TXT-, den MX-, den SRV- und den CNAME-Record einrichten."><link rel="canonical" href="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/"><title> Welche DNS Einstellungen für Microsoft 365? | STRATO </title><meta property="og:title" content="Welche DNS Einstellungen für Microsoft 365? | STRATO"><meta name="og:description" content="Hier erfahren Sie, wie Sie Ihr Microsoft 365 für die Nutzung Ihrer Domain sowie den TXT-, den MX-, den SRV- und den CNAME-Record einrichten."><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '2429',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/2429/',
+            'econda_pageid'                : 'FAQ/2429/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_2429 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_2429:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/163.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/168/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/173/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/178/E-Mail-Adressen-einrichten.html"> E-Mail Adressen einrichten <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/203/E-Mail-Programme-einrichten.html"> E-Mail Programme einrichten <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/248/Sicherheit.html"> Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/258/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/958/STRATO-Webmail.html"> STRATO Webmail </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/163.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/168/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/173/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/178/E-Mail-Adressen-einrichten.html"> E-Mail Adressen einrichten <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/203/E-Mail-Programme-einrichten.html"> E-Mail Programme einrichten <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/248/Sicherheit.html"> Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/258/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/958/STRATO-Webmail.html"> STRATO Webmail </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #2429 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Welche DNS Einstellungen muss ich für Microsoft 365 im STRATO Kunden-Login vornehmen? </h1><p>In diesem Artikel finden Sie eine detaillierte Anleitung zur Einrichtung Ihres Microsoft 365 f&uuml;r die Nutzung Ihrer Domain als E-Mail und Skype for Business.</p><div class="sf-status info">Wenn Sie schrittweise Hilfe bei der Verkn&uuml;pfung Ihrer Domain mit Microsoft 365 w&uuml;nschen, hilft Ihnen auch unser Chatbot Pascal. Sie finden ihn unten rechts auf der <a href="/faq/" target="_blank">Hilfe und Kontakt</a> Seite.</div><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#verifizierung" title="Wie verifiziere ich mein STRATO Domain in Microsoft 365?">Wie verifiziere ich mein STRATO Domain in Microsoft 365?</a></li><li class="my-2"><a href="#txt-record" title="Wo setze ich den TXT-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?">Wo setze ich den TXT-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?</a></li><li class="my-2"><a href="#mx-record" title="Wo setze ich den MX-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?">Wo setze ich den MX-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?</a></li><li class="my-2"><a href="#srv-record" title="Wo setze ich die SRV-Eintr&auml;ge von Microsoft 365 in meinem STRATO Kunden-Login?">Wo setze ich die SRV-Eintr&auml;ge von Microsoft 365 in meinem STRATO Kunden-Login?</a></li><li class="my-2"><a href="#cname-record" title="Welche Subdomains und welche CNAME-Eintr&auml;ge brauche ich?">Welche Subdomains und welche CNAME-Eintr&auml;ge brauche ich?</a></li> </ul></div><h2><a id="verifizierung"></a>Wie verifiziere ich mein STRATO Domain in Microsoft 365?</h2><p>Loggen Sie sich bitte als Administrator in Ihr Microsoft 365 Paket ein und w&auml;hlen Sie die Kachel <strong>Admin</strong> an.</p><p>&nbsp;<strong>Produktportal Microsoft 365 International:</strong>&nbsp;<a rel="nofollow" href="https://login.microsoftonline.com/" target="_blank">https://login.microsoftonline.com/</a></p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/00_-_ms_login_-_done.big.PNG" alt="MS365 - Admincenter" title="MS365 - Admincenter" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>W&auml;hlen Sie im n&auml;chsten Fenster in der Men&uuml;leiste bitte <strong>Einstellungen/ Dom&auml;nen</strong>.</p><p>W&auml;hlen Sie nun bitte den Button <strong>+ Dom&auml;ne hinzuf&uuml;gen</strong>, geben Sie Ihre STRATO Domain ein und best&auml;tigen Sie Ihre Eingabe mit <strong>Weiter</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/02_-_domains_-_done.big.PNG" alt="MS365 - Einstellungen" title="MS365 - Einstellungen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/03_-_domains_-_done.big.PNG" alt="MS365 - Domain hinzufuegen" title="MS365 - Domain hinzufuegen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>W&auml;hlen Sie nun <strong>TXT-Eintrag </strong>aus und anschlie&szlig;end wird Ihnen der korrekte Verifizierungseintrag f&uuml;r Ihre Domain angezeigt.</p><div class="sf-status info">Bei den DNS-eintr&auml;gen in diesem Artikel handelt es sich um Beispiele. Ihre korrekten Eintr&auml;ge erhlaten Sie direkt in Ihrem Microsoft 365 Admin Center. Bitte benutzen Sie nicht die Werte in diesem Artikel.</div><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/04_-_domains_-_done.big.PNG" alt="MS365 - Domain Verifizieren" title="MS365 - Domain Verifizieren" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Nachdem Sie den Eintrag vorgenommen haben, w&auml;hlen <strong>&Uuml;berpr&uuml;fen</strong>.</p><p>Im Anschluss werden Sie aufgefordert Ihre DNS-Eintr&auml;ge zu aktualisieren. Es ist wichtig das Sie hier <strong>Ihre eigenen DNS-Eintr&auml;ge hinzuf&uuml;gen</strong> w&auml;hlen. Anderenfalls w&uuml;rden Sie mit Nameserver Eintr&auml;gen die Funktion Ihrer Webseite verlieren.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/07_-_domains_-_done.big.PNG" alt="MS365 - Eintr&auml;ge aktivieren" title="MS365 - Eintr&auml;ge aktivieren" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Nun k&ouml;nnen Sie die Produkte w&auml;hlen welche Sie auf dieser Domain benutzen m&ouml;chten. Alle Notwendigen DNS Eintr&auml;ge werden Ihnen Angezeigt.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/08_-_domains_-done.big.PNG" alt="MS365 - Einrichtung" title="MS365 - Einrichtung" class="image-loader img-fluid img jss_article_image my-3"></span></p><h2><a id="txt-record"></a>Wo setze ich den TXT-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?</h2><p>Der TXT-Eintrag dient zur &Uuml;berpr&uuml;fung, ob sie die angegeben Domain unter Microsoft 365 besitzen.</p><p>Loggen Sie sich bitte in Ihren <a href="https://www.strato.de/apps/CustomerService#/skl">STRATO Kunden-Login</a> ein und &ouml;ffnen Sie den Men&uuml;punkt <strong>Domains / Domainverwaltung</strong>.</p><p><img data-image-loader="/faq/new_images/2429/de/2220fc328ea7652e36073f6267bc13b1.png" alt="meine STRATO Domain in Office 365?-7.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"></p><p>W&auml;hlen Sie in der Domain&uuml;bersicht das <strong>Zahnr&auml;dchen</strong> f&uuml;r Ihre Domain, die Sie mit Microsoft 365 verkn&uuml;pfen wollen.</p><p><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/Kunden-Login_-_Domainverwaltung.big.png" alt="Domainverwaltung" title="Domainverwaltung" class="image-loader img-fluid img jss_article_image my-3"></p><p>Anschlie&szlig;end k&ouml;nnen Sie unter den Einstellungen (Domain) auf den Reiter <strong>DNS </strong>klicken und &uuml;ber <strong>verwalten</strong> die <strong>TXT Records inklusive SPF und DKIM Einstellungen</strong> konfigurieren.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/DNS_Einstellungen_TXT.big.png" alt="TXT Record" title="TXT Record" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Tragen Sie nun den <strong>TXT-Wert</strong>, den Ihnen in der Konfiguration von Microsoft Exchange mitgeteilt wurde, in das entsprechende Feld ein.Beachten Sie hierbei bitte, dass Sie keine SPF-Regel aktivieren und den TXT-Pr&auml;fix leer lassen. Anschlie&szlig;end w&auml;hlen Sie das + Symbol um den Spamfilter-Eintrag setzen zu k&ouml;nnen.<br/><br/></p><p><img data-image-loader="/faq/new_images/2429/de/7ed470830bfd3c0df109f0bb19045103.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"  alt="meine STRATO Domain in Office 365?-10.png"></p><p>Tragen Sie in das neue Feld nun den jeweiligen SPF-Wert ein. Der Typ bleibt auch hier TXT, der Pr&auml;fix bleibt leer. <br/>&nbsp;</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label=""><strong>SPF-Wert</strong></td><td width="50%" data-label=""><span title="">v=spf1 include:spf.protection.outlook.com -all</span></td></tr></tbody></table></div><p>Best&auml;tigen Sie Ihre Eingaben mit <strong>Einstellung &uuml;bernehmen</strong>.</p><p><img class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="meine STRATO Domain in Office 365?-11.png" data-image-loader="/faq/new_images/2429/de/401b98ab48510197a61bef82c260136e.png"></p><p>W&auml;hlen Sie nun den Button <strong>Zur &Uuml;bersicht</strong>, um wieder zur&uuml;ck zu den Einstellungen (Domain) zu gelangen.</p><h2><a id="mx-record"></a>Wo setze ich den MX-Eintrag von Microsoft 365 in meinem STRATO Kunden-Login?</h2><p>In der Domainverwaltung Ihrer Domain finden Sie unter dem Men&uuml;punkt DNS , die Konfiguration des MX-Records.</p><p>&Ouml;ffnen Sie jetzt die Verwaltung des <strong>MX-Records</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/MX_Record.big.png" alt="MX Record" title="MX Record" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Sobald Sie den prim&auml;ren Mailserver auf <strong>Eigener Mailserver</strong> umstellen, k&ouml;nnen Sie den jeweiligen Hostname und somit den MX-Record setzen.</p><div class="sf-status error">Nachfolgendes Beispiel gilt nicht f&uuml;r Domains mit einem Bindestrich im Domainnamen. Nutzen Sie hier bitte die Kopierfunktion in Ihrem Microsoft 365 Admin Center.<br/><br/>Verwenden Sie bei der Angabe des Hostname ein &acute;-&acute;statt dem Punkt vor der Domainendung. Beispiel: wunschname-de statt wunschname.de</div><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>MX-Hostname 1</td><td>MX-Hostname 2</td></tr></thead><tbody><tr><td width="50%" data-label="MX-Hostname 1">IHREDOMAIN.mail.protection.outlook.de</td><td width="50%" data-label="MX-Hostname 2">IHREDOMAIN.mail.protection.outlook.com</td></tr></tbody></table></div><p><img alt="meine STRATO Domain in Office 365?-13.png" class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2429/de/f5a1709ff2027b859b018e901329aba7.png"></p><h2><a id="srv-record"></a>Wo setze ich die SRV-Eintr&auml;ge von Microsoft 365 in meinem STRATO Kunden-Login?</h2><p>In der Domainverwaltung Ihrer Domain finden Sie unter dem Men&uuml;punkt DNS Einstellungen, die Konfiguration des SRV-Records.</p><p>&Ouml;ffnen Sie jetzt die Verwaltung des <strong>SRV-Records</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/SRV_Record.big.png" alt="SRV Record" title="SRV Record" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Setzen Sie den Radio-Button bei <strong>SRV-Record</strong> bitte auf <strong>Aktiviert</strong>, um SRV-Eintr&auml;ge setzen zu k&ouml;nnen.</p><p>Sie ben&ouml;tigen zwei separate SRV-Eintr&auml;ge. W&auml;hlen Sie zun&auml;chst das<strong> +</strong> <strong>Symbol</strong> an und tragen Sie anschlie&szlig;end folgende Werte in die entsprechenden Felder ein:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>_Service._</td><td>Protokoll</td><td>Priorit&auml;t</td><td>Gewicht</td><td>Port</td><td>Ziel</td></tr></thead><tbody><tr><td width="16.6666666666667%" data-label="_Service._">sip</td><td width="16.6666666666667%" data-label="Protokoll">tls</td><td width="16.6666666666667%" data-label="Priorit&auml;t">100</td><td width="16.6666666666667%" data-label="Gewicht">1</td><td width="16.6666666666667%" data-label="Port">443</td><td width="16.6666666666667%" data-label="Ziel">sipdir.online.lync.com.</td></tr><tr><td width="16.6666666666667%" data-label="_Service._">sipfederationtls</td><td width="16.6666666666667%" data-label="Protokoll">tcp</td><td width="16.6666666666667%" data-label="Priorit&auml;t">100</td><td width="16.6666666666667%" data-label="Gewicht">1</td><td width="16.6666666666667%" data-label="Port">5061</td><td width="16.6666666666667%" data-label="Ziel">sipfed.online.lync.com.</td></tr></tbody></table></div><p>Anschlie&szlig;end k&ouml;nnen Sie die eingetragenen Werte wieder mit <strong>Einstellungen &uuml;bernehmen</strong> best&auml;tigen.</p><p><img class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="meine STRATO Domain in Office 365?-15.png" data-image-loader="/faq/new_images/2429/de/d56c66f9bfd0e755d14feead93fc69d4.png"></p><p>Sie erhalten nun die Systembest&auml;tigung mit einer &Uuml;bersicht der angegeben Daten. &Uuml;ber <strong>Zur &Uuml;bersicht</strong> gelangen Sie zur&uuml;ck in Ihre Domainverwaltung.</p><p><img class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="meine STRATO Domain in Office 365?-16.png" data-image-loader="/faq/new_images/2429/de/3cc11d2ffeb8f6a2540e80f152d14e4b.png"></p><h2><a id="cname-record"></a>Welche Subdomains und welche CNAME-Eintr&auml;ge brauche ich?</h2><p>F&uuml;r einen vollumf&auml;nglichen Betrieb von Microsoft 365 und Skype for Business ben&ouml;tigen Sie nun noch nachfolgende Subdomains und die entsprechenden CNAME-Eintr&auml;ge.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>Subdomain</td><td>CNAME-Eintrag</td></tr></thead><tbody><tr><td width="50%" data-label="Subdomain">autodiscover</td><td width="50%" data-label="CNAME-Eintrag">autodiscover.outlook.com.</td></tr><tr><td width="50%" data-label="Subdomain">sip</td><td width="50%" data-label="CNAME-Eintrag">sipdir.online.lync.com.</td></tr><tr><td width="50%" data-label="Subdomain">lyncdiscover</td><td width="50%" data-label="CNAME-Eintrag">webdir.online.lync.com.</td></tr><tr><td width="50%" data-label="Subdomain">enterpriseregistration</td><td width="50%" data-label="CNAME-Eintrag">enterpriseregistration.windows.net.</td></tr><tr><td width="50%" data-label="Subdomain">enterpriseenrollment</td><td width="50%" data-label="CNAME-Eintrag">enterpriseenrollment.manage.microsoft.com.</td></tr></tbody></table></div><p>&Ouml;ffnen Sie den Men&uuml;punkt <strong>Domains / Domainverwaltung </strong>in Ihrer Paketverwaltung.</p><p><img alt="DNS Einstellungen f�r Office 365 bei STRATO-1.png" class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2429/de/2220fc328ea7652e36073f6267bc13b1.png"></p><p>W&auml;hlen Sie in der Domain&uuml;bersicht das <strong>Zahnr&auml;dchen</strong> f&uuml;r Ihre Wunschdomain, die Sie zuvor konfiguriert haben.</p><p><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/Kunden-Login_-_Domainverwaltung.big.png" alt="Domainverwaltung" title="Domainverwaltung" class="image-loader img-fluid img jss_article_image my-3"></p><p>Anschlie&szlig;end k&ouml;nnen Sie unter den Einstellungen (Domain) den Reiter <strong>DNS Einstellungen</strong> ausklappen und w&auml;hlen den Punkt <strong>TXT Records inklusive SPF und DKIM Einstellungen</strong>.</p><p>Sie lassen die Vorauswahl auf <strong>Keine SPF-Regel</strong> und klicken auf das blaue Feld mit dem Pluszeichen.</p><p><img data-image-loader="/faq/new_images/2429/de/ee984a3924780724307144b54a6d05ee.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"  alt="DNS Einstellungen f�r Office 365 bei STRATO-1.png"></p><p>In der n&auml;chsten &Uuml;bersicht f&uuml;gen Sie das <strong>Pr&auml;fix</strong> und als <strong>Wert</strong> den entsprechenden CNAME-Eintrag (siehe Tabelle oben) ein.&nbsp;</p><p>Als Typ w&auml;hlen Sie <strong>CNAME</strong>.</p><p><img  class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="DNS Einstellungen f�r Office 365 bei STRATO-2.png" data-image-loader="/faq/new_images/2429/de/2ea19503148b40659f6f5b799dc2337f.png">&nbsp;</p><p>siehe auch:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>CNAME-Eintrag</td><td>Pr&auml;fix</td></tr></thead><tbody><tr><td width="50%" data-label="CNAME-Eintrag">webdir.online.lync.com.</td><td width="50%" data-label="Pr&auml;fix">lyncdiscover</td></tr></tbody></table></div><p>Best&auml;tigen Sie anschlie&szlig;end die Einstellungen mit <strong>Einstellungen &uuml;bernehmen</strong>.</p><p>Wenn Sie wieder im Hauptmen&uuml; auf die Domainverwaltung gehen, sehen Sie jetzt Subdomain(s) vorhanden unter Ihrer Domain. Wenn Sie dort drauf klicken, &ouml;ffnet sich eine &Uuml;bersicht Ihrer Subdomeins und dem entsprechenden CNAME-Eintrag. &nbsp;</p><p><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/2022-03-24_10_49_02-STRATO_Kunden-Login_-_Domainverwaltung.big.png" alt="Subdomain verwalten title=Subdomain" title="Subdomain verwalten" class="image-loader img-fluid img jss_article_image my-3"></p><p>Sie k&ouml;nnen nun den Einrichtungsassistenten im Microsoft 365 Admin center abschlie&szlig;en.</p><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/SRV_Record.big.png" alt="SRV Record" title="SRV Record" class="image-loader img-fluid img jss_article_image my-3"></span></div></div><h2> Microsoft 365 Business </h2><p> Bewährte Office-Anwendungen für PC und Mac sowie als App für mobile Geräte. </p><p> <a href="/microsoft-365/" data-ksb="/microsoft-365/" class="btn btn-primary" data-emos-clickmarker="Direktlink/Office365" data-campaign="Direktlink/Office365" data-track="emos" id="directlink_a"> Zu Microsoft 365 </a> </p><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="2429"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="2429"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Welche DNS Einstellungen muss ich für Microsoft 365 im STRATO Kunden-Login vornehmen? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="2429"> <input type="hidden" name="headline" value="Welche DNS Einstellungen muss ich für Microsoft 365 im STRATO Kunden-Login vornehmen?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/office/welche-dns-einstellungen-muss-ich-fuer-microsoft-365-im-strato-kunden-login-vornehmen/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

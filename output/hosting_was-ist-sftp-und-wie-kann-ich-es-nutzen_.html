@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="In diesem FAQ-Artikel zu SFTP beschreiben wir Schritt für Schritt, wie Sie Dateien von Ihrem Computer auf Ihren STRATO Webspeicher übertragen können."><link rel="canonical" href="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/"><title> So nutzen Sie SFTP für Ihre Website | STRATO </title><meta property="og:title" content="So nutzen Sie SFTP für Ihre Website | STRATO"><meta name="og:description" content="In diesem FAQ-Artikel zu SFTP beschreiben wir Schritt für Schritt, wie Sie Dateien von Ihrem Computer auf Ihren STRATO Webspeicher übertragen können."><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '2095',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/2095/',
+            'econda_pageid'                : 'FAQ/2095/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_2095 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_2095:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/8.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/13/Providerwechsel-zu-STRATO.html"> Providerwechsel zu STRATO </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/18/Stornierung-von-Bestellungen.html"> Stornierung von Bestellungen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/23/Domains.html"> Domains </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/28/E-Mail.html"> E-Mail </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/33/Hosting.html"> Hosting </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/38/Homepage-Baukasten.html"> Homepage-Baukasten </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/43/Server.html"> Server </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/48/Webshops.html"> Webshops </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/8.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/13/Providerwechsel-zu-STRATO.html"> Providerwechsel zu STRATO </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/18/Stornierung-von-Bestellungen.html"> Stornierung von Bestellungen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/23/Domains.html"> Domains </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/28/E-Mail.html"> E-Mail </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/33/Hosting.html"> Hosting </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/38/Homepage-Baukasten.html"> Homepage-Baukasten </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/43/Server.html"> Server </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/48/Webshops.html"> Webshops </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #2095 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Was ist SFTP und wie kann ich es nutzen? </h1><p>In diesem Artikel beschreiben wir, wie Sie Dateien von Ihrem lokalen Computer auf Ihren Webspeicher &uuml;bertragen k&ouml;nnen. Wir leiten Sie in diesem Artikel Schritt f&uuml;r Schritt von der Erstellung eines SFTP-Zugangs hin zur Anwendung von SFTP-Software.</p><p><div class="responsive-video my-3 col-12 col-lg-8"> <iframe width="100%" height="340" src="https://www.youtube-nocookie.com/embed/wdmWVNqQLl4" frameborder="0" allowfullscreen=""></iframe> <div class="responsive-video-consent-background"></div> <div class="responsive-video-consent border border-1 rounded rounded-3 text-center"> <p> <span class="jss_accept_video_text"></span> <a rel="nofollow" href="<tmpl_var uri_privacy_policy>" class="external-link footer-link-big" target="_blank"> <span class="jss_accept_video_text_link"></span> </a> </p> <button class="btn btn-primary jss_accept_video jss_accept_video_text_button" type="button"></button> </div></div></p><div class="sf-status error">Wir empfehlen Ihnen grunds&auml;tzlich immer die verschl&uuml;sselte Verbindung via SFTP zum Austausch von Dateien. Bei FTP handelt es sich um ein veraltetes und nicht sicheres Protokoll. Im <a href="/apps/CustomerService#/skl" target="_blank">Kunden-Login</a> unter <strong>SFTP-Zug&auml;nge verwalten</strong>&nbsp;k&ouml;nnen Sie die Zugriffseinstellungen f&uuml;r Ihr Paket definieren.</div><p>&nbsp;Um Ihre erstellten Webseiten hochzuladen, m&uuml;ssen folgende Voraussetzungen erf&uuml;llt sein:</p><p>1. Sie haben bereits ein Hosting-Paket bei STRATO bestellt</p><p>2. Sie haben ein SFTP-Programm installiert</p><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#Begriffserkl&auml;rung" title="Begriffserkl&auml;rung">Begriffserkl&auml;rung</a></li><li class="my-2"><a href="#Anlegen eines FTP-Zugangs im KSB" title="Ihr voreingestellter SFTP-Zugang">Ihr voreingestellter SFTP-Zugang</a></li><li class="my-2"><a href="#MasterID" title="SFTP-Zugang mit der Master-ID nutzen">SFTP-Zugang mit der Master-ID nutzen</a></li><li class="my-2"><a href="#Domainname" title="SFTP-Zugang mit dem Domainnamen nutzen">SFTP-Zugang mit dem Domainnamen nutzen</a></li><li class="my-2"><a href="#Anwendung%20des FTP-Programms" title="Anwendung des SFTP-Programms">Anwendung des SFTP-Programms</a></li> </ul></div><h2><strong> <a name="Begriffserkl&auml;rung"></a>Begriffserkl&auml;rung</strong></h2><p>SFTP ist die Abk&uuml;rzung f&uuml;r Secure File Transfer Protocol. Mit diesem Protokoll ist es m&ouml;glich,&nbsp;mittels Secure Shell (SSH), verschl&uuml;sselt Daten zwischen Ihrem lokalen Computer und dem Speicherplatz Ihres STRATO Hosting-Paketes zu &uuml;bertragen. Das SFTP-&Uuml;bertragungsprotokoll ist unabh&auml;ngig vom verwendeten Betriebssystem und von der Art der Verbindung. Zus&auml;tzlich zur M&ouml;glichkeit Daten &uuml;ber das SFTP zu &uuml;bertragen, erlaubt es auch die Anzeige von Verzeichnissen, deren Umbenennung oder die Einschr&auml;nkung von Rechten.</p><p>SFTP ist der Nachfolger von <a href="/hosting/ftp/">FTP</a>: der Unterschied ist eine h&ouml;here Sicherheit - wie der Zusatz "Secure" verr&auml;t.<br/>&nbsp; <br/> Mittels eines SFTP-Programms k&ouml;nnen Sie die Dateien f&uuml;r Ihre Homepage auf Ihren <a href="/hosting/webspace/">Webspace </a>hochladen. Auch eine Sicherung der Internetseite k&ouml;nnen Sie mit SFTP erstellen - in diesem Fall kopieren Sie die Daten, die auf dem Webspace vorhanden sind, lokal auf Ihren Rechner.<br/>&nbsp;</p><div class="sf-status info"><p>Mit einem SFTP-Programm k&ouml;nnen Sie auch Dateien und/oder ganze Verzeichnisse l&ouml;schen. L&ouml;schen Sie alle Inhalte, werden dem Besucher Ihrer Webseite keine Inhalte mehr angezeigt. <br/><br/>Markieren Sie hierzu einfach den nicht gew&uuml;nschten Inhalt und klicken Sie hierauf mit rechter Maustaste. W&auml;hlen Sie die Option l&ouml;schen, wird der Inhalt nach einer Sicherheitsabfrage vom Webspace gel&ouml;scht.</p></div><h2><strong><a name="Anlegen eines FTP-Zugangs im KSB"></a>Ihr voreingestellter SFTP-Zugang </strong></h2><p>Auch wenn Sie noch keine Domain in Ihrem STRATO Paket registriert haben, steht Ihnen der Internet-Speicherplatz Ihres Paketes bereits zur Verf&uuml;gung. Sie k&ouml;nnen also bereits Daten auf diesen &uuml;bertragen. Hierf&uuml;r ben&ouml;tigen Sie die STRATO <strong>Master-ID </strong>und das<strong> Masterpasswort</strong>. Die Master-ID wird Ihnen von STRATO per E-Mail zugesandt, sobald Ihr Paket aktiviert wurde.</p><p>Die Master-ID finden Sie zus&auml;tzlich in Ihrem STRATO Kunden-Login. Loggen Sie sich ein und w&auml;hlen Sie anschlie&szlig;end Ihr Paket. Rechts unter der <strong>&Uuml;bersicht</strong> finden Sie die <strong>Technischen Features</strong> mit der Master-ID:</p><p><img alt="So nutzen Sie FTP f�r Ihre Website-1.jpg" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2095/de/11a47a75efb62ff338d06aa361de3a3e.jpg"></p><p><br/>&nbsp; <a href="/faq/vertrag/was-ist-die-master-id-und-wozu-benoetige-ich-sie/" target="_blank">Was ist die STRATO Master-ID und wozu ben&ouml;tige ich sie? </a></p><h2><strong><a name="MasterID"></a>Voreingestellten SFTP-Zugang mit Master-ID nutzen</strong></h2><p>Der Aufbau des voreingestellten SFTP-Zugangs ist in allen Paketen identisch. Sie ben&ouml;tigen die drei folgenden Angaben um sich mit dem Speicherplatz &uuml;ber ein SFTP-Programm zu verbinden. Wo Sie die Daten im SFTP-Programm eintragen m&uuml;ssen, beschreiben wir im <a href="#Anwendung%20des FTP-Programms" target="_self">unteren Abschnitt des Artikels</a>.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>Eingabefeld</td><td>Inhalt / Aktion</td></tr></thead><tbody><tr><td width="50%" data-label="Eingabefeld">Server</td><td width="50%" data-label="Inhalt / Aktion">ssh.strato.de</td></tr><tr><td width="50%" data-label="Eingabefeld">Port</td><td width="50%" data-label="Inhalt / Aktion">22</td></tr><tr><td width="50%" data-label="Eingabefeld">Benutzername (Username)</td><td width="50%" data-label="Inhalt / Aktion">Ihre Master-ID (12345678.swh.strato-hosting.eu)</td></tr><tr><td width="50%" data-label="Eingabefeld">Passwort</td><td width="50%" data-label="Inhalt / Aktion">Ihr Masterpasswort</td></tr></tbody></table></div><p>Das <strong>Masterpasswort</strong> m&uuml;ssen Sie selbst in Ihrem <a href="/apps/CustomerService#/skl" target="_blank">STRATO Kunden-Login</a> w&auml;hlen. Nach Auswahl Ihres Auftrags (Button <strong>Ihr Paket</strong>) k&ouml;nnen Sie das Masterpasswort unter dem Men&uuml;punkt <strong>Sicherheit </strong>mit Klick auf<strong> Passw&ouml;rter festlegen</strong> anlegen.<br/>&nbsp; <br/><img data-image-loader="/faq/new_images/2095/de/9d57c803aea61f9aadcdae0b46685c4f.jpg" alt="So nutzen Sie FTP f�r Ihre Website-2.jpg"  class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"></p><div class="sf-status info">Auch wenn Sie zu einem sp&auml;teren Zeitpunkt eine Domain in Ihrem Paket registriert haben, bleibt die M&ouml;glichkeit sich mit der Master-ID mit dem Internet-Speicherplatz zu verbinden erhalten.</div><h2><strong><a name="Domainname"></a>Voreingestellten SFTP-Zugang mit Domainnamen nutzen</strong></h2><p>Ist Ihre Domain bereits in dem von Ihnen bestellten Paket konnektiert worden, k&ouml;nnen Sie sich mit dem Domainnamen und dem Masterpasswort auf Ihrem Webspace anmelden. Wo Sie die Daten im SFTP-Programm eintragen m&uuml;ssen, beschreiben wir im unteren Abschnitt des Artikels.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>Eingabefeld</td><td>Inhalt / Aktion</td></tr></thead><tbody><tr><td width="50%" data-label="Eingabefeld">Server</td><td width="50%" data-label="Inhalt / Aktion">ssh.strato.de</td></tr><tr><td width="50%" data-label="Eingabefeld">Port</td><td width="50%" data-label="Inhalt / Aktion">22</td></tr><tr><td width="50%" data-label="Eingabefeld">Benutzername (Username)</td><td width="50%" data-label="Inhalt / Aktion">Ihr Domainname (ohne www. z.B. wunschname.de)</td></tr><tr><td width="50%" data-label="Eingabefeld">Passwort</td><td width="50%" data-label="Inhalt / Aktion">Ihr Master-Passwort</td></tr></tbody></table></div><p>&nbsp;<br/> <strong>Weitere SFTP Zug&auml;nge einrichten</strong></p><p>&nbsp;<br/> Zus&auml;tzlich zum voreingestellten SFTP-Zugang k&ouml;nnen Sie in den meisten Webhosting-Paketen weitere SFTP-Zug&auml;nge einrichten. Bitte loggen Sie sich zuerst in Ihren gesicherten <a href="/apps/CustomerService#/skl">STRATO Kunden-Login</a> ein. Falls Sie mehrere Pakete haben, w&auml;hlen Sie das betreffende Paket aus.</p><p>Gehen Sie im linken Men&uuml; den Unterpunkt <strong>Datenbanken und Webspace </strong>und dann S<strong>FTP-Zug&auml;nge</strong> <strong>verwalten</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/datenbank_u_webspace_sftp-zugaenge_verwalten.big.PNG" alt="datenbank u webspace sftp-zugaenge verwalten" title="datenbank_u_webspace_sftp-zugaenge_verwalten" class="image-loader img-fluid img jss_article_image my-3"></span></p><div class="sf-status info"><p>Je nach gew&auml;hltem Hosting-Paket stehen Ihnen bis zu 101 SFTP-Zug&auml;nge zur Verf&uuml;gung. Es kann durchaus sinnvoll sein, mehrere FTP-Zug&auml;nge anzulegen, wenn Sie zum Beispiel Dritten das Recht einr&auml;umen m&ouml;chten, Inhalte auf Ihren Speicherplatz hochzuladen. Sie k&ouml;nnen hier den Zugriff auch auf ausgew&auml;hlte Verzeichnisse beschr&auml;nken. <br/><br/>Durch das STRATO Passwortsystem ist sichergestellt, dass Dritte keine Einsicht in Ihre pers&ouml;nlichen Daten (wie Bankverbindung, Anschrift oder &Auml;hnliches) erhalten.</p></div><p>Legen Sie nun einen SFTP-Zugang an, indem Sie den Button<strong> Neuen anlegen</strong> klicken:</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/sftp_zugaenge_anlegen_neu_anlegen.big.PNG" alt="sftp-zugaenge anlegen neu manlegen" title="sftp_zugaenge_anlegen_neu_anlegen" class="image-loader img-fluid img jss_article_image my-3"></span> <br/><br/> Sie m&uuml;ssen nun einen Benutzernamen (Username) und ein Passwort angeben, mit welchem Sie sich anschlie&szlig;end mit dem SFTP-Programm anmelden k&ouml;nnen. Die Sicherheitsstufe des gew&auml;hlten Passwortes wird Ihnen nebenstehend angezeigt.<br/><a href="/faq/vertrag/unsere-empfehlungen-fuer-gute-passwoerter/">Unsere Empfehlungen f&uuml;r gute Passw&ouml;rter</a><br/><br/></p><p>Wenn Sie bereits einen oder mehrere SFTP-Zug&auml;nge angelegt haben, klicken Sie auf das kleine Symbol rechts in der tabellarischen &Uuml;bersicht.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/sftp_zugaenge_anlegen_bestehende_zugaenge_bearbeiten.big.PNG" alt="sftp-zugaenge anlegen bestehende zugaenge bearbeiten" title="sftp-zugaenge anlegen bestehende zugaenge bearbeiten" class="image-loader img-fluid img jss_article_image my-3"></span> <br/> <br/>Das voreingestellte Startverzeichnis (auch: root- oder Wurzel-Verzeichnis) ist &bdquo;/". Dies ist die oberste Ebene der Verzeichnisstruktur. M&ouml;chten Sie die Rechte f&uuml;r den SFTP-Zugang einschr&auml;nken, k&ouml;nnen Sie ein Verzeichnis des Speicherplatzes ausw&auml;hlen. Alle oberhalb des gew&auml;hlten Verzeichnisses liegenden Ordner und Dateien k&ouml;nnen dann nicht eingesehen werden. Dies kann zum Beispiel dann sinnvoll sein, wenn Sie die Gestaltung Ihrer Seiten in externe H&auml;nde geben m&ouml;chten und private Inhalte vor der Bearbeitung gesch&uuml;tzt werden sollen. <br/><br/>Haben Sie die Eingaben abgeschlossen und mit einem Klick auf <strong>Speichern</strong> best&auml;tigt, erhalten Sie eine Best&auml;tigung mit den eingetragenen Informationen im nachfolgenden Schritt.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/sftp_zugaenge_anlegen_passwort_vergeben.big.PNG" alt="sftp-zugaenge anlegen passwort vergeben" title="sftp-zugaenge anlegen passwort vergeben" class="image-loader img-fluid img jss_article_image my-3"></span> <br/> <strong><br/></strong></p><h2><strong> <a name="Anwendung des FTP-Programms"></a>Anwendung des SFTP-Programms</strong></h2><p>Die am h&auml;ufigsten genutzte Form &uuml;ber SFTP-Dateien hochzuladen, ist die Nutzung von SFTP-Software. Grunds&auml;tzlich bieten auch manche Browser eine indes vielfach eingeschr&auml;nkte M&ouml;glichkeit des Up-/Downloads von Dateien via SFTP an. Die Verwendung einer eigenst&auml;ndigen Softwarel&ouml;sung ist aber vorzuziehen, da die Handhabung einfacher und komfortabler ist. <br/> <br/>SFTP-Programme sind vielfach als sogenannte open-source L&ouml;sung verf&uuml;gbar und damit kostenlos aus dem Internet erh&auml;ltlich. <br/>Beliebte Programme sind z.B. <a rel="nofollow" href="https://filezilla-project.org/download.php?show_all=1" target="_blank">FileZilla &amp;</a> <a rel="nofollow" href="https://www.smartftp.com/en-us/" target="_self">SmartFTP</a>.<br/> <br/> Diese liegen f&uuml;r Windows und f&uuml;r MacOS Betriebssysteme vor, zum Teil jedoch nur in englischer Sprache. <br/> <br/> Manche Browserversionen erlauben die SFTP-Verbindung direkt &uuml;ber den Browser. F&uuml;r den Firefox Browser steht auch eine Erweiterung (Add-On) mit dem Namen "fireFTP" kostenlos zur Verf&uuml;gung.<br/> <br/> In diesem Abschnitt beschreiben wir die M&ouml;glichkeiten der SFTP-Nutzung mit der kostenlosen Software FileZilla. Diese k&ouml;nnen Sie unter <a rel="nofollow" href="https://filezilla-project.org/download.php?show_all=1" target="_self">https://filezilla-project.org/download.php?show_all=1</a> herunterladen.</p><p>Nachdem Sie Filezilla installiert haben, finden Sie eine &Uuml;bersichtsdarstellung mit mehreren zum Teil leeren Fenstern vor.</p><p><br/> <img data-image-loader="/faq/new_images/2095/de/ed14fe8d39da79fe0ffd3d50a7575e44.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie FTP f&uuml;r Ihre Website-8.png"></p><p>Grunds&auml;tzlich k&ouml;nnen Sie die Gr&ouml;&szlig;e der einzelnen Fenster Ihren Bed&uuml;rfnissen anpassen. Hierzu ziehen Sie den Rand eines Fensters bei gedr&uuml;ckter Maustaste an die gew&uuml;nschte Position. Auch k&ouml;nnen Sie &uuml;ber den Men&uuml;punkt <strong>Ansicht </strong>von Filezilla Fenster aus- und einblenden lassen.</p><p><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie FTP f&uuml;r Ihre Website-9.png" data-image-loader="/faq/new_images/2095/de/e7f47831110103aeebd1c6b8044c1d8b.png"></p><p>Auf der linken Seite wird Ihnen die Verzeichnisstruktur Ihres Computers angezeigt. Diese hierarchische Baumstruktur ist Ihnen vielleicht vom Windows Explorer bereits bekannt.</p><p>Die Struktur von Filezilla haben wir in drei Unterbereiche aufgeschl&uuml;sselt, die wir der Reihe nach vorstellen m&ouml;chten.</p><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#Navigationsbereich%20und Login" title="Einstellungen und Login / Statusfenster f&uuml;r die Verbindung">Einstellungen und Login / Statusfenster f&uuml;r die Verbindung</a></li><li class="my-2"><a href="#Verzeichnisstruktur" title="Verzeichnisstruktur Ihres Computers / Speicherplatz Ihres STRATO Hosting-Paketes">Verzeichnisstruktur Ihres Computers / Speicherplatz Ihres STRATO Hosting-Paketes</a></li><li class="my-2"><a href="#&Uuml;bertragungen%20und%20Warteschleife" title="Status&uuml;bersicht der aktuellen &Uuml;bertragungen / Warteschleife">Status&uuml;bersicht der aktuellen &Uuml;bertragungen / Warteschleife</a></li> </ul></div><br/>&nbsp;<img data-image-loader="/faq/new_images/2095/de/0fde79bf3dc467cac3d14df2e781a47d.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="So nutzen Sie SFTP f�r Ihre Website-1.png"><br/> <br/><br/> <a name="Navigationsbereich und Login"></a><strong>1.</strong><strong> Navigationsbereich und Login</strong> <br/> <br/>&nbsp;<img alt="So nutzen Sie SFTP f�r Ihre Website-2.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2095/de/99eff8766d3f44d8b95153470fd4efb7.png"><br/> <br/> Um sich mit FileZilla an Ihrem Internet Speicherplatz zu verbinden, m&uuml;ssen Sie sich am Speicherplatz anmelden. Hierf&uuml;r ben&ouml;tigen Sie die Angaben die Sie beim Anlegen des SFTP-Zugangs erhalten haben. Die Anmeldung am Speicherplatz k&ouml;nnen Sie in der am oberen Rand positionierten Eingabeleiste durchf&uuml;hren.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover"><thead><tr><td>Eingabefeld</td><td>Inhalt / Aktion</td></tr></thead><tbody><tr><td width="50%" data-label="Eingabefeld">Server</td><td width="50%" data-label="Inhalt / Aktion">ssh.strato.de</td></tr><tr><td width="50%" data-label="Eingabefeld">Benutzername</td><td width="50%" data-label="Inhalt / Aktion">Hier tragen Sie Ihren SFTP-Benutzernamen und Ihre Domain im Format Benutzername@wunschname.de ein. Sofern Sie Ihren <strong>voreingestellten</strong> FTP-Zugang verwenden, reicht die Angabe des Domainnamens (ohne www.) als Benutzername aus.</td></tr><tr><td width="50%" data-label="Eingabefeld">Passwort</td><td width="50%" data-label="Inhalt / Aktion">Tragen Sie hier bitte Ihr Masterpasswort ein, welches Sie im STRATO Kunden-Login vergeben haben.</td></tr><tr><td width="50%" data-label="Eingabefeld">Port</td><td width="50%" data-label="Inhalt / Aktion">22</td></tr><tr><td width="50%" data-label="Eingabefeld">Verbinden</td><td width="50%" data-label="Inhalt / Aktion">Mit Klick auf Verbinden werden die eingetragenen Angaben an den Server &uuml;bermittelt und gepr&uuml;ft. Sie k&ouml;nnen zur&uuml;ckliegende Verbindungen erneut aufrufen, wenn Sie das Ausklappmen&uuml; klicken.</td></tr></tbody></table></div><div class="sf-status info"><strong>Hinweise f&uuml;r das Feld "Server":&nbsp;</strong>Um das Server-Protokoll festzulegen, k&ouml;nnen Sie einen Protokollnamen vor dem Servernamen einf&uuml;gen. Wenn kein Protokoll angegeben wird, wird das Standardprotokoll (ftp://) verwendet. Sie k&ouml;nnen auch eine komplette URL in der Form protokoll://benutzername:passwort@server:port angeben. Die Werte in den anderen Feldern werden dann &uuml;berschrieben.</div><p><strong> Der Servermanager</strong> <br/> Mit dem Servermanager k&ouml;nnen Sie Ihre Angaben (Servername, Benutzername, Passwort) eintragen und speichern. Hierdurch entf&auml;llt das erneute Eintragen in die Auswahlfelder. Zudem k&ouml;nnen mehrere SFTP-Zug&auml;nge hier&uuml;ber verwaltet werden.</p><p>Der Servermanager ist in der Navigationsleiste unter <strong>Datei </strong>und <strong>Servermanager </strong>zu erreichen. <br/> <br/><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"   data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_2.png"> <br/> <br/> Tragen Sie in das Feld Server Ihren Domainnamen ein. Als Verbindungsart w&auml;hlen Sie bitte <strong>Normal</strong> und tragen Sie abschlie&szlig;end den angelegten SFTP-Zugangsnamen und das vergebene Passwort ein. <br/> <br/> Wenn Sie mehrere SFTP-Zug&auml;nge &uuml;ber den Servermanager anlegen, ist es ratsam diese mit einem leicht zu merkenden Namen zu versehen. Hierf&uuml;r steht Ihnen im linken Arbeitsbereich die Option <strong>Umbenennen</strong> zur Verf&uuml;gung. <br/> <br/><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie SFTP f�r Ihre Website-3.png" data-image-loader="/faq/new_images/2095/de/f36c882dd7d153db7c3e0b3bd34bdd67.png"><br/> <br/> Die weiteren Optionen des Servermanagers (Erweitert, Transfer-Einstellungen, Zeichensatz) sind f&uuml;r eine Verbindung zu Ihrem Speicherplatz nicht relevant. <br/> <br/> Sie verbinden sich nun mit dem Speicherplatz durch Klick auf den Button <strong>Verbinden</strong>. <br/> <br/> <strong> Statusmeldungen </strong> <br/> Unterhalb des Eingabefensters f&uuml;r Ihre Zugangsdaten finden Sie ein Fenster mit Statusr&uuml;ckmeldungen f&uuml;r Ihre Befehle. So wird Ihnen hier angezeigt, wenn die Verbindung nicht hergestellt werden konnte, da zum Beispiel das Passwort falsch war. <br/> <br/> <img  class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"  data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_9.gif"> <br/> <br/> Der Aufbau der Statusmeldungen ist immer identisch. Es wird zuerst angegeben, welcher Befehl von Ihnen aufgegeben worden ist. Nachfolgend wird Ihnen Filezilla die Antwort ausgeben (im Beispiel: 530 Login incorrect). <br/> <br/> Auch wenn Sie &Uuml;bertragungen beauftragen, k&ouml;nnen Sie in diesem Bereich immer nachvollziehen, ob das gew&uuml;nschte Ergebnis erzielt worden ist oder ob Fehler aufgetreten sind.</p><div class="sf-status info">Wenn das SFTP Programm keine Verbindung zum Server herstellt, kann das verschiedene<br/> Ursachen haben. Einen L&ouml;sungsansatz finden Sie unter folgendem FAQ Artikel:<br/><br/> <a href="/faq/hosting/das-ftp-programm-kann-keine-verbindung-zum-server-herstellen-fehler-530-login-incorrect/"><strong>Das SFTP Programm kann keine Verbindung zum Server herstellen </strong></a></div><p><br/> <a id="Verzeichnisstruktur"></a><strong>2. Verzeichnisstruktur Ihres Computers / Speicherplatz Ihres STRATO Hosting Paketes</strong> <br/> In diesem Fenster sehen Sie die Verzeichnisstruktur Ihres lokalen Computers. Sie k&ouml;nnen in diesem Bereich durch Klick auf die + und - Zeichen den Verzeichnisbaum auf- und zuklappen. Im Feld <strong>Lokal </strong>wird jeweils das Verzeichnis angezeigt, welches Sie gerade ausgew&auml;hlt haben (Beispiel Laufwerk F: , Verzeichnis STRATO) <br/> <br/>&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="So nutzen Sie FTP f&uuml;r Ihre Website-11.png" data-image-loader="/faq/new_images/2095/de/8ea6b2ec813480a405f89a7467ec2960.png"></p><p>Haben Sie die <strong>lokale </strong>Datei oder das Verzeichnis, welche Sie auf Ihren Speicherplatz hochladen m&ouml;chten ausgew&auml;hlt, ist es nun&nbsp;wichtig das Verzeichnis auf Ihrem <strong>Internet-Speicherplatz </strong>auszuw&auml;hlen, in welches die Datei hochgeladen werden soll. <br/> <br/>Sie m&uuml;ssen also im rechten Arbeitsbereich (Server) von Filezilla den Verzeichnisbaum aufklappen und das gew&uuml;nschte Unterverzeichnis ausw&auml;hlen. <br/> <br/> In unserem Beispiel haben wir eine auf dem lokalen Desktop befindliche Datei (Photo aus dem Urlaub.gif) ausgew&auml;hlt und m&ouml;chten diese in das Verzeichnis <em>/cgi-data/fotoalbum/images</em> des Speicherplatzes hochladen.<br/><br/>Mit <strong>Doppelklick </strong>auf die Datei wird die &Uuml;bertragung gestartet. Alternativ k&ouml;nnen Sie die Datei mit rechter Maustaste markieren und die Option <strong>Hochladen</strong> w&auml;hlen.<br/> <br/><img data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_4.png" class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"><br/> <br/> Die Datei ist nun auf Ihrem Speicherplatz und kann unter Angabe Ihres Domainnamens aufgerufen werden, also in unserem Beispiel unter:&nbsp;</p><p><br/><strong><em>http://wunschname.de/cgi-data/fotoalbum/faq/images/Photo%20aus%20dem%20Urlaub.gif</em></strong></p><div class="sf-status error">Hinweis: Die Dateiberechtigung des Ordners cgi-data muss gegebenenfalls angepasst werden, bevor die Adresse &ouml;ffentlich erreichbar ist.</div><p><br/> <br/> <img data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_12.gif" class=" image-loader img-fluid img jss_article_image my-3"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"> <br/> <br/> <strong> <a name="&Uuml;bertragungen und Warteschleife"></a> 3. &Uuml;bertragungen und Warteschlange</strong><br/>Im darunter liegenden Feld erkennen Sie, ob die &Uuml;bertragungen erfolgreich verlaufen, oder ob Fehler aufgetreten sind. Dieses Fenster bietet Ihnen eine Historie &uuml;ber alle &Uuml;bertragungen w&auml;hrend Ihrer Sitzung (Session).<br/><br/><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"  data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_3.png"> <br/> <br/> Sie k&ouml;nnen auch, wenn Sie viele Dateien hoch- oder herunterladen m&ouml;chten, Dateien der Warteschleife hinzuf&uuml;gen. Somit kann die Ihnen zur Verf&uuml;gung stehende Bandbreite an &Uuml;bertragungskapazit&auml;t besser ausgenutzt werden. Die in der Warteschleife befindlichen Dateien werden im Anschluss an von Ihnen priorisierte &Uuml;bertragungen abgearbeitet. Sie werden &uuml;ber ein Ampelsignal dar&uuml;ber informiert, wie viele &Uuml;bertragungen sich aktuell in der Warteschlange befinden.<br/> <br/> <img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"   data-image-loader="/faq/images/artikelbilder/2001-2500/_2350_17.gif"></p><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">IWir empfehlen Ihnen grunds&auml;tzlich immer die verschl&uuml;sselte Verbindung via SFTP zum Austausch von Dateien. Bei FTP handelt es sich um ein veraltetes und nicht sicheres Protokoll. Im Kunden-Login unter <a href="https://www.strato.de/apps/CustomerService?dlink=FTPManagement">SFTP-Zug&auml;nge verwalten</a>&nbsp;k&ouml;nnen Sie die Zugriffseinstellungen f&uuml;r Ihr Paket definieren.</div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#Begriffserkl&auml;rung" title="Begriffserkl&auml;rung">Begriffserkl&auml;rung</a></li><li class="my-2"><a href="#Anlegen eines FTP-Zugangs im KSB" title="Ihr voreingestellter SFTP-Zugang">Ihr voreingestellter SFTP-Zugang</a></li><li class="my-2"><a href="#MasterID" title="SFTP-Zugang mit der Master-ID nutzen">SFTP-Zugang mit der Master-ID nutzen</a></li><li class="my-2"><a href="#Domainname" title="SFTP-Zugang mit dem Domainnamen nutzen">SFTP-Zugang mit dem Domainnamen nutzen</a></li><li class="my-2"><a href="#Anwendung%20des FTP-Programms" title="Anwendung des SFTP-Programms">Anwendung des SFTP-Programms</a></li> </ul></div></div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="2095"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="2095"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Was ist SFTP und wie kann ich es nutzen? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="2095"> <input type="hidden" name="headline" value="Was ist SFTP und wie kann ich es nutzen?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Joomla ist ein frei verfügbares CMS und zeichnet sich durch seine einfache Bedienung und seine Flexibilität aus. So installieren Sie das System!"><link rel="canonical" href="https://www.strato.de/faq/hosting/wie-installiere-ich-joomla-bei-strato/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/hosting/wie-installiere-ich-joomla-bei-strato/"><title> Joomla einfach installieren - So gehen Sie vor | STRATO </title><meta property="og:title" content="Joomla einfach installieren - So gehen Sie vor | STRATO"><meta name="og:description" content="Joomla ist ein frei verfügbares CMS und zeichnet sich durch seine einfache Bedienung und seine Flexibilität aus. So installieren Sie das System!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '2070',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/2070/',
+            'econda_pageid'                : 'FAQ/2070/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_2070 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_2070:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/263.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/268/Grundlegende-Fragen.html"> Grundlegende Fragen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/283/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/288/Domains-und-Subdomains.html"> Domains und Subdomains <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/308/WordPress-Co-Hostinganwendungen.html"> WordPress &amp; Co. - Hostinganwendungen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/353/Statistik-und-Logfiles.html"> Statistik und Logfiles </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/358/Backups-und-Sicherheit.html"> Backups und Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/363/SFTP.html"> SFTP </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/368/SSL-DNS.html"> SSL &amp; DNS <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/403/Webspace.html"> Webspace </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/408/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/1043/rankingCoach.html"> rankingCoach </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/263.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/268/Grundlegende-Fragen.html"> Grundlegende Fragen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/283/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/288/Domains-und-Subdomains.html"> Domains und Subdomains <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/308/WordPress-Co-Hostinganwendungen.html"> WordPress &amp; Co. - Hostinganwendungen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/353/Statistik-und-Logfiles.html"> Statistik und Logfiles </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/358/Backups-und-Sicherheit.html"> Backups und Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/363/SFTP.html"> SFTP </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/368/SSL-DNS.html"> SSL &amp; DNS <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/403/Webspace.html"> Webspace </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/408/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/1043/rankingCoach.html"> rankingCoach </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #2070 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Wie installiere ich Joomla bei STRATO? </h1><p>In diesem Artikel beschreiben wir die manuelle Installation von Joomla.<br/><strong>Tipp</strong>: &Uuml;ber <a href="/faq/hosting/was-ist-wordpress-co-und-welche-anwendungen-kann-ich-damit-installieren/" target="_blank"><strong>Wordpress &amp; Co.</strong> </a>(ab Hosting Starter, &auml;ltere Pakete ab PowerWeb Starter bzw. Basic 2012) k&ouml;nnen Sie die Installation von Joomla automatisch durchf&uuml;hren.</p><p><a href="#joomla_installieren">Wie installiere ich Joomla bei STRATO?</a></p><p><a href="#pfadangaben_&auml;ndern">&Auml;nderung der Pfadangaben f&uuml;r Ihre manuelle Joomla! Installation</a></p><p><a href="#joomla_kompromittiert">Meine Joomla-Installation wurde kompromittiert, welche Schritte kann ich unternehmen?</a></p><h2><strong><a id="joomla_installieren"></a>Wie installiere ich Joomla bei STRATO?</strong></h2><p>Joomla erfordert eine <a href="/faq/hosting/so-nutzen-sie-unsere-mysql-datenbank/" target="_blank">MySQL-Datenbank</a>, eine Installation bei STRATO ist daher ab dem Paket Hosting Starter (&auml;ltere Pakete: ab Starter bzw. BasicWeb XL) oder auf einem eigenen Serverpaket m&ouml;glich.</p><p>Um Joomla zu installieren ist es erforderlich, dass Sie das Installationspaket auf Ihrem Webspeicherplatz hinterlegen. Wir empfehlen Ihnen den Download direkt unter <a rel="nofollow" href="https://www.joomla.org/" target="_self">joomla.org</a> oder dem deutschsprachigem Ableger unter <a rel="nofollow" href="https://www.joomla.de/" target="_self">joomla.de.</a></p><p>Bevor Sie mit der eigentlichen Installation beginnen, empfehlen wir Ihnen folgende Dinge zu &uuml;berpr&uuml;fen:</p><ul><li>Sie k&ouml;nnen eine <a href="/hosting/ftp/">FTP</a>-Verbindung zu Ihrem Speicherplatz herstellen</li><li>Sie haben bereits eine MySQL-Datenbank angelegt und die Zugangsdaten sind Ihnen bekannt</li><li>Sie haben mindestens 15 MB freien Speicherplatz auf Ihrem Webspeicherplatz</li></ul><p>Da das Installationspaket in den meisten F&auml;llen eine .zip Datei ist, entpacken Sie dieses bitte zun&auml;chst lokal. Die entpackten Dateien laden Sie anschlie&szlig;end mittels FTP auf Ihren Webspeicherplatz. Dieser Vorgang wird in Abh&auml;ngigkeit von der Geschwindigkeit Ihrer Internetverbindung einige Minuten in Anspruch nehmen.</p><p>Nach erfolgreichem Upload des Installationspaketes rufen Sie bitte folgende Adresse auf:</p><p><strong>http://www.wunschname.de/</strong> (anstatt wunschname.de verwenden Sie bitte Ihren eigenen Domainnamen)</p><p>Sofern Sie die Daten in einem Unterverzeichnis innerhalb Ihres Speicherplatzes abgelegt haben, passen Sie die Adresse bitte entsprechend an. Wurden die Daten beispielsweise in einem Ordner /joomla angelegt, lautet der korrekte Pfad: <strong>http://wunschname.de/joomla</strong>.</p><p>Bei Eingabe der korrekten Adresse wird automatisch der Installationsassistent aufgerufen:<br/><br/></p><p><img alt="Joomla Installation-1.jpg" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2070/de/f99b8872b93e1b0626f4fa5bcb625a83.jpg"></p><p>W&auml;hlen Sie zun&auml;chst die gew&uuml;nschte Sprache und f&uuml;llen alle Punkte mit * aus. Klicken Sie anschlie&szlig;end auf den Button <strong><em>Weiter</em>. </strong>Achten Sie bitte auf die korrekte Schreibweise Ihrer E-Mailadresse und notieren Sich bitte das Administratorpasswort.</p><p>Im n&auml;chsten Schritt findet eine <strong>Konfiguration der Datenbank</strong> statt.</p><p><img data-image-loader="/faq/new_images/2070/de/2ae74d43f11063c7653ed5508692722c.jpg" alt="Joomla Installation-2.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"></p><p>F&uuml;r Hostingkunden:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label=""><strong>Servername</strong></td><td width="50%" data-label="">rdbms.strato.de</td></tr><tr><td width="50%" data-label=""><strong>Benutzername</strong></td><td width="50%" data-label="">U123456</td></tr><tr><td width="50%" data-label=""><strong>Passwort</strong></td><td width="50%" data-label="">xxxxxx</td></tr><tr><td width="50%" data-label=""><strong>Datenbankname</strong></td><td width="50%" data-label="">DB123456</td></tr></tbody></table></div><p>Nutzer unserer Hosting-Pakete und Managed Server haben die M&ouml;glichkeit die Informationen in Ihrem STRATO Kunden-Login unter dem Men&uuml;punkt <strong>Einstellungen</strong> und <strong>Datenbankverwaltung</strong> nochmals nachzuschauen.</p><p>Serverkunden haben in der Regel die M&ouml;glichkeit die Informationen zu den MySQL-Datenbanken Ihres Servers in der Administrationsoberfl&auml;che (z.B. Plesk) nachzuvollziehen.</p><p>Nach Eingabe der Daten klicken Sie bitte wieder auf <em><strong>Weiter</strong></em>.</p><p>Bei einer fehlerhaften Eingabe erhalten Sie die Fehlermeldung: <strong>Unable to connect to the database:Could not connect to MySQL</strong>, dies bedeutet, dass keine Verbindung zur Datenbank hergestellt werden konnte. &Uuml;berpr&uuml;fen Sie in diesem Fall die Eingabe der Zugangsdaten zur Datenbank.</p><p>Halten Sie f&uuml;r diesen Punkt bitte die Informationen zu der von Ihnen angelegten MySQL Datenbank bereit.</p><p>Im n&auml;chsten Schritt vor der endg&uuml;ltigen Installation, erfolgt ein <strong>&Uuml;berblick </strong>der Angegebenen Daten statt.</p><p><img data-image-loader="/faq/new_images/2070/de/f470805c3123e74712aa4e1cce5e8407.jpg" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="Joomla Installation-3.jpg"></p><p>Neuen Nutzern von Joomla wird empfohlen die Beispieldaten zu installieren, diese erleichtern Ihnen die ersten Schritte bei der Verwendung von Joomla.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-4.jpg" data-image-loader="/faq/new_images/2070/de/a67aef03a3c0aaa7888a71c8de6694c5.jpg"></p><p><strong>Installationspr&uuml;fung</strong></p><p>Nutzer von STRATO Hostingpaketen (ab Hosting Starter, &auml;ltere Pakete ab PowerWeb Starter bzw. BasicWeb XL) m&uuml;ssen hier in der Regel keine weiteren Einstellungen vornehmen da Ihr Speicherplatz bereits entsprechend konfiguriert ist. Bei der Installation auf einem eigenem Serverpaket, nehmen Sie sofern erforderlich die notwendigen Anpassungen direkt in Ihrer Serverkonfiguration vor.</p><p>Sofern alle erforderlichen Punkte entsprechend mit <strong>Ja </strong>gekennzeichnet sind, klicken Sie bitte auf <em><strong>Installieren</strong></em>.</p><p>Im folgenden Schritt beenden Sie die Installation von Joomla. Es ist erforderlich, dass Sie mittels Ihres FTP-Zugangs das Verzeichnis <em>/installation</em> auf Ihrem Webspeicherplatz l&ouml;schen. Erst wenn dies erfolgt ist kann der Administrationsbereich aufgerufen werden.</p><p><img alt="Joomla Installation-5.jpg" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2070/de/67e014dd627f8a44a2c61e749ed23064.jpg"></p><p>Nachdem Sie das Verzeichnis <em>/installation</em> gel&ouml;scht haben, k&ouml;nnen Sie den Punkt <strong>Administrator </strong>anw&auml;hlen und sich mit dem <strong>Admin-Benutzernamen </strong>und dem vergebenem <strong>Admin-Passwort</strong> Anmelden.</p><p><img data-image-loader="/faq/new_images/2070/de/0e8d799daa8eb06f4823282f55103f12.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-6.jpg"></p><p>Die Joomla-Installation ist damit abgeschlossen. Sie k&ouml;nnen nun damit beginnen im Administrationsbereich Joomla Ihren eigenen W&uuml;nschen und Bed&uuml;rfnissen anzupassen.</p><p>Sie erreichen den Administrationsbereich Ihrer Joomla-Installation jederzeit unter der Adresse:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label=""><strong>http://www.wunschname.de/administrator/</strong></td></tr></tbody></table></div><p>Hier ist wiederum die Eingabe Ihres eigenen Domainnamens und gegebenenfalls eine Anpassung des Pfades notwendig.</p><div class="sf-status info">Nach der Installation passen Sie bitte die in Joomla hinterlegten Pfade an, da Joomla hier standardm&auml;&szlig;ig die relativen Systempfade verwendet, beginnend mit <strong>/mnt/</strong>. Aufgrund interner Optimierungsarbeiten oder einem Wechsel auf andere Storage Volumes k&ouml;nnen sich diese aber unbemerkt &auml;ndern. Bitte verwenden Sie ausschlie&szlig;lich die absoluten Pfade beginnend mit <strong>/home/</strong>.</div><p><strong>/home/strato/www/ersten zwei_buchstaben/www.wunschname.de/htdocs/</strong></p><p>Eine ausf&uuml;hrliche Anleitung zu den korrekten Pfaden finden Sie im folgenden FAQ-Artikel:</p><p><a href="/faq/hosting/wie-lauten-die-pfade-in-ihrem-system/">Wie lauten die Pfade in Ihrem System?</a></p><p>Sie finden die hinterlegten Pfade im Administrator-Bereich von Joomla unter dem Punkt <strong>Konfiguration.</strong></p><p><img data-image-loader="/faq/new_images/2070/de/552575c5e71ed87d6bac5e147e85f773.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-7.jpg"></p><p>Das <strong>Protokollverzeichnis</strong> finden Sie unter dem Punkt <strong>System</strong>.</p><p>Das <strong>Tempverzeichnis</strong> finden Sie unter dem Punkt <strong>Server</strong>.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-8.jpg" data-image-loader="/faq/new_images/2070/de/ce6df1ce983c08505c6ffed3137da66b.jpg"></p><p>Beachten Sie bitte, dass wir keine weiterf&uuml;hrenden Hinweise bez&uuml;glich der Nutzung von Joomla bieten k&ouml;nnen, es handelt sich hierbei um eine Software welche nicht aus unserem Hause stammt. Bei weiteren Fragen zur Konfiguration empfehlen wir Ihnen einen Besuch der offiziellen Seiten.</p><h2><a id="pfadangaben_&auml;ndern"></a>&Auml;nderung der Pfadangaben f&uuml;r Ihre manuelle Joomla! Installation</h2><p>Als Webhosting Kunde teilen Sie sich Ihren Speicherplatz (Webspace) mit anderen Kunden. Einzelne Kunden mit starker Nutzung k&ouml;nnen daher prinzipiell zu einer Performancebelastung f&uuml;hren. Um allen Kunden gleichbleibende Leistung anzubieten, f&uuml;hrt STRATO vereinzelt Optimierungsarbeiten zur Entlastung der Plattform durch. Hierbei werden stark beanspruchte Speicherpl&auml;tze durch den Wechsel (dem sog. &bdquo;Move") auf ein gering genutztes Speichermedium entlastet, ohne dass dies f&uuml;r Sie merklich ist.</p><p>F&uuml;r Joomla Installationen kann dies zu Problemen und Fehlermeldungen f&uuml;hren, wenn diese <strong>nicht </strong>&uuml;ber Wordpress &amp; Co. installiert wurden.</p><p>Joomla ermittelt bei der manuellen Installation einen Pfad zu Ihrem Speicherplatz und tr&auml;gt diesen Pfad eigenst&auml;ndig in den System- und Servereinstellungen ein.</p><p><img data-image-loader="/faq/new_images/2070/de/a9e787729ee2457e44d20377e7526098.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-1.png"></p><p>Joomla verwendet dabei reale Systempfade, welche nach einem Move nicht mehr g&uuml;ltig sind. Dies trifft m&ouml;glicherweise auch auf installierte Plugins und Extensions zu. Sie k&ouml;nnen die von Joomla eingetragenen Pfade durch den absoluten Pfad zu Ihrem STRATO Speicherplatz &auml;ndern. Dieser Pfad bleibt immer gleich.</p><p>Den absoluten Pfad in Ihrem Hosting-Paket finden Sie in Ihrer Paket&uuml;bersicht unter dem Namen <strong>Webspace Pfad</strong>.</p><p>Nachfolgend ein Beispiel:</p><p><img data-image-loader="/faq/new_images/2070/de/68e0a0708b665e165e9cbcad605f2b25.png" alt="Joomla Installation-2.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"></p><p>Rufen Sie im Administrationsbereich von Joomla in den<strong> Global Configurations</strong> die System- und Servereinstellungen auf. &Auml;ndern Sie die dort hinterlegten Pfade nach dem folgenden Schema:</p><p><strong>System</strong> /mnt/rid/6/78/12345678/htdocs/joomla_01/logs</p><p><strong>Server</strong> /mnt/rid/6/78/12345678/htdocs/joomla_01/tmp</p><h2><a id="joomla_kompromittiert"></a>Meine Joomla-Installation wurde kompromittiert, welche Schritte kann ich unternehmen?</h2><p>Unter bestimmten Umst&auml;nden kann es vorkommen das unbefugte Dritte auf Ihre mittels Joomla erstellte Homepage Zugriff nehmen. Der Zugriff wird hierbei &uuml;ber <strong>Sicherheitsl&uuml;cken in der Joomla-Installation</strong> vorgenommen, aus diesem Grund ist es wichtig Ihre Joomla Installation auf einem aktuellen versionsstand zu halten. Der Server wird dann beispielsweise missbraucht um sogenannte <a rel="nofollow" href="https://de.wikipedia.org/wiki/Denial_of_Service" target="_self">Denial of Service-Attacken</a> auf andere Server auszuf&uuml;hren oder um Spam zu versenden.</p><p>Innerhalb von Joomla gibt es mehrere M&ouml;glichkeiten wo sich Sicherheitsl&uuml;cken versteckt haben k&ouml;nnten.</p><p>Die erste ist hierbei die Joomla-Installation selbst. Es kommt zu Sicherheitsl&uuml;cken, wenn mit veralteten Joomla-Versionen gearbeitet wird. Es empfiehlt sich daher immer Joomla in der <strong>aktuellsten Version</strong> zu betreiben um Sicherheitsl&uuml;cken minimal zu halten bzw. bereits entdeckte Sicherheitsl&uuml;cken zu schlie&szlig;en.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-3.png" data-image-loader="/faq/new_images/2070/de/b9d1784189bdf69d8750989da07bc225.png"></p><p>Als zweite m&ouml;gliche Sicherheitsl&uuml;cke kommen zus&auml;tzlich installierte <strong>Module und Plugins</strong> in Frage. Auch hier ist auf die Aktualit&auml;t der jeweiligen Version zu achten. Zus&auml;tzlich empfiehlt es sich zu recherchieren ob bekannte Sicherheitsl&uuml;cken existieren. Recherchieren k&ouml;nnen Sie hierbei mit der Hilfe von Suchmaschinen wie z.B. Google. Um ein Modul oder Plugin auf einen aktuellen Versionstand zu bringen, empfiehlt es sich &uuml;ber den Administrationsbereich das Plugin zu deinstallieren. Den Administrationsbereich erreichen Sie, wenn Sie Ihre Webseite aufrufen und dahinter <strong>/administrator</strong> eingeben.</p><p><strong>Beispiel: </strong>http://wunschname.de/administrator</p><div class="sf-status info"><strong>Wichtig:</strong> Sichern Sie vor der Deinstallation Ihre Einstellungen, damit Ihnen diese erhalten bleiben. Laden Sie anschlie&szlig;end eine aktuelle Version vom Hersteller des Moduls/Plugins herunter und spielen Sie diese &uuml;ber den Administrationsbereich von Joomla wieder ein.</div><p>Als dritte M&ouml;glichkeit f&uuml;r potentielle Sicherheitsl&uuml;cken kommen die von Joomla <strong>verwendeten Templates</strong> in Frage. Eine besonders h&auml;ufig ausgenutzte Sicherheitsl&uuml;cke existiert in dem Template Bluestork. Als Sicherheitsma&szlig;nahme empfiehlt es sich die Dateiberechtigungen f&uuml;r den Ordner des Templates abzu&auml;ndern so, dass in diesem Ordner keine Skripte mehr ausgef&uuml;hrt werden k&ouml;nnen. Im Bluestork ist der Template-Ordner unter <strong>/administrator/templates/bluestork/</strong> zu finden. Mit Hilfe eines FTP-Programmes k&ouml;nnen Sie die <strong>Dateiberechtigung </strong>f&uuml;r den Bluestork-Ordner auf <strong>444 </strong>setzen.</p><p>Wenn Ihre Joomla-Installation bereits gehackt wurde und unberechtigte Personen Zugriff darauf erlangt haben, empfiehlt es sich die kompromittierte Joomla-Installation zu entfernen und eine <strong>Sicherungskopie </strong>einzuspielen.</p><p>Ab dem Paket Hosting Starter (&auml;ltere Pakete: ab PowerWeb Starter bzw. BasicWeb XL Paket) bieten wir Ihnen die M&ouml;glichkeit eine FTP-Sicherung &uuml;ber die <strong>STRATO BackupControl</strong>-Funktion an.</p><p><img data-image-loader="/faq/new_images/2070/de/acf54dc64a52fe14ecbf7d1276f18d40.png" alt="Joomla Installation-4.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"></p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Joomla Installation-5.png" data-image-loader="/faq/new_images/2070/de/0d7e019c8317853c6f23854a64e77272.png"></p><p>Mittels BackupControl k&ouml;nnen Sie auf die Sicherungen der letzten 10 Tage zugreifen, um diese dann auf Ihrem Speicherplatz zu hinterlegen.</p><p>Da bei einem Hacker-Angriff oft auch Datens&auml;tze aus der <strong>Datenbank </strong>kompromittiert werden, empfiehlt es sich auch die Datenbank durch ein Backup zu ersetzen. Ab dem Hosting Starter (ehemals PowerWeb Starter) bietet STRATO auch f&uuml;r Datenbanken ein automatisiertes Backup an. Dies bedeutet, dass auch hier Backups f&uuml;r die letzten 10 Tage f&uuml;r Sie vorgenommen werden. Diese k&ouml;nnen Sie beispielsweise mit der Anwendung PuTTY ansprechen und anschlie&szlig;end in der Datenbank einspielen.</p><p>Nach dem Sie alle Dateien und Datenbanken zur&uuml;ck gesichert haben, empfiehlt es sich, dass Sie die oben beschriebenen Empfehlungen durchf&uuml;hren um den Zugriff f&uuml;r Dritte zuk&uuml;nftig zu verhindern.</p><p>Ab dem Paket Hosting Starter (&auml;ltere Pakete: ab PowerWeb Starter bzw. BasicWeb XL Paket) bieten wir unser Feature <strong>SiteGuard </strong>an, welcher ebenfalls zur Sicherheit Ihrer Webseiten beitr&auml;gt. &Uuml;ber diesen k&ouml;nnen Sie den Schreibschutz aktivieren um das ver&auml;ndern von Dateien zu unterbinden. Ebenfalls k&ouml;nnen Sie das Logging aktivieren. Das Logging beobachtet Ihren Webspeicherplatz und protokolliert Ver&auml;nderungen an Dateien und Ordner. Diese Ver&auml;nderungen k&ouml;nnen Sie sich bequem per E-Mail zusenden lassen. Zus&auml;tzlich bietet Ihnen der SiteGuard die M&ouml;glichkeit die <strong>FTP- und SSH-Zug&auml;nge zu deaktivieren</strong> um dar&uuml;ber den Zugriff Dritter zu unterbinden.</p><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="2070"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="2070"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Wie installiere ich Joomla bei STRATO? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="2070"> <input type="hidden" name="headline" value="Wie installiere ich Joomla bei STRATO?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/wie-installiere-ich-joomla-bei-strato/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/wie-installiere-ich-joomla-bei-strato/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

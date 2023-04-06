@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Bereits ab dem Paket Hosting Starter stellen wir Ihnen einen direkten SSH- und SFTP-Zugang zur Verfügung. Hier erfahren Sie mehr darüber!"><link rel="canonical" href="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/"><title> So nutzen Sie Ihren SSH-/SFTP-Zugang | STRATO </title><meta property="og:title" content="So nutzen Sie Ihren SSH-/SFTP-Zugang | STRATO"><meta name="og:description" content="Bereits ab dem Paket Hosting Starter stellen wir Ihnen einen direkten SSH- und SFTP-Zugang zur Verfügung. Hier erfahren Sie mehr darüber!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '1044',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/1044/',
+            'econda_pageid'                : 'FAQ/1044/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_1044 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_1044:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/263.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/268/Grundlegende-Fragen.html"> Grundlegende Fragen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/283/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/288/Domains-und-Subdomains.html"> Domains und Subdomains <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/308/WordPress-Co-Hostinganwendungen.html"> WordPress &amp; Co. - Hostinganwendungen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/353/Statistik-und-Logfiles.html"> Statistik und Logfiles </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/358/Backups-und-Sicherheit.html"> Backups und Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/363/SFTP.html"> SFTP </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/368/SSL-DNS.html"> SSL &amp; DNS <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/403/Webspace.html"> Webspace </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/408/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/1043/rankingCoach.html"> rankingCoach </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/263.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/268/Grundlegende-Fragen.html"> Grundlegende Fragen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/283/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/288/Domains-und-Subdomains.html"> Domains und Subdomains <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/308/WordPress-Co-Hostinganwendungen.html"> WordPress &amp; Co. - Hostinganwendungen <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/353/Statistik-und-Logfiles.html"> Statistik und Logfiles </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/358/Backups-und-Sicherheit.html"> Backups und Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/363/SFTP.html"> SFTP </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/368/SSL-DNS.html"> SSL &amp; DNS <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/403/Webspace.html"> Webspace </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/408/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/1043/rankingCoach.html"> rankingCoach </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #1044 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> So nutzen Sie Ihren SSH-/SFTP-Zugang </h1><p>Bereits <strong>ab dem Paket Hosting Starter</strong>&nbsp;(&auml;ltere Pakete ab: Premium und PowerPlus) stellen wir Ihnen einen direkten SSH- und SFTP-Zugang zur Verf&uuml;gung.</p><p><strong>Kurze Begriffskl&auml;rung:</strong></p><p><strong>SSH</strong>&nbsp;(<strong>S</strong>ecure <strong>Sh</strong>ell) wird zur Authentifizierung und sicheren, verschl&uuml;sselten Daten&uuml;bertragung verwendet. Es erm&ouml;glicht eine kryptographisch gesicherte Kommunikation &uuml;ber unsichere Netze und bietet ein hohes Sicherheitsniveau, was zuverl&auml;ssige gegenseitige Authentifizierung der Partner, sowie Integrit&auml;t und Vertraulichkeit der ausgetauschten Daten erm&ouml;glicht.</p><p><strong>SFTP</strong> (<strong>S</strong>ecure <strong>F</strong>ile <strong>T</strong>ransfer <strong>P</strong>rotokoll)&nbsp;ist ein Protokoll, welches eine sichere Verbindung zum Dateiaustausch &uuml;ber SSH herstellt.</p><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#SSH" title="SSH Zugang">SSH Zugang</a></li><li class="my-2"><a href="#SFTP" title="SFTP Zugang">SFTP Zugang</a></li><li class="my-2"><a href="#zugriff-&uuml;ber-die-kommandozeile" title="Zugriff &uuml;ber die Kommandozeile">Zugriff &uuml;ber die Kommandozeile</a></li><li class="my-2"><a href="#wichtige_unix_kommandos" title="Wichtige Unix-Kommandos im Kurz&uuml;berblick">Wichtige Unix-Kommandos im Kurz&uuml;berblick</a></li><li class="my-2"><a href="#openssh_verbindung" title="Wie kann ich eine OpenSSH-Verbindung zu meinem Webspeicherplatz einrichten?">Wie kann ich eine OpenSSH-Verbindung zu meinem Webspeicherplatz einrichten?</a></li> </ul></div><p><b>&nbsp;</b></p><p><b><strong>Wichtige Eingabe-Parameter f&uuml;r die Hostingpakete lauten:<strong><br/></strong></strong></b></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label=""><strong>SSH</strong></td><td width="50%" data-label=""><strong>SFTP</strong></td></tr><tr><td width="50%" data-label=""><strong>Server - oder Hostname:</strong></td><td width="50%" data-label=""><strong>Server - oder Hostname:</strong></td></tr><tr><td width="50%" data-label="">ssh.strato.de</td><td width="50%" data-label="">ssh.strato.de</td></tr><tr><td width="50%" data-label=""><strong>Benutzername:</strong></td><td width="50%" data-label=""><strong><strong>Benutzername:</strong></strong></td></tr><tr><td width="50%" data-label="">(www.)wunschname.de</td><td width="50%" data-label="">ftp_xxx@wunschname.de</td></tr><tr><td width="50%" data-label=""><strong>Passwort:</strong></td><td width="50%" data-label=""><strong>Passwort:</strong></td></tr><tr><td width="50%" data-label="">Ihr <a href="/faq/sicherheit/was-ist-das-masterpasswort-und-wofuer-wird-es-benoetigt/" target="_blank">Masterpasswort</a></td><td width="50%" data-label="">Ihr vergebenes (S)FTP-Passwort</td></tr><tr><td width="50%" data-label=""><strong>Port: 22</strong></td></tr></tbody></table></div><h2><strong><a id="SSH"></a>SSH-Zugang</strong></h2><div>Um mit diesem Feature arbeiten zu k&ouml;nnen, ben&ouml;tigen Sie ein Programm, wie bspw. PuTTY:</div><div><a rel="nofollow" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">www.chiark.greenend.org.uk/~sgtatham/putty/</a></div><p>Nachdem Sie sich die Software heruntergeladen und installiert haben, starten Sie dieses in der Regel &uuml;ber: <strong>Start &gt; Programme &gt; PuTTY</strong>. Als n&auml;chstes wird Ihnen das Konfigurationsfenster angezeigt.</p><p>Tragen Sie hier bitte als "Host Name" <strong>ssh.strato.de</strong> ein. F&uuml;r den sicheren Zugang aktivieren Sie den Punkt <strong>SSH</strong>. Optional: F&uuml;r zuk&uuml;nftige Zugriffe ersparen Sie sich erneute Eingaben, indem Sie diese Einstellung mit <strong>Save</strong> unter einem eigenen Namen speichern.</p><div><img data-image-loader="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/PuTTY_SSH.big.png" alt="PuTTY SSH" title="PuTTY SSH" class="image-loader img-fluid img jss_article_image my-3"></div><p>Nachdem Sie alle Einstellungen vorgenommen haben, klicken Sie auf den Button <strong>Open</strong>. Es &ouml;ffnet sich nun ein extra Eingabefenster. Wenn Sie das Programm zum ersten Mal starten, erhalten Sie folgende Warnmeldung:</p><p><img data-image-loader="/faq/images/artikelbilder/1001-1500/_1282_2.gif" class=" image-loader img-fluid img jss_article_image my-3" border="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"></p><div><strong>Der verwendete Fingerprint lautet, je nach Darstellung, wie folgt:</strong></div><pre>$ ssh-keyscan ssh.strato.de | ssh-keygen -l -f /dev/stdin<br />1024 SHA256:FEq+NKLciheDUUoeKGUxofLtx59sHMdxNai/I2zwBOk ssh.strato.de (RSA)<br />256 SHA256:uBEcHvlYrltumYxZxLSAGLNWM1Tch91sAG7/kMvP6R0 ssh.strato.de (ECDSA)<br />256 SHA256:yrt1ZYQO/YULXZ/IXS18adptcEBuDbszghxyfJut/RY ssh.strato.de (ED25519)<br />---<br />$ ssh-keyscan ssh.strato.de | ssh-keygen -E md5 -l -f /dev/stdin<br />1024 MD5:2a:7d:3a:04:bd:df:02:7f:05:4b:ea:8b:32:00:47:91 ssh.strato.de (RSA)<br />256 MD5:70:87:7d:47:68:6d:b6:b3:bc:1c:3f:1d:d8:a5:d2:2d ssh.strato.de (ECDSA)<br />256 MD5:5d:de:08:b4:a9:f8:80:d1:07:70:bc:ba:31:25:24:07 ssh.strato.de (ED25519)</pre><div>Dieser Hinweis bedeutet, dass f&uuml;r den Zugang noch kein "Key" generiert wurde, der den sicheren Zugang garantiert. Best&auml;tigen Sie dieses Fenster mit <strong>Ja</strong>.</div><div><div><div>Anschlie&szlig;end geben Sie folgende Daten ein:</div></div><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label=""><ul><li>login as: <strong>www.wunschname.de</strong> (Anstelle von "wunschname.de" geben Sie Ihre eigene Domain an.)</li><li>password: <strong>Ihr Masterpasswort</strong></li></ul></td></tr></tbody></table></div></div><div><p>Die Eingabe des Passworts wird nicht angezeigt, daher bleibt der Cursor stehen:</p></div><p><img data-image-loader="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/SSH-Login_bearbeitet.big.png" alt="Login in SSH" title="Login in SSH" class="image-loader img-fluid img jss_article_image my-3"></p><div><p>Sobald Sie diese Eingaben korrekt angegeben haben, befinden Sie sich im gesicherten Bereich Ihrer Homepage.</p></div><div><img data-image-loader="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/SSH_Verzeichnisinhalt.big.png" alt="SSH Verzeichnisinhalt" title="SSH Verzeichnisinhalt" class="image-loader img-fluid img jss_article_image my-3"></div><div><div class="sf-status error">Das Einloggen mittels Subaccount (bspw. sftp_xx@domainname.de@ssh.strato.de) ist bei einer SSH Verbindung nicht m&ouml;glich.</div></div><div><span>&nbsp;</span></div><div><p>Wichtige Unix-Kommandos, Tipps und Tricks finden Sie weiter <a href="#wichtige_unix_kommandos">unten</a>.</p></div><div><div class="sf-status info"><strong><strong>Anmerkung:</strong> </strong>Die Bedienung ist hierbei &auml;hnlich wie bei DOS &uuml;ber die Kommandozeile. Es sind somit Grundkenntnisse im Umgang mit einem UNIX-System dringend notwendig. Wer keine UNIX-Kenntnisse besitzt, kann die meisten Einstellungen auch auf dem Webserver mit einem <a href="/hosting/ftp/">FTP</a>-Client vornehmen.</div><p>Weitere Informationen auch unter <a rel="nofollow" href="https://www.openssh.com/" target="_blank">https://www.openssh.com/</a></p><hr/></div><h2><strong><a id="SFTP"></a>SFTP-Zugang</strong></h2><div><div>SFTP&nbsp;ist ein Daten&uuml;bertragungsprotokoll zwischen zwei Computern, z.B. zum Hochladen von Webseiten.&nbsp;Die &Uuml;bertragung erfolgt verschl&uuml;sselt. Es ist daf&uuml;r ein spezielles (S)FTP-Programm notwendig.&nbsp; <div>Entsprechende Programme k&ouml;nnen Sie hier finden:</div><div><a rel="nofollow" href="https://filezilla-project.org/download.php?show_all=1" target="_blank" rel="nofollow">Filezilla</a><br/><a rel="nofollow" href="https://winscp.net/eng/docs/lang:de" target="_blank" rel="nofollow">WinSCP</a><br/><a rel="nofollow" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></div></div><div><p>Den PuTTY-FTP Client starten Sie in der Regel &uuml;ber: <strong>Start &gt; Programme &gt; PuTTY &gt; PSFTP</strong></p></div><div>Es &ouml;ffnet sich nun ein extra Eingabefenster. Bitte geben Sie hier folgendes ein:</div><div><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label=""><ul><li><strong>open ssh.strato.de</strong></li><li>login as: <strong>www.wunschname.de </strong>(Anstelle von "wunschname.de" geben Sie Ihre eigene Domain an.)</li><li>password: <strong>Ihr Masterpasswort</strong></li></ul></td></tr></tbody></table></div></div><p>Die Eingabe des Passwortes wird nicht angezeigt, daher bleibt der Cursor stehen:</p></div><p><img border="" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/images/artikelbilder/1001-1500/_1282_5.gif"></p><div><p>Anschlie&szlig;end befinden Sie sich in Ihrem gesicherten SFTP-Bereich.</p><p>Noch detailliertere Beschreibungen zum SFTP-Zugriff erhalten Sie in unserem Artikel:&nbsp;<a href="/faq/hosting/was-ist-sftp-und-wie-kann-ich-es-nutzen/">Was ist SFTP und wie kann ich es nutzen?</a></p><div><hr/></div><div>Die Variante <strong>ohne</strong> Verschl&uuml;sselung ist <strong>FTP</strong> (<strong>F</strong>ile <strong>T</strong>ransfer <strong>P</strong>rotokoll) und somit ebenso ein Daten&uuml;bertragungsprotokoll zwischen zwei Computern z.B. zum &Uuml;berspielen der Homepage. Der FTP-Zugang ist durch Benutzername und Passwort gesichert. Die &Uuml;bertragung erfolgt ohne Verschl&uuml;sselung. Es gibt zur Zeit ca. 200 verschiedene FTP-Programme auf dem Markt. <strong>Viele Programme sind als Share- oder Freeware zu haben.</strong></div><div><hr/></div><div class="cl-preview-section"><div class="cl-preview-section"><h2 id="zugriff-&uuml;ber-die-kommandozeile"><a id="zugriff-&uuml;ber-die-kommandozeile"></a>Zugriff &uuml;ber die Kommandozeile</h2></div><div class="cl-preview-section"><p>Alternativ k&ouml;nnen Sie sich auch &uuml;ber die Kommandozeile anmelden. Unter Linux und Mac ist dies m&ouml;glich, indem Sie ein Terminal &ouml;ffnen. Ab Windows 10 ist dies auch &uuml;ber die <a rel="nofollow" href="https://learn.microsoft.com/de-de/powershell/scripting/overview?view=powershell-7.2" target="_blank">PowerShell</a> m&ouml;glich.</p></div><div class="cl-preview-section"><p>Verwenden Sie den folgenden Befehl, um sich anzumelden:</p><p><code>$ ssh domainname.de@ssh.strato.de</code></p><p>Als Benutzername geben Sie einen <strong>Domainnamen</strong> aus Ihrem Paket an.&nbsp;Geben Sie dann das <strong>Master-Passwort</strong> des Pakets ein und dr&uuml;cken Sie <strong>ENTER</strong>.</p></div><div class="cl-preview-section"></div><div class="cl-preview-section"><p><img data-image-loader="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/command_line.big.png" alt="command_line" title="Kommandozeile" class="image-loader img-fluid img jss_article_image my-3"></p><hr/></div></div><h2><strong><a id="wichtige_unix_kommandos"></a>Wichtige Unix-Kommandos im Kurz&uuml;berblick</strong></h2></div><div class="sf-status info"><strong>Bitte beachten Sie</strong> beim Umgang mit Unix-Befehlen und -Befehlsparametern, <strong>dass Gro&szlig;- und Kleinschreibung unterschieden wird</strong>.</div><div><div><strong>cat (concatenate)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie sich den Inhalt von Dateien auf den Bildschirm ausgeben oder in eine andere Datei schreiben lassen. Zum Beispiel: <br/> <em>cat Dateiname</em> gibt den Inhalt der Datei auf den Bildschirm aus. <br/> <em>cat Datei1 &gt; Datei2</em> kopiert den Inhalt von Datei1 in Datei2 und erstellt Datei2 gegebenenfalls neu.<br/> Soll der Inhalt von Datei1 an den Inhalt von Datei2 angeh&auml;ngt werden, muss "&gt;&gt;" anstelle von "&gt;" verwendet werden." <br/> <br/> <strong>cd (change directory)</strong><br/> Dieser Befehl erm&ouml;glicht Ihnen den Wechsel in &uuml;ber- und untergeordnete Verzeichnisse. Um in ein Unterverzeichnis zu wechseln, geben Sie den Befehl<br/> <em>cd Verzeichnisname Returntaste</em><br/> ein. Um in ein &uuml;bergeordnetes Verzeichnis zu wechseln, geben Sie den Befehl <br/> <em>cd .. Returntaste</em><br/> ein. Im Gegensatz zum DOS-Befehl muss ein Leerzeichen zwischen cd und .. stehen. <br/> <br/> <strong>chmod (change mode)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie die Zugriffsrechte f&uuml;r eine Datei ver&auml;ndern. Die Befehlsstruktur ist: <br/> <em>chmod Rechteangabe Dateiname</em><br/> Es k&ouml;nnen dabei verschiedene Zugriffsrechte, vor allem <strong>r</strong> (read), <strong>w</strong> (write) und <strong>x</strong> (execute), f&uuml;r <strong>u</strong> (user), <strong>g</strong> (group) und <strong>o</strong> (others) individuell verschieden gesetzt werden. Alternativ zur genannten symbolischen Angabe k&ouml;nnen die Zugriffsrechte auch als Oktalzahl (z.B. 755) angegeben werden. <br/> <br/> <strong>cp (copy)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie Dateien kopieren. Zum Beispiel: <br/> <em>cp Dateiname Verzeichnisname</em> <br/> <br/> <strong>diff</strong><br/> Dieser Befehl erm&ouml;glicht den Vergleich zweier Dateien. Es gibt diejenigen Zeilen aus, die in beiden Dateien unterschiedlich sind. <br/> <em>diff datei1 datei2</em> <br/> <br/> <strong>du (disk usage)</strong><br/> Dieser Befehl zeigt Ihnen den benutzten Plattenplatz von Verzeichnissen und Dateien in Bl&ouml;cken &aacute; 512 Byte. Die Befehlsstruktur ist: <br/> <em>du [Befehlsparameter] [name]</em><br/> Die wichtigsten Befehlsparameter sind: <br/> <em>-s</em> nur Gesamtsumme.<br/> <em>-a</em> Gr&ouml;&szlig;enangabe f&uuml;r jede Datei. <br/> <em>-r</em> Gr&ouml;&szlig;enangabe auch f&uuml;r unlesbare Verzeichnisse und Dateien, die nicht ge&ouml;ffnet werden k&ouml;nnen. <br/> Wird kein Datei- oder Verzeichnisname per <em>[name]</em> spezifiziert, wird das aktuelle Verzeichnis verwendet. <br/> <br/> <strong>env (environment)</strong><br/> Dieser Befehl gibt die Umgebungsvariablen auf unserem Server aus, also zum Beispiel die Zeitzone, die gerade aktive Shell oder das verwendete Betriebssystem. Diese ben&ouml;tigen Sie zum Teil f&uuml;r CGI-Scripte.<br/> <em>env Returntaste</em> <br/> <br/> <strong>exit</strong> oder <strong>logout</strong><br/> Mit diesen Befehlen k&ouml;nnen Sie Ihre SSH-Sitzung beenden.<br/> <em>exit Returntaste</em><br/> <em>logout Returntaste</em> <br/> <br/> <strong>F&uuml;r selbst geschriebene Scripte k&ouml;nnen Sie verwenden</strong>: <br/> <br/> <strong>gtar</strong> (Archivierungsprogramm)<br/> Dieser Befehl erm&ouml;glicht Ihnen die Archivierung von Dateien bzw. Verzeichnissen. Das bedeutet, Sie k&ouml;nnen mehrere Dateien und Verzeichnisse zu einer einzigen Datei zusammenfassen. Die Befehlsstruktur lautet:<br/> <em>gtar [-Befehlsparameter]</em> <em>Datei1 [Datei2,...,DateiN] / Verzeichnis1 [Verzeichnis2,...,VerzeichnisN]</em> <br/> Eine &uuml;bersichtliche Auflistung aller g&uuml;ltigen Befehlsparameter erhalten Sie durch Eingabe von<br/> <em>gtar --help |more</em> <br/> <br/> <strong>gzip</strong> (Komprimierungsprogramm)<br/> Dieser Befehl erm&ouml;glicht Ihnen die Komprimierung und Dekomprimierung von einzelnen Dateien. Die Befehlsstruktur lautet:<br/> <em>gzip [-Befehlsparameter] Dateiname</em><br/> Durch Eingabe von <br/> <em>gzip -h</em><br/> erhalten Sie eine &Uuml;bersicht der g&uuml;ltigen Befehlsparameter.<br/> Wenn Sie eine Datei dekomprimieren m&ouml;chten, geben Sie bitte folgendes ein:<br/> <em>gzip -d Dateiname</em> <br/> <br/> <strong>id</strong><br/> Dieser Befehl zeigt Ihnen die Identifikationsnummer (ID) des Benutzers und der Gruppe. Das Betriebssystem Unix verwendet die Nutzerklassen Benutzer (user), Gruppe (group) und alle (others).<br/> <em>id Returntaste</em> <br/> <br/> <strong>ls (list)</strong><br/> Dieser Befehl listet den Inhalt eines Verzeichnisses auf. F&uuml;r ls gibt es zahlreiche Parameter; die Befehlsstruktur ist: <br/> <em>ls [Befehlsparameter] [Verzeichnisname]</em><br/> Die wichtigsten Befehlsparameter sind: <br/> <em>-a (all)</em> zeigt alle Dateien, d. h. auch die verdeckten (= alle, die mit einem Punkt beginnen) an. <br/> <em>-F</em> kennzeichnet Verzeichnisse mit / und ausf&uuml;hrbare Dateien mit *. <br/> <em>-l</em> (long Format) listet den Inhalt eines Verzeichnisses in ausf&uuml;hrlicher Form auf. <br/> <br/> <strong>mail</strong><br/> Mit diesem Befehl rufen Sie das E-Mail Programm "Mail" auf. <br/> <br/> <strong>more</strong><br/> Dieser Befehl zeigt eine Datei seitenweise am Bildschirm. Die Befehlsstruktur ist <br/> <em>more Returntaste</em><br/> Zur n&auml;chsten Seite bl&auml;ttern Sie mit der Leertaste; zeilenweises Bl&auml;ttern erm&ouml;glicht die Returntaste. Seitenweise zur&uuml;ck gelangen Sie mit "b". <br/> <br/> <strong>mkdir</strong><br/> Mit diesem Befehl k&ouml;nnen Sie ein neues Verzeichnis anlegen. Die Befehlsstruktur lautet: <br/> <em>mkdir Verzeichnisname</em> <br/> <br/> <strong>mv (move)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie eine Datei verschieben, bzw. umbenennen. Die Befehlsstruktur lautet: <br/> <em>mv alter_Dateiname Zielverzeichnis/neuer_Dateiname</em> oder <br/> <em>mv alter_Dateiname neuer_Dateiname</em> oder <br/> <em>mv alter_Dateiname Zielverzeichnis/alter_Dateiname</em> <br/> <br/> <strong>perl</strong> oder <strong>perl5</strong><br/> Dieser Befehl startet Perl, Version 5. <br/> <br/> <strong>pwd (print working directory)</strong><br/> Dieser Befehl gibt das Verzeichnis auf dem Bildschirm aus, in dem Sie sich gerade befinden. <br/> <em>pwd Returntaste</em> <br/> <br/> <strong>rm (remove)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie Dateien l&ouml;schen. Die Befehlsstruktur lautet: <br/> <em>rm Dateiname</em> <br/> <br/> <strong>rmdir (remove directory)</strong><br/> Mit diesem Befehl k&ouml;nnen Sie ein Verzeichnis l&ouml;schen, wenn es leer ist. Die Befehlsstruktur lautet:<br/> <em>rmdir Verzeichnisname</em> <br/> <br/> <strong>sed</strong> (Stream Editor)<br/> Dieser Befehl ruft den Stream Editor auf. Der Stream Editor erlaubt es, Dateien durch Mustervergleich (pattern matching) und Ersetzungen zu ver&auml;ndern. <br/> <br/> <strong>sh</strong> (Bourne Shell)<br/> Dieser Befehl startet die Bourne Shell. <br/> <br/> <strong>sleep</strong><br/> H&auml;lt das gerade laufende Programm f&uuml;r die angegebene Zeit in Sekunden an. <br/> <em>sleep Sekundenzahl</em> <br/> <br/> <strong>tcsh</strong> (Th Shell)<br/> Dieser Befehl startet die th Shell.</div><div><hr/></div></div><div><strong>Alternative Wege</strong><br/>Einige der gezeigten Unix-Operationen, vor allem im Umgang mit Dateien, k&ouml;nnen Sie auch mit einem FTP-Programm ausf&uuml;hren, z.B. das Anzeigen eines Verzeichnisinhaltes und das Umbenennen oder L&ouml;schen von Dateien. Das Komprimieren und Dekomprimieren von Dateien k&ouml;nnen Sie auch vornehmen, indem Sie die Datei per SFTP auf Ihren eigenen Computer herunterladen und anschlie&szlig;end mit einem Programm, wie WinZip oder GZip, komprimieren bzw. dekomprimieren. Anschlie&szlig;end m&uuml;ssen Sie die neue Datei wieder per SFTP hochladen. <br/> <br/> <strong>Weitere Informationen</strong><br/> Hilfe zum Umgang mit Unix finden Sie zum Beispiel unter <a rel="nofollow" href="https://www.ias.edu/math/services/computing/unix-help" target="_blank">https://www.ias.edu/math/services/computing/unix-help</a>.</div><div><strong>Tipp</strong>: Mit dem Programm PuTTYgen haben Sie die M&ouml;glichkeit, einen speziellen "Key" f&uuml;r Ihre Domain zu generieren, so dass Sie beim Einloggen &uuml;ber SSH oder SFTP nicht immer wieder Ihre Zugangsdaten eingeben m&uuml;ssen. <br/> Diese Datei wird dann in einem speziellen Ordner in Ihrem Webspace hinterlegt.</div><div>Beachten Sie zu diesem Thema bitte auch den FAQ-Artikel:</div><div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class="img_bottom faq_icon image-loader img-fluid img jss_article_image my-3" alt="Beachte auch" data-image-loader="/faq/std_images/hinweis.png"><a href="/faq/server/wie-kann-ich-den-ssh-dienst-auf-meinem-linux-server-absichern/" target="_blank">Wie kann ich den SSH-Dienst auf einem Linux Server sicherer einrichten?</a></div><div><hr/></div><div>&nbsp; <h2><strong><a id="openssh_verbindung"></a>Wie kann ich eine OpenSSH-Verbindung zu meinem Webspeicherplatz einrichten?</strong></h2><p>Dieser Absatz beschreibt die Einrichtung einer OpenSSH-Verbindung mit Public Key Authentication unter Windows zu Ihrem STRATO Webspeicherplatz. Die Nutzung des SSH-Zugangs steht Ihnen ab unseren Hosting Plus-Paketen (ehemals PowerPlus) zur Verf&uuml;gung. Zur Einrichtung ben&ouml;tigen Sie:</p><ul><li>den SSH-Client <a rel="nofollow" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li><li>SFTP-Zugangsdaten</li></ul><p>Rufen Sie zun&auml;chst bitte das Installationsverzeichnis Ihrer PuTTY-Installation auf. Der Standardpfad lautet "C:\\Programme/PuTTY". Sollten Sie diesen bei der Installation nicht genutzt haben, passen Sie ihn bitte Ihren lokalen Gegebenheiten an. Im Installationsverzeichnis finden Sie die Datei puttygen.exe.</p><p>Verwenden Sie dazu bitte die Parameter:</p><p><strong>Schl&uuml;ssel-Typ</strong>: SSH2 RSA</p><p><strong>Schl&uuml;ssel-L&auml;nge</strong>: 2048 Bit</p><p>Mit Klick auf <strong>Generate und Bewegung der Maus</strong> &uuml;ber der Anwendung wird das notwendige SSH-Schl&uuml;sselpaar erzeugt.</p><p><img alt="Zugriff per SSH/SFTP-1.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/1044/de/21494fc694d5fd423bcffb1078af24ec.png"></p><p>In das Feld <strong>Key comment</strong> tragen Sie bitte Ihren Domainnamen ein.</p><p><strong>Key passphrase </strong>erfordert die Eingabe eines Passwortes. W&auml;hlen Sie bitte ein sicheres Passwort aus und wiederholen die Eingabe im Feld <strong>Confirm passphrase</strong>.</p><p>Speichern Sie nun bitte sowohl den <em>public key</em>, als auch den <em>private key</em> ab.</p><p><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="Zugriff per SSH/SFTP-2.png" data-image-loader="/faq/new_images/1044/de/1ed0e50db9402e9bef69d2d9ccec036f.png"></p><p>Speichern Sie den public key bitte unter dem Namen public_domainname im Verzeichnis "C:\\ssh" ab. Die Speicherung des private key erfolgt ebenfalls im Verzeichnis "C:\\ssh" unter dem Namen: "private_domainname.ppk".</p><p>Im n&auml;chsten Schritt erstellen wir die Datei welche sp&auml;ter auf dem <a href="/hosting/webspace/">Webspace</a>&nbsp;hinterlegt werden muss. Diese Datei muss den Namen "<strong>authorized_keys</strong>" haben, es darf keinerlei Dateiendung wie z.B. ".txt" vorhanden sein. In dieser Datei wird der public key hinterlegt, kopieren Sie diesen vollst&auml;ndig aus dem PuTTY Key Generator:</p><p><img data-image-loader="/faq/new_images/1044/de/f560b2e92a7b604d1573d2fcab4d962a.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Zugriff per SSH/SFTP-3.png"></p><p>Der vollst&auml;ndige Key endet mit "...== wunschname" im Anschluss daran, tragen Sie bitte noch =wunschname.de@ssh.strato.de ein. In unserem Beispiel endet der Eintrag dann also mit: "== wunschname= wunschname.de@ssh.strato.de"</p><div class="sf-status error"><strong>Wichtig:</strong>&nbsp;In der Datei "authorized_keys" d&uuml;rfen keinerlei Zeilenumbr&uuml;che vorhanden sein. Je nach verwendetem Editor muss die Zeilenumbruchfunktion daher abgeschaltet sein. Der Key muss eine einzelne Zeile sein.</div><p>Die Datei "authorized_keys" muss nun auf Ihrem Webspeicherplatz hinterlegt werden. Stellen Sie dazu die SFTP-Verbindung zu Ihrem Speicherplatz und legen einen neuen Ordner mit der Bezeichnung ".ssh" an, in diesem Ordner legen Sie die Datei "authorized_keys" ab.</p><p>Um die OpenSSH-Verbindung zu nutzen, wird nun nur noch der "PuTTY authenticaten agent" (Pageant) ben&ouml;tigt. Legen Sie dazu bitte eine Verkn&uuml;pfung an: C:\\Programme\\PuTTY\\pageant.exe C:\\sshprivate_domainname.ppk.</p><p>Es empfiehlt sich, diese Verkn&uuml;pfung &uuml;ber den Autostart Ihres Rechners direkt beim Rechnerstart zu laden, andernfalls muss Pageant manuell gestartet werden bevor Sie die OpenSSH-Verbindung zu Ihrem Speicherplatz herstellen k&ouml;nnen.</p></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><!--[if gte mso 9]><xml><w:WordDocument><w:View>Normal</w:View><w:Zoom>0</w:Zoom><w:TrackMoves/><w:TrackFormatting/><w:HyphenationZone>21</w:HyphenationZone><w:PunctuationKerning/><w:ValidateAgainstSchemas/><w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><w:IgnoreMixedContent>false</w:IgnoreMixedContent><w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><w:DoNotPromoteQF/><w:LidThemeOther>DE</w:LidThemeOther><w:LidThemeAsian>X-NONE</w:LidThemeAsian><w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript><w:Compatibility><w:BreakWrappedTables/><w:SnapToGridInCell/><w:WrapTextWithPunct/><w:UseAsianBreakRules/><w:DontGrowAutofit/><w:SplitPgBreakAndParaMark/><w:EnableOpenTypeKerning/><w:DontFlipMirrorIndents/><w:OverrideTableStyleHps/></w:Compatibility><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><m:mathPr><m:mathFont m:val="Cambria Math"/><m:brkBin m:val="before"/><m:brkBinSub m:val="&#45;-"/><m:smallFrac m:val="off"/><m:dispDef/><m:lMargin m:val="0"/><m:rMargin m:val="0"/><m:defJc m:val="centerGroup"/><m:wrapIndent m:val="1440"/><m:intLim m:val="subSup"/><m:naryLim m:val="undOvr"/></m:mathPr></w:WordDocument></xml><![endif]--><!--[if gte mso 9]><xml><w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true" DefSemiHidden="true" DefQFormat="false" DefPriority="99" LatentStyleCount="267"><w:LsdException Locked="false" Priority="0" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Normal"/><w:LsdException Locked="false" Priority="9" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="heading 1"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/><w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/><w:LsdException Locked="false" Priority="39" Name="toc 1"/><w:LsdException Locked="false" Priority="39" Name="toc 2"/><w:LsdException Locked="false" Priority="39" Name="toc 3"/><w:LsdException Locked="false" Priority="39" Name="toc 4"/><w:LsdException Locked="false" Priority="39" Name="toc 5"/><w:LsdException Locked="false" Priority="39" Name="toc 6"/><w:LsdException Locked="false" Priority="39" Name="toc 7"/><w:LsdException Locked="false" Priority="39" Name="toc 8"/><w:LsdException Locked="false" Priority="39" Name="toc 9"/><w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/><w:LsdException Locked="false" Priority="10" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Title"/><w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/><w:LsdException Locked="false" Priority="11" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/><w:LsdException Locked="false" Priority="22" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Strong"/><w:LsdException Locked="false" Priority="20" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/><w:LsdException Locked="false" Priority="59" SemiHidden="false" UnhideWhenUsed="false" Name="Table Grid"/><w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/><w:LsdException Locked="false" Priority="1" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 1"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 1"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 1"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/><w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/><w:LsdException Locked="false" Priority="34" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/><w:LsdException Locked="false" Priority="29" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Quote"/><w:LsdException Locked="false" Priority="30" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 1"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 1"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 2"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 2"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 2"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 2"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 2"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 3"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 3"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 3"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 3"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 3"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 4"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 4"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 4"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 4"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 4"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 5"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 5"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 5"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 5"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 5"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/><w:LsdException Locked="false" Priority="60" SemiHidden="false" UnhideWhenUsed="false" Name="Light Shading Accent 6"/><w:LsdException Locked="false" Priority="61" SemiHidden="false" UnhideWhenUsed="false" Name="Light List Accent 6"/><w:LsdException Locked="false" Priority="62" SemiHidden="false" UnhideWhenUsed="false" Name="Light Grid Accent 6"/><w:LsdException Locked="false" Priority="63" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/><w:LsdException Locked="false" Priority="64" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/><w:LsdException Locked="false" Priority="65" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/><w:LsdException Locked="false" Priority="66" SemiHidden="false" UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/><w:LsdException Locked="false" Priority="67" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/><w:LsdException Locked="false" Priority="68" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/><w:LsdException Locked="false" Priority="69" SemiHidden="false" UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/><w:LsdException Locked="false" Priority="70" SemiHidden="false" UnhideWhenUsed="false" Name="Dark List Accent 6"/><w:LsdException Locked="false" Priority="71" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/><w:LsdException Locked="false" Priority="72" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful List Accent 6"/><w:LsdException Locked="false" Priority="73" SemiHidden="false" UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/><w:LsdException Locked="false" Priority="19" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/><w:LsdException Locked="false" Priority="21" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/><w:LsdException Locked="false" Priority="31" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/><w:LsdException Locked="false" Priority="32" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/><w:LsdException Locked="false" Priority="33" SemiHidden="false" UnhideWhenUsed="false" QFormat="true" Name="Book Title"/><w:LsdException Locked="false" Priority="37" Name="Bibliography"/><w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/></w:LatentStyles></xml><![endif]--><!--[if gte mso 10]><style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normale Tabelle";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style><![endif]--><span>ssh.strato.de </span></div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="1044"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="1044"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> So nutzen Sie Ihren SSH-/SFTP-Zugang </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="1044"> <input type="hidden" name="headline" value="So nutzen Sie Ihren SSH-/SFTP-Zugang"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/hosting/so-nutzen-sie-ihren-ssh-sftp-zugang/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

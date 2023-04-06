@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="In diesem Artikel beschreiben wir ein, an erfahrene Nutzer gerichtetes Feature für dedizierte Root-Server (Linux und Windows). Jetzt informieren!"><link rel="canonical" href="https://www.strato.de/faq/server/so-konfigurieren-sie-das-pronet-vlan/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/server/so-konfigurieren-sie-das-pronet-vlan/"><title> So nutzen Sie das ProNet VLAN | STRATO </title><meta property="og:title" content="So nutzen Sie das ProNet VLAN | STRATO"><meta name="og:description" content="In diesem Artikel beschreiben wir ein, an erfahrene Nutzer gerichtetes Feature für dedizierte Root-Server (Linux und Windows). Jetzt informieren!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '2103',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/2103/',
+            'econda_pageid'                : 'FAQ/2103/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_2103 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_2103:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/858.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/858.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #2103 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> So konfigurieren Sie das ProNet VLAN </h1><p><br/>In diesem Artikel beschreiben wir ein, an erfahrene Nutzer gerichtetes Feature f&uuml;r dedizierte Root-Server Linux und Windows (mit dem Paketnamen Dxxx). Das ProNet VLAN steht bei Root-Servern mit dem Paketnamen CPxxx nicht zur Verf&uuml;gung.<br/><br/></p><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#was-ist-pronet-vlan" title="Was ist ProNet VLAN?">Was ist ProNet VLAN?</a></li><li class="my-2"><a href="#so-bestellen-sie-pronet-vlan" title="So bestellen Sie ProNet VLAN">So bestellen Sie ProNet VLAN</a></li><li class="my-2"><a href="#wie-richte-ich-pronet-vlan-ein" title="Wie richte ich ProNet VLAN ein?">Wie richte ich ProNet VLAN ein?</a></li><li class="my-2"><a href="#vlan-typen" title="VLAN-Typen">VLAN-Typen</a></li><li class="my-2"><a href="#wie-konfiguriere-ich-meine-server-fuer-die-verwendung-des-pronet-vlan" title="Wie konfiguriere ich meine Server f&uuml;r die Verwendung des ProNet VLAN?">Wie konfiguriere ich meine Server f&uuml;r die Verwendung des ProNet VLAN?</a></li><li class="my-2"><a href="#temporaere-konfiguration-unter-linux-distributionsabhaengig" title="Tempor&auml;re Konfiguration unter Linux (distributionsabh&auml;ngig)">Tempor&auml;re Konfiguration unter Linux (distributionsabh&auml;ngig)</a></li><li class="my-2"><a href="#permanente-konfiguration-unter-linux-distributionsabhaengig" title="Permanente Konfiguration unter Linux (distributionsabh&auml;ngig)">Permanente Konfiguration unter Linux (distributionsabh&auml;ngig)</a></li><li class="my-2"><a href="#debian-und-ubuntu" title="Debian und Ubuntu">Debian und Ubuntu</a></li><li class="my-2"><a href="#centos" title="CentOS 7">CentOS 7</a></li><li class="my-2"><a href="#windows" title="Windows 2012">Windows 2012</a></li><li class="my-2"><a href="#einsatzszenarien" title="Einsatzszenarien">Einsatzszenarien</a></li><li class="my-2"><a href="#datenblatt" title="Datenblatt">Datenblatt</a></li> </ul></div><h2><a id="was-ist-pronet-vlan"></a><br/>Was ist STRATO ProNet VLAN?</h2><p>Das ProNet VLAN dient der Kommunikation zwischen zwei oder mehr Servern &uuml;ber eine zweite Netzwerkinfrastruktur. Diese ist unabh&auml;ngig von der prim&auml;ren Netzwerkinfrastruktur, &uuml;ber die Ihre Server mit dem Internet verbunden sind. Einer Ihrer Server kann de facto komplett auf die externe Anbindung verzichten und nur &uuml;ber den anderen Server erreichbar sein. ProNet VLAN ist aktuell nur f&uuml;r dedizierte Root-Server (Linux/Windows) einsetzbar.<br/><br/> Jeder Server, f&uuml;r den Sie das Produkt ProNet VLAN gebucht haben, wird &uuml;ber eine zweite Ethernetschnittstelle an unsere zweite Netzwerkinfrastruktur angebunden. <br/><br/> <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"  data-image-loader="/faq/images/artikelbilder/2001-2500/_2358_1.gif"></p><h2><a id="so-bestellen-sie-pronet-vlan"></a><br/>So bestellen Sie ProNet VLAN</h2><p>Loggen Sie sich zun&auml;chst in Ihren passwortsch&uuml;tzten <a title="Verkn&uuml;pfung folgen" href="https://www.strato.de/apps/CustomerService#/skl" target="_blank" rel="nofollow">STRATO Kunden-Login</a> ein.&nbsp;Dort klicken Sie in der &Uuml;bersicht Ihrer Pakete auf <b>Einstellungen</b> bei Ihrem Serverpaket, um in Ihr Server-Login zu gelangen.In dieser w&auml;hlen Sie unter dem Men&uuml;punkt <strong>Netzwerk &amp; Last </strong>die Option <strong>ProNet VLAN.<br/><br/></strong><img alt="So nutzen Sie das ProNet VLAN-1.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2103/de/12f3d8c38564509d9be867a552e17644.png"></p><p><br/>Die Bereitstellung erfordert die Installation durch einen Techniker in unserem Rechenzentrum und kann wenige Stunden in Anspruch nehmen.<br/><br/> Es stehen verschiedene Bandbreiten f&uuml;r Ihre Server von 10 Mbit/s bis 1000 Mbit/s zur Auswahl. Die Bandbreite kann bei den jeweiligen Servern unterschiedlich sein. &Uuml;ber den Link <strong>Upgrade</strong> k&ouml;nnen Sie h&ouml;here Bandbreiten in den Schritten 10, 100, 200, 500 und 1000 Mbit/s buchen.<br/><br/> Zus&auml;tzlich kann ein virtuelles LAN (VLAN) eingerichtet werden. Um ein VLAN aufzubauen, ben&ouml;tigt jeder Ihrer Server einen Connect. Ist dieser aktiviert, kann der Server als VLAN User in ein bestehendes VLAN eingebunden werden. <br/><br/><strong>&Uuml;ber VLAN</strong>: Mit der Option VLAN erhalten Sie eine eindeutige VLAN ID. Zus&auml;tzlich erhalten Sie ein privates IP-Netz aus dem 10/8-Pr&auml;fix nach <img class="img_bottom faq_icon image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="externer Link" data-image-loader="/faq/std_images/extern_link.png"> <a rel="nofollow" href="http://www.faqs.org/rfcs/rfc1918.html" target="_blank">RFC 1918</a>, beispielsweise 10.31.1.0/24. Die ersten Adressen Ihres IP-Netzes 10.31.1.1 - 10.31.1.7 sind f&uuml;r Infrastrukturkomponenten reserviert.</p><h2><a id="wie-richte-ich-pronet-vlan-ein"></a><br/>Wie richte ich ProNet VLAN ein?</h2><p>Die Konfiguration Ihres VLAN f&uuml;hren Sie &uuml;ber den STRATO Server-Login durch.<strong><br/></strong></p><p>Ist das VLAN aktiv, kann begonnen werden weitere VLAN-User einzubinden.</p><p>Entweder l&auml;dt der VLAN-Owner den User &uuml;ber den STRATO Server-Login ein, oder der User fragt beim Owner eine Mitgliedschaft an. In beiden F&auml;llen muss die Gegenseite die Mitgliedschaft best&auml;tigen.</p><p><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie das ProNet VLAN-2.png" data-image-loader="/faq/new_images/2103/de/da4847ccae163555b5de5101f1bbdb43.png"></p><p><br/><br/>&Uuml;ber den Button <strong>Mitgliedschaft anbieten</strong> k&ouml;nnen Sie Server zu Ihrem VLAN hinzuf&uuml;gen.</p><ul><li>Wenn Sie f&uuml;r den hinzuzuf&uuml;genden Server &uuml;ber das Passwort zum STRATO Server-Login verf&uuml;gen, so k&ouml;nnen Sie dieses angeben. Der Server wird dann ohne Umweg Mitglied in Ihrem VLAN.</li></ul><ul><li>Sind Sie nicht im Besitz des Passworts, weil Sie beispielsweise den Server eines anderen Kunden in Ihr VLAN aufnehmen m&ouml;chten, so wird im STRATO Server-Login dieses Servers Ihre Anfrage zur Annahme oder Ablehnung vorgelegt.</li></ul><h2><a id="vlan-typen"></a><br/>VLAN-Typen</h2><p>Es existieren zwei VLAN-Typen, Untagged VLANs und Tagged VLANs.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label="">Untagged VLAN</td><td width="50%" data-label="">Das erste auf einem Server eingerichtete VLAN wird immer in dieser Konfiguration betrieben. Die VLAN-Funktionalit&auml;t wird dabei von der ProNet-Infrastruktur verwaltet.</td></tr><tr><td width="50%" data-label="">Tagged VLAN</td><td width="50%" data-label="">Werden zus&auml;tzliche VLANs auf einem Server eingerichtet, so ist die Konfiguration als Tagged VLAN erfordrlich.</td></tr></tbody></table></div><h2><a id="wie-konfiguriere-ich-meine-server-fuer-die-verwendung-des-pronet-vlan"></a><br/>Wie konfiguriere ich meine Server f&uuml;r die Verwendung des ProNet VLAN?</h2><p>Um Ihr ProNet VLAN nutzen zu k&ouml;nnen, m&uuml;ssen Sie auf Ihren Servern das zweite Netzwerkinterface statisch konfigurieren.</p><h2><a id="temporaere-konfiguration-unter-linux-distributionsabhaengig"></a><br/>Tempor&auml;re Konfiguration unter Linux (distributionsabh&auml;ngig)</h2><div class="sf-status info">Diese Art der Konfiguration ist nicht bootfest. Um sicherzustellen, dass das ProNet VLAN nach einem Neustart Ihres Servers weiterhin funktioniert, folgen Sie bitte der weiter unten f&uuml;r das von Ihnen genutzte Betriebssystem angegebenen Konfigurations-Anleitung.</div><p>Pr&uuml;fen Sie, ob Ihr zweites Netzwerkinterface mit dem ProNet VLAN-Switch verbunden ist.<br/><br/></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # ethtool eth1<br/>Settings for eth1:<br/>Supported ports: [ TP ]<br/>Supported link modes: 10baseT/Half 10baseT/Full<br/>100baseT/Half 100baseT/Full<br/>1000baseT/Full<br/>Supports auto-negotiation: Yes<br/>Advertised link modes: 10baseT/Half 10baseT/Full<br/>100baseT/Half 100baseT/Full<br/>1000baseT/Full<br/>Advertised auto-negotiation: Yes<br/>Speed: 10Mb/s<br/>Duplex: Full<br/>Port: Twisted Pair<br/>PHYAD: 1<br/>Transceiver: internal<br/>Auto-negotiation: on<br/>Supports Wake-on: umbg<br/>Wake-on: g<br/>Current message level: 0x00000007 (7)<br/>Link detected: yes<br/>Speedklassen: 200 Mbps und 500 Mbps werden als 1 Gbps angezeigt, da Limitierung auf Switchseite stattfindet.</td></tr></tbody></table></div><p>Entscheidend ist in dieser Ausgabe die Zeile: <strong>Link detected: yes</strong></p><p>Diese Zeile signalisiert eine bestehende Verbindung.</p><p>Wird hier keine Verbindung angezeigt, kann dies daran liegen, dass sich das Netzwerkinterface eth1 im Power-Down-Zustand befindet. Aktivieren Sie eth1 gegebenenfalls mit dem Befehl:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # ip addr add 10.x.y.z/24 dev eth1</td></tr></tbody></table></div><p>und pr&uuml;fen Sie die Verbindung anschlie&szlig;end erneut.</p><p>&nbsp;<br/><em><strong>Untagged VLAN</strong></em></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # ifconfig eth1 10.x.y.z netmask 255.255.255.0 up</td></tr></tbody></table></div><p>Verwenden Sie bitte anstatt der 10.x.y.z bitte die IP-Adresse Ihres VLANs. Diese finden Sie im STRATO Server-Login Ihres Servers unter dem Men&uuml;punkt<strong> Netzwerk &amp; Last / ProNet VLAN / interne IP-Adresse.</strong></p><p><em><strong>Tagged VLAN</strong></em></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ #ip link add link eth1 name eth1.#### type vlan id ####<br/>h123456:~ # ip addr add 10.x.y.z/24 brd 10.x.y.255 dev eth1.####<br/>h123456:~ # ip link set eth1.#### up</td></tr></tbody></table></div><p>Ersetzen Sie #### durch die entsprechende ID Ihres tagged VLANs. Anstatt der 10.x.y.z verwenden Sie bitte die IP-Adresse Ihres VLANs.<br/>Die Angaben finden Sie in Ihrem STRATO Server-Login unter dem Men&uuml;punkt Security /ProNet VLAN / VLAN und unter dem Men&uuml;punkt&nbsp;<strong><strong>Netzwerk &amp; Last</strong> / ProNet VLAN / interne IP-Adresse.</strong><br/><strong><br/></strong></p><p><img alt="So nutzen Sie das ProNet VLAN-1.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/2103/de/763b0133a3b71faa3b414492beed2756.png"></p><h2><a id="permanente-konfiguration-unter-linux-distributionsabhaengig"></a><br/>Permanente Konfiguration unter Linux (distributionsabh&auml;ngig)</h2><h2><a id="debian-und-ubuntu"></a><br/>Debian und Ubuntu</h2><p><em><strong>Untagged VLAN</strong></em></p><p><br/>Editieren Sie die Datei <strong>/etc/network/interfaces</strong><br/>Passen Sie den Abschnitt f&uuml;r das Netzwerkinterface eth1 an, um eine IP-Adresse dem zweiten Netzwerkinterface zuzuordnen:<br/><br/></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">auto eth1<br/>iface eth1 inet static<br/>address 10.x.y.z<br/>netmask 255.255.255.0<br/>network 10.x.y.0<br/>broadcast 10.x.y.255<br/>mtu 1500 <br/>Starten Sie anschlie&szlig;end die Netzwerkkonfiguration neu:<br/>h123456:~ # ifdown eth1; ifup eth1</td></tr></tbody></table></div><p><em><strong><br/>Tagged VLAN</strong></em></p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # apt-get install vlan</td></tr></tbody></table></div><p>Editieren Sie die Datei <strong>/etc/network/interfaces</strong><br/>F&uuml;gen Sie einen Abschnitt f&uuml;r Ihr tagged VLAN hinzu:<br/>Ersetzen Sie #### durch die entsprechende ID Ihres tagged VLANs.<br/>&nbsp;</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label=""># VLAN ####<br/>auto vlan####<br/>iface vlan#### inet static<br/>address 10.x.y.z<br/>netmask 255.255.255.0<br/>network 10.x.y.0<br/>broadcast 10.x.y.255<br/>mtu 1500<br/>vlan_raw_device eth1<br/>Starten Sie anschlie&szlig;end die Netzwerkkonfiguration neu:<br/>h123456:~ # ifdown vlan####; ifup vlan####</td></tr></tbody></table></div><hr/><h2><a id="centos"></a><br/>CentOS 7</h2><p><em><strong>Untagged VLAN</strong></em></p><p>Editieren Sie die Datei <strong>/etc/sysconfig/network-scripts/ifcfg-eth1</strong> und passen Sie den Inhalt entsprechend der folgenden Angaben an:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">TYPE=Ethernet<br/>DEVICE=eth1<br/>BOOTPROTO=static<br/>IPADDR=10.x.y.z<br/>NETMASK=255.255.255.0<br/>USERCTL=yes<br/>ONBOOT=yes</td></tr></tbody></table></div><p>Starten Sie anschlie&szlig;end die Netzwerkkonfiguration neu:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # service network restart</td></tr></tbody></table></div><p>&nbsp;<em><strong><br/>Tagged VLAN</strong></em></p><p>Legen Sie die Datei <strong>/etc/sysconfig/network-scripts/ifcfg-vlan####</strong> mit folgendem Inhalt an:</p><p>Ersetzen Sie #### durch die entsprechende ID Ihres tagged VLANs.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">VLAN=yes<br/>VLAN_NAME_TYPE=VLAN_PLUS_VID_NO_PAD<br/>DEVICE=vlan####<br/>PHYSDEV=eth1<br/>BOOTPROTO=static<br/>ONBOOT=yes<br/>TYPE=Ethernet<br/>IPADDR=10.x.y.z<br/>NETMASK=255.255.255.0</td></tr></tbody></table></div><p>Starten Sie anschlie&szlig;end die Netzwerkkonfiguration neu:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">h123456:~ # ifdown vlan####; ifup vlan####</td></tr></tbody></table></div><h2><a id="windows"></a><br/>Windows 2012</h2><p>Bitte aktivieren Sie zun&auml;chst das zweite Netzwerkinterface.</p><p>&Ouml;ffnen Sie hierzu &uuml;ber das Startmen&uuml; die <strong>Systemsteuerung</strong>. Klicken sie anschlie&szlig;end auf <strong>Hardware</strong> und &ouml;ffnen Sie unter <strong>Ger&auml;te und Drucker </strong>den <strong>Ger&auml;te-Manager.</strong></p><p>Lassen Sie sich die installierten Netzwerkinterfaces durch einen Klick auf das Symbol vor <strong>Netzwerkadapter</strong> anzeigen.</p><p>Ein deaktiviertes Netzwerkinterface erkennen Sie an einem Symbol mit einem Pfeil, der nach unten zeigt. Aktivieren Sie dieses Interface durch Rechtsklick <strong>Aktivieren </strong>oder &uuml;ber Aufruf der <strong>Eigenschaften</strong> dieses Interfaces.</p><p><img data-image-loader="/faq/new_images/2103/de/e32752e249b3dd109264a358d5360795.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie das ProNet VLAN-2.png"></p><p><em><strong>Untagged VLAN</strong></em></p><p><br/>Taskbar Systray, Rechtsklick auf Symbol f&uuml;r Netzwerkverbindungen / Netwerk- und Freigabecenter &ouml;ffnen</p><p><br/>Klick auf <strong>Ethernet 2</strong> unter <strong>aktive Netzwerke anzeigen</strong></p><p><br/>Klicken Sie anschlie&szlig;end auf <strong>Eigenschaften</strong></p><p><br/>W&auml;hlen anschlie&szlig;end im Fenster <strong>Eigenschaften von Ethernet 2</strong> den Punkt <strong>Internetprotokoll Version 4</strong> und klicken Sie erneut auf Eigenschaften.<em><strong><br/><br/></strong></em></p><p><em><strong><img data-image-loader="/faq/new_images/2103/de/66663a6ea24140e9e0cbbed8970d1b45.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="So nutzen Sie das ProNet VLAN-3.png"></strong></em></p><p>Im Fenster Eigenschaften geben Sie die folgenden Punkte an:</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="100%" data-label="">Folgende Einstellungen verwenden:<br/>IP-Adresse: 10.x.y.z<br/>Subnetzmaske: 255.255.255.0<br/>Standardgateway: 10.x.y.1</td></tr></tbody></table></div><p>Ersetzen Sie den Platzhalter 10.x.y.z bitte durch die interne IP-Adresse und den Platzhalter 10.x.y.1 durch die IP-Adresse des Gateways ihres VLANs. Diese finden Sie in Ihrem STRATO Server-Login unter:<strong> Security / ProNet VLAN.</strong><br/><br/></p><p><em><strong>Tagged VLAN</strong></em></p><p><br/>Um ein tagged VLAN auf Ihrem Windows 2012 Server zu installieren, &ouml;ffnen Sie bitte zun&auml;chst den<strong> Server-Manager.</strong></p><p><br/>Rechtsklicken Sie bitte unter <strong>Alle Server/Server</strong> auf den Eintrag mit dem Hostnamen Ihres Servers und anschlie&szlig;end auf <strong>NIC-Teamvorgang konfigurieren</strong>.<br/><strong><br/><img class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie das ProNet VLAN-4.png" data-image-loader="/faq/new_images/2103/de/c81dd75ec059f0e1fb8e21cf3f7d75cd.png"><br/> </strong></p><p>Klicken Sie im Fenster <strong>NIC-Teamvorgang</strong> unter <strong>Adapter und Schnittstellen</strong> einen Rechtsklick auf den Eintrag <strong>Ethernet 2</strong> und klicken Sie anschlie&szlig;end auf <strong>Zum neuen Team hinzuf&uuml;gen.</strong></p><p><strong><img data-image-loader="/faq/new_images/2103/de/3568fd9ed1392b9b2941e41d307bc3ca.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="So nutzen Sie das ProNet VLAN-5.png"></strong></p><p>Erstellen Sie anschlie&szlig;end ein neues Team f&uuml;r den Adapter <strong>Ethernet 2</strong> indem Sie einen Namen f&uuml;r das Team eingeben und den Vorgang mit <strong>OK</strong> abschlie&szlig;en. W&auml;hlen Sie hierf&uuml;r jedoch im Netzwerk- und Freigabecenter die eben erstellte VLAN-Verbindung aus.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="So nutzen Sie das ProNet VLAN-6.png" data-image-loader="/faq/new_images/2103/de/6d273a10906c514be344001feb291bf3.png"></p><p>Klicken Sie anschlie&szlig;end bitte im Feld <strong>Adapter und Schnittstellen</strong> auf <strong>Teamschnittstellen</strong>.</p><p><br/>Mit einem Rechtsklick auf das neuerstellte Team und anschlie&szlig;endem Klick auf <strong>Eigenschaften</strong> gelangen Sie zu den <strong>Netzwerkadaptereigenschaften.</strong></p><p><img data-image-loader="/faq/new_images/2103/de/fdc914dd8aceb085356fa9f20e845381.png" alt="So nutzen Sie das ProNet VLAN-7.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3"></p><p>Bitte klicken Sie unter VLAN-Mitgliedschaft auf Spezifisches VLAN und geben Sie die VLAN-ID f&uuml;r Ihr tagged VLAN ein.</p><p><br/>Die ID Ihres VLANS finden Sie im STRATO Server-Login unter dem Men&uuml;punkt <strong>Security / ProNet VLAN / VLAN.</strong></p><p><img data-image-loader="/faq/new_images/2103/de/91e60f50fe5a5aa3f9b4645c5e6dd334.png" class=" image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="So nutzen Sie das ProNet VLAN-8.png"></p><p>Bitte weisen Sie dem soeben erstellten Interface anschlie&szlig;end eine IP-Adresse zu. Folgen Sie hierzu der oben unter<strong> untagged VLAN</strong> beschriebenen Vorgehensweise. W&auml;hlen Sie hierf&uuml;r jedoch das neuerstellte VLAN-Interface im Netzwerk- und Freigabecenter aus.</p><p><br/>Die Informationen zur IP-Adresse Ihres tagged VLANs finden Sie im STRATO Server-Login unter dem Men&uuml;punkt <strong>Security / ProNet VLAN / interne IP-Adresse</strong></p><p><br/>Hinweis: Bitte achten Sie auf die Konfiguration der Windows-Firewall Ihres Servers, da diese den Zugriff auf das ProNet VLAN blockieren kann.</p><h2><a id="einsatzszenarien"></a><br/>Einsatzszenarien</h2><p><strong>High-Availability-L&ouml;sung</strong><br/>Zwei Server mit haupts&auml;chlich statischen Webseiten werden zur Erh&ouml;hung der Verf&uuml;gbarkeit gegenseitig gespiegelt. F&uuml;r ein Failover-Szenario wird die STRATO ClusterIP eingesetzt. Zwischen den Servern dient eine 10 MBit Verbindung f&uuml;r den Heartbeat und den regelm&auml;&szlig;igen Datenabgleich.<br/><br/><strong>Caching-Webproxy-L&ouml;sung</strong><br/>Ein Webserver wird &uuml;ber das ProNet VLAN mit einem zweitem System verbunden, welches als Caching Webproxy arbeitet. Vorteile sind deutlich bessere Performance und h&ouml;here Sicherheit. Je nach Bedarf kommt eine Anbindung mit 100 MBit oder mehr zum Einsatz.<br/><br/><strong>Front-End/Back-End-L&ouml;sung</strong><br/>Ein Webserver wird &uuml;ber das ProNet VLAN mit einem zweiten System verbunden, welches als Datenbankserver arbeitet und ggf. andere Dienste anbietet, die nicht extern verf&uuml;gbar sein m&uuml;ssen (z. B. User-Authentifizierung, Fileservice, Syslog). Vorteile sind auch hier einerseits deutlich bessere Performance, aber auch h&ouml;here Sicherheit, da Dienste auf getrennten Systemen laufen.<br/><br/>Das Sicherheitskonzept f&uuml;r jedes System kann individuell an die gegebenen Anforderungen angepasst werden, ohne Kompromisse einzugehen.<br/>Der Datenbank Server kann ggf. vollst&auml;ndig vor dem Zugriff von extern abgeschirmt werden.<br/><br/>Je nach Bedarf kommt eine Anbindung mit 100 MBit oder mehr zum Einsatz.<br/><br/><strong>Firewall-Gateway-L&ouml;sung</strong><br/>Ein Server fungiert als dedizierter Firewall-Server. Alle anderen Server kommunizieren ausschlie&szlig;lich &uuml;ber das ProNet VLAN mit dem Firewall-Server oder untereinander.<br/><br/><strong>Front-End/Back-End-L&ouml;sung mit mehreren Servern</strong><br/>Kunden mit mehreren Servern bei STRATO k&ouml;nnen auch mehr als zwei Server innerhalb eines VLANs miteinander verbinden. Ein m&ouml;gliches Szenario k&ouml;nnte sein:<br/>Zwei Datenbank-Server mit MySQL Replikation werden mit zwei redundant ausgelegten Web-Servern miteinander verbunden. Die Datenbank-Server werden mit 200 MBit angeschlossen, die Web-Server jeweils mit 100 MBit. Die Datenbank-Server werden ausschlie&szlig;lich &uuml;ber Remote Console administriert und sind &uuml;ber das ProNet VLAN zu erreichen. Das externe Interface kann komplett deaktiviert werden, was maximale Sicherheit vor Angriffen von au&szlig;en bietet.</p><h2><a id="datenblatt"></a>Datenblatt</h2><p>Das Datenblatt zu ProNet VLAN, sowie weitere Datenbl&auml;tter und Informationen stehen in unserer &Uuml;bersicht <img class="img_bottom faq_icon image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="externer Link" data-image-loader="/faq/std_images/extern_link.png"> <a href="https://www.strato.de/_assets_de/download/server/texte/produktbeschreibung_strato-pronet-vlan.pdf">Datenbl&auml;tter &ndash; Preislisten &ndash; Anleitungen </a>zu Ihrer Verf&uuml;gung.<br/><br/></p><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">High-Availability-L&ouml;sung<br/>Zwei Server mit haupts&auml;chlich statischen Webseiten werden zur Erh&ouml;hung der Verf&uuml;gbarkeit gegenseitig gespiegelt. F&uuml;r ein Failover-Szenario wird die STRATO ClusterIP eingesetzt. Zwischen den Servern dient eine 10 MBit Verbindung f&uuml;r den Heartbeat und den regelm&auml;&szlig;igen Datenabgleich.<br/><br/><br/>Caching-Webproxy-L&ouml;sung<br/>Ein Webserver wird &uuml;ber das ProNet VLAN mit einem zweitem System verbunden, welches als Caching Webproxy arbeitet. Vorteile sind deutlich bessere Performance und h&ouml;here Sicherheit. Je nach Bedarf kommt eine Anbindung mit 100 MBit oder mehr zum Einsatz.<br/><br/><br/>Front-End/Back-End-L&ouml;sung<br/>Ein Webserver wird &uuml;ber das ProNet VLAN mit einem zweiten System verbunden, welches als Datenbankserver arbeitet und ggf. andere Dienste anbietet, die nicht extern verf&uuml;gbar sein m&uuml;ssen (z. B. User-Authentifizierung, Fileservice, Syslog). Vorteile sind auch hier einerseits deutlich bessere Performance, aber auch h&ouml;here Sicherheit, da Dienste auf getrennten Systemen laufen.<br/><br/>Das Sicherheitskonzept f&uuml;r jedes System kann individuell an die gegebenen Anforderungen angepasst werden, ohne Kompromisse einzugehen.<br/>Der Datenbank Server kann ggf. vollst&auml;ndig vor dem Zugriff von extern abgeschirmt werden.<br/><br/>Je nach Bedarf kommt eine Anbindung mit 100 MBit oder mehr zum Einsatz.<br/><br/><br/>Firewall-Gateway-L&ouml;sung<br/>Ein Server fungiert als dedizierter Firewall-Server. Alle anderen Server kommunizieren ausschlie&szlig;lich &uuml;ber das ProNet VLAN mit dem Firewall-Server oder untereinander.<br/><br/><br/>Front-End/Back-End-L&ouml;sung mit mehreren Servern<br/>Kunden mit mehreren Servern bei STRATO k&ouml;nnen auch mehr als zwei Server innerhalb eines VLANs miteinander verbinden. Ein m&ouml;gliches Szenario k&ouml;nnte sein:<br/>Zwei Datenbank-Server mit MySQL Replikation werden mit zwei redundant ausgelegten Web-Servern miteinander verbunden. Die Datenbank-Server werden mit 200 MBit angeschlossen, die Web-Server jeweils mit 100 MBit. Die Datenbank-Server werden ausschlie&szlig;lich &uuml;ber Remote Console administriert und sind &uuml;ber das ProNet VLAN zu erreichen. Das externe Interface kann komplett deaktiviert werden, was maximale Sicherheit vor Angriffen von au&szlig;en bietet.<br/><br/>Das Datenblatt zu ProNet VLAN, sowie weitere Datenbl&auml;tter und Informationen stehen in unserer &Uuml;bersicht&nbsp; Datenbl&auml;tter &ndash; Preislisten &ndash; Anleitungen zu Ihrer Verf&uuml;gung.<br/><br/></div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">X</div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">Das Datenblatt zu ProNet VLAN, sowie weitere Datenbl&auml;tter und Informationen stehen in unserer &Uuml;bersicht&nbsp; Datenbl&auml;tter &ndash; Preislisten &ndash; Anleitungen zu Ihrer Verf&uuml;gung.<br/><br/></div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><img class="img_bottom faq_icon image-loader img-fluid img jss_article_image my-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="externer Link" data-image-loader="/faq/std_images/extern_link.png"> <a rel="nofollow" href="https://news.stratoserver.net/w/documents/2012/11/19/dokumente/" target="_blank">Datenbl&auml;tter &ndash; Preislisten &ndash; Anleitungen</a></div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><a title="Verkn&uuml;pfung folgen" href="https://www.strato.de/apps/CustomerService#/skl" target="_blank" rel="nofollow">STRATO Kunden-Login</a></div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">Dort klicken Sie in der &Uuml;bersicht Ihrer Pakete auf <b>Einstellungen</b> bei Ihrem Serverpaket, um in Ihr Server-Login zu gelangen.</div></div><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><strong>Netzwerk &amp; Last</strong></div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="2103"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="2103"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> So konfigurieren Sie das ProNet VLAN </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="2103"> <input type="hidden" name="headline" value="So konfigurieren Sie das ProNet VLAN"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-konfigurieren-sie-das-pronet-vlan/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-konfigurieren-sie-das-pronet-vlan/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

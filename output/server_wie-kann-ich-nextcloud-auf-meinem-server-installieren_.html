@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Hier beschreiben wir, wie Sie Nextcloud auf einem dedizierten Linux-Server installieren können. Jetzt informieren!"><link rel="canonical" href="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/"><title> Nextcloud auf einem Server | STRATO </title><meta property="og:title" content="Nextcloud auf einem Server | STRATO"><meta name="og:description" content="Hier beschreiben wir, wie Sie Nextcloud auf einem dedizierten Linux-Server installieren können. Jetzt informieren!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '3901',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/3901/',
+            'econda_pageid'                : 'FAQ/3901/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_3901 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_3901:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/813.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/813.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #3901 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Wie kann ich Nextcloud auf meinem Server installieren? </h1><p>Hier beschreiben wir, wie Sie Nextcloud auf einem dedizierten Linux-Server installieren k&ouml;nnen.</p><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#voraussetzungen" title="Voraussetzungen und Vorbereitungen">Voraussetzungen und Vorbereitungen</a></li><li class="my-2"><a href="#nextcloud-docker" title="Die Installation mittels eines Docker-Images">Die Installation mittels eines Docker-Images</a></li><ul class="article-navigation-items"><li class="my-2"><a href="#nc-docker-install" title="Docker installieren">Docker installieren</a></li><li class="my-2"><a href="#nc-docker-vorbereiten" title="Das Docker-Image vorbereiten">Das Docker-Image vorbereiten</a></li><li class="my-2"><a href="#nc-docker-imagestart" title="Das Docker-Image starten">Das Docker-Image starten</a></li><li class="my-2"><a href="#nc-docker-assistent" title="Der Installations-Assistent">Der Installations-Assistent</a></li><li class="my-2"><a href="#nc-docker-wartung" title="Betrieb und Wartung">Betrieb und Wartung</a></li></ul><li class="my-2"><a href="#nextcloud-snap" title="Die Installation mit einem Snap-Paket">Die Installation mit einem Snap-Paket</a></li><ul class="article-navigation-items"><li class="my-2"><a href="#nc-snap-install" title="Das Snap installieren">Das Snap installieren</a></li><li class="my-2"><a href="#nc-snap-domain" title="Die Domain zuweisen">Die Domain zuweisen</a></li><li class="my-2"><a href="#nc-snap-ssl" title="Absicherung mit SSL">Absicherung mit SSL</a></li><li class="my-2"><a href="#nc-snap-wartung" title="Betrieb und Wartung">Betrieb und Wartung</a></li></ul><li class="my-2"><a href="#nextcloud-plesk" title="Die Installation in Plesk">Die Installation in Plesk</a></li><li class="my-2"><a href="#nextcloud-manuell" title="Die manuelle Installation">Die manuelle Installation</a></li><ul class="article-navigation-items"><li class="my-2"><a href="#nc-manuell-mysql" title="Der MySQL-Server">Der MySQL-Server</a></li><li class="my-2"><a href="#nc-manuell-ssl" title="Die SSL-Zertifikate">Die SSL-Zertifikate</a></li><li class="my-2"><a href="#nc-manuell-webserverssl" title="SSL f&uuml;r den Webserver einstellen">SSL f&uuml;r den Webserver einstellen</a></li><li class="my-2"><a href="#nc-manuell-install" title="Nextcloud installieren">Nextcloud installieren</a></li><li class="my-2"><a href="#nc-manuell-assistent" title="Der Installations-Assistent">Der Installations-Assistent</a></li></ul><li class="my-2"><a href="#nextcloud-ubuntu22" title="&Auml;nderungen bei der Verwendung von Ubuntu 22.04">&Auml;nderungen bei der Verwendung von Ubuntu 22.04</a></li><ul class="article-navigation-items"><li class="my-2"><a href="#ubuntu22-docker" title="Bei der Docker-Installation">Bei der Docker-Installation</a></li><li class="my-2"><a href="#ubuntu22-snap" title="Bei der Snap-Installation">Bei der Snap-Installation</a></li><li class="my-2"><a href="#ubuntu22-plesk" title="Bei der Plesk-Installation">Bei der Plesk-Installation</a></li><li class="my-2"><a href="#ubuntu22-manuell" title="Bei der manuellen Installation">Bei der manuellen Installation</a></li></ul> </ul></div><h2><a id="voraussetzungen"></a>Voraussetzungen und Vorbereitungen</h2><p>In diesem Guide gehen wir von einem dedizierten Linux Server aus, auf dem <strong>Ubuntu 20.04 LTS</strong> frisch installiert wurde. F&uuml;r die Verwendung unter Ubuntu 22.04 LTS gelten &auml;hnliche Bedingungen, beachten Sie bitte aber das Kapitel zu den &Auml;nderungen bei der Verwendung von Ubuntu 22.04</p><p>Stellen Sie eine <a href="/faq/server/mit-putty-an-linux-server-und-managed-server-anmelden/" target="_blank">SSH-Verbindung (z.B. mittels PuTTY) mit Ihrem Server</a> her (noch als Benutzer &ldquo;root).</p><p>Stellen Sie sicher, dass das Betriebssystem auf dem aktuellen Stand ist:</p><pre># apt update &amp;&amp; apt upgrade</pre><p>(Das &amp;&amp; sorgt daf&uuml;r, dass der 2. Befehl nur ausgef&uuml;hrt wird, wenn der erste Befehl ohne Fehler abgeschlossen wurde). Beachten Sie, dass der Server unter Umst&auml;nden nach dem Update neu gestartet werden muss.<br/><br/></p><p>Aus Sicherheitsgr&uuml;nden sollte die Administration eines Servers mit einem Benutzer gemacht werden, der sudo Rechte hat und nicht mit dem Benutzer root selbst.</p><p>Sie k&ouml;nnen (als root) folgende Befehle verwenden, um einen neuen Benutzer anzulegen:</p><pre># adduser &lt;Benutzername&gt;</pre><p>Beantworten Sie die Fragen und geben dem neuen Nutzer noch sudo-Rechte:</p><pre># usermod -a -G sudo &lt;Benutzername&gt;</pre><p>Bitte loggen Sie als root aus und loggen Sie sich mit dem eben erstellten Benutzer neu ein. In Zukunft ist es am besten, Sie melden sich mit diesem Nutzer beim Server direkt an (bitte nicht mit den Nextcloud Nutzern verwechseln).</p><div class="sf-status info">Wenn der Login mit diesem Benutzer funktioniert und Sie ein Kommando mit sudo ausf&uuml;hren k&ouml;nnen (zum Test z.B. sudo ls /), k&ouml;nnen Sie in der sshd-Konfiguration den Login als Benutzer root generell verbieten. Das verbessert die Sicherheit f&uuml;r den SSH-Zugriff.</div><p>Es gibt mehrere Wege Nextcloud zu installieren und ans Laufen zu bekommen. In diesem Guide werden wir diese Installationsmethoden abdecken:</p><ul><li>Docker</li><li>Snap-Image</li><li>Plesk</li><li>manuellen Installation</li></ul><p>Wenn Sie ein anderes System nutzen wollen, als hier vorgestellt, beachten Sie bitte die <a rel="nofollow" href="https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html" target="_blank">Systemvoraussetzungen</a> f&uuml;r Nextcloud.<br/><br/>Eine weitere Voraussetzung f&uuml;r eine funktionierende Nextcloud Installation ist es, eine Domain oder Subdomain zu haben. Diese wird so eingestellt, dass in dem A-Record (<a href="/faq/domains/wie-kann-ich-bei-strato-meine-dns-eintraege-verwalten/" target="_blank">DNS-Einstellungen</a>) die IP-Adresse Ihres Servers eingetragen wird.<br/><br/></p><h2><a id="nextcloud-docker"></a>Die Installation mittels eines Docker-Images</h2><p>Nextcloud bietet ein offizielles &ldquo;All in One&rdquo; Docker-Image zur Verwendung an. Wir werden das Docker-Image nutzen, um Nextcloud an den Start zu bringen. Das lohnt sich vor allem dann, wenn Sie auch andere Dienste oder Webseiten mittels Docker einbinden und anbieten wollen.</p><p>Beachten Sie, dass wir von einem neu installierten Ubuntu 20.04 ausgehen.</p><p>Bitte geben Sie in der Firewall die Ports 8080 und 8443 frei, pr&uuml;fen Sie dabei bitte auch eine eventuell vorhandene externe Firewall.<br/><br/></p><h3><a id="nc-docker-install"></a>Docker installieren</h3><ul><li>&nbsp;Als ersten ben&ouml;tigen wir ein paar Pakete, um sicherzustellen, dass die F&auml;higkeiten des Paketmanagers auf dem aktuellen Stand sind: <pre>$ sudo apt install apt-transport-https ca-certificates curl software-properties-common</pre></li><li>Als n&auml;chstes muss der GPG-Schl&uuml;ssel der offiziellen Docker-Bibliothek importiert werden (den - am Ende nicht auslassen): <pre>$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</pre></li><li>Jetzt f&uuml;gen Sie die Docker-Bibliothek hinzu und aktualisieren die interne Paketdatenbank: <pre>$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"</pre></li><li>Sie k&ouml;nnen pr&uuml;fen, ob jetzt die korrekte Version installiert werden w&uuml;rde: <pre>$ apt-cache policy docker-ce</pre> Die Downloads sollten von download.docker.com erfolgen.</li><li>Nun geht es an die Docker-Installation: <pre>$ sudo apt install docker-ce</pre></li><li>Nun noch pr&uuml;fen, ob die Docker-Engine l&auml;uft: <pre>$ systemctl status docker</pre> In der Zeile &ldquo;Active:&rdquo; sollte&nbsp; &ldquo;active (running)&rdquo; stehen. Die Anzeige wird mit der Taste Q beendet.</li></ul><h3><a id="nc-docker-vorbereiten"></a>Das Docker-Image vorbereiten</h3><p>Als erstes legen Sie ein Verzeichnis an, in dem das Image die Daten der Nutzer speichert.</p><pre>$ sudo mkdir -p /var/docker/nextcloud/userdata</pre><p>Jetzt noch ein Verzeichnis, dass dazu genutzt werden kann, um Daten an das Docker-Image bei dessen Start zu &uuml;bertragen:</p><pre>$ sudo mkdir -p /var/docker/nextcloud/_data</pre><p>Nun noch sicher gehen, dass die Berechtigungen passen:</p><pre>$ sudo chown -R 33:0 /var/docker/nextcloud<br />$ sudo chmod -R 750 /var/docker/nextcloud</pre><h3><a id="nc-docker-imagestart"></a>Das Docker-Image starten</h3><p>Um das Docker-Image zu starten, geben Sie folgendes ein:</p><pre>$ sudo docker run -it --name nextcloud-aio-mastercontainer \<br />&nbsp;--restart always -p 8080:8080 -p 8443:8443 -p 80:80 \<br />&nbsp;--volume nextcloud_aio_mastercontainer:/var/docker/nextcloud \<br />&nbsp;--volume /var/run/docker.sock:/var/run/docker.sock:ro \ <br />&nbsp;--env NEXTCLOUD_DATADIR="/var/docker/nextcloud/userdata" \<br />&nbsp;nextcloud/all-in-one:latest</pre><h3><a id="nc-docker-assistent"></a>Der Installations-Assistent</h3><p>Rufen Sie nun den Server &uuml;ber den Port 8080 auf:</p><pre>https://&lt;IP-Adresse des Servers&gt;:8080</pre><p>Sie werden auf das Risiko wegen des selbstsignierten Zertifikats hingewiesen. Best&auml;tigen Sie dies und Ihnen wird das Passwort f&uuml;r die Docker-Administration angezeigt:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker01.big.png" alt="Docker-Passwort" title="Docker-Passwort" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Kopieren Sie sich das Passwort und klicken dann auf <strong>Open Nextcloud AIO login</strong>. Sichern Sie sich das Passwort, weil damit die Container neu gestartet werden k&ouml;nnen, sollte Nextcloud einmal nicht laufen.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker02.big.png" alt="Nextcloud AIO Login" title="Nextcloud AIO Login" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Loggen Sie sich mit dem eben gesicherten Passwort ein</p><p>Hier k&ouml;nnen Sie der Nextcloud einen (Sub-)Domainnamen zuweisen. Achten Sie darauf, dass der eingetragene Domainname bereits mit den richtigen DNS-Einstellungen (A-Record) konfiguriert ist.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker03.big.png" alt="Domain zuweisen" title="Domain zuweisen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Danach k&ouml;nnen Sie noch einige Komponenten ausw&auml;hlen und die Zeitzone eintragen. Vergessen Sie nicht, auf &ldquo;Save changes&rdquo; zu klicken, wenn Sie &Auml;nderungen vornehmen.</p><p><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker04.big.png" alt="Komponenten ausw&auml;hlen" title="Komponenten ausw&auml;hlen" class="image-loader img-fluid img jss_article_image my-3"> <img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker05.big.png" alt="Zeitzone einstellen" title="Zeitzone einstellen" class="image-loader img-fluid img jss_article_image my-3"></p><p><br/>Beim Klick auf &ldquo;Start containers&rdquo; werden die weiteren notwendigen Docker-Images heruntergeladen und gestartet. Der erste Start kann ein wenig dauern. Danach kommen Sie auf eine &Uuml;bersicht &uuml;ber die Container:</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker06.big.png" alt="Startvorgang" title="Startvorgang" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Warten Sie etwas und klicken auf &ldquo;Reload&rdquo;, um die Status-Anzeige zu aktualisieren. Es kann sein, dass der Reload-Button nicht angezeigt wird. In dem Fall erfolgt eine automatische Aktualisierung.</p><p>Wenn alles gr&uuml;n ist, wird Ihnen der Admin-Account der Nextcloud selbst angezeigt.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudDocker07.big.png" alt="Nextcloud ist bereit" title="Nextcloud ist bereit" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Klicken Sie auf <strong>Open your Nextcloud</strong>, um zum Login zu kommen. Wenn Sie einen g&uuml;ltigen Domainnamen angegeben haben, wurde automatisch ein SSL-Zertifikat &uuml;ber Let&rsquo;s Encrypt abgerufen und eingebunden.<br/><br/>Die Ausgaben auf der Kommandozeile k&ouml;nnen abgebrochen werden (STRG+C). Die Container laufen trotzdem weiter.<br/><br/></p><h3><a id="nc-docker-wartung"></a>Betrieb und Wartung</h3><p>Wenn sie Dateien im Datenverzeichnis f&uuml;r Nextcloud ge&auml;ndert haben (im obigen Beispiel unter <code>/var/docker/nextcloud-aio/_data/</code>), m&uuml;ssen diese neu eingelesen werden:</p><pre>$ sudo docker exec -it nextcloud-aio-nextcloud php occ files:scan --all</pre><p><br/>Das Aktualisieren der Container kann durch stoppen und starten der Container &uuml;ber die Container-Verwaltung (https://&lt;domain&gt;:8080) gemacht werden.<br/>&nbsp;</p><h2><a id="nextcloud-snap"></a>Die Installation mit einem Snap-Paket</h2><p>Nextcloud bietet auch ein offiziell gepflegtes Snap-Image an, &uuml;ber das man Nextcloud installieren und laufen lassen kann.<br/><br/>Bei Ubuntu ist Snap vorinstalliert, bei den anderen Distributionen kann es notwendig sein, snap nachzuinstallieren. Gehen Sie sicher, dass alle Tools installiert sind. Unter Ubuntu stellen Sie das sicher mit:</p><pre>$ sudo apt install snapd</pre><h3><a id="nc-snap-install"></a>Das Snap installieren</h3><p>Nun installieren (und starten) Sie den entsprechenden snap:</p><pre>$ sudo snap install nextcloud</pre><p><br/>Sie k&ouml;nnen pr&uuml;fen, ob die Installation erfolgreich war:</p><pre>$ snap changes nextcloud<br />ID&nbsp; Status&nbsp; Spawn&nbsp; Ready&nbsp; Summary<br />2&nbsp; Done&nbsp; today at 16:34 UTC&nbsp; today at 16:35 UTC&nbsp; Install "nextcloud" snap</pre><p>Weitere Informationen &uuml;ber das Snap-Paket k&ouml;nnen Sie so abrufen:</p><p><code>$ snap info nextcloud</code></p><p>Infos &uuml;ber die Verbindungen bekommen Sie so angezeigt:</p><pre>$ snap connections nextcloud</pre><p><br/>Jetzt muss die Installation noch abgeschlossen und ein Administrator-Konto f&uuml;r Nextcloud angelegt werden:</p><pre>$ sudo nextcloud.manual-install &lt;Benutzername&gt; &lt;Passwort&gt;</pre><p>Das Abschlie&szlig;en der Installation kann, je nach Server, durchaus etwas l&auml;nger dauern.</p><h3><a id="nc-snap-domain"></a>Die Domain zuweisen</h3><p>Bei Installation &uuml;ber die Befehlszeile schr&auml;nkt Nextcloud die Hostnamen ein, auf die die Instanz reagieren wird. Standardm&auml;&szlig;ig reagiert der Dienst nur auf Anfragen, die an den Hostnamen &bdquo;localhost&ldquo; gestellt werden. Damit Nextcloud auch &uuml;ber den Dom&auml;nennamen oder die IP-Adresse des Servers erreichbar ist, muss diese Einstellung anpasst werden.<br/><br/>Sie k&ouml;nnen die aktuellen Einstellungen anzeigen, indem Sie den Wert f&uuml;r &ldquo;trusted_domains&rdquo; abfragen:</p><pre>$ sudo nextcloud.occ config:system:get trusted_domains localhost</pre><p>Tragen Sie nun die Domain und/oder die IP-Adresse ein, &uuml;ber die Sie den Server erreichen:</p><pre>$ sudo nextcloud.occ config:system:set trusted_domains 1 --value=&lt;Domain / IP&gt;</pre><p>Pr&uuml;fen Sie durch Anzeige der &ldquo;trusted_domains&rdquo; nach, ob die Domain / die IP eingetragen wurde.<br/><br/></p><h3><a id="nc-snap-ssl"></a>Absicherung mit SSL</h3><p><strong>M&ouml;glichkeit 1: STRATO SSL</strong></p><div class="sf-status info">Die Verwendung von STRATO-SSL funktioniert lediglich, wenn die Domain einem Server-Paket zugeordnet ist.</div><p><a href="/faq/server/so-verwenden-sie-ein-strato-ssl-zertifikat-auf-ihrem-server/#ssl-in-linux" target="_blank">Erstellen Sie als erstes den CSR</a> und damit auch den Private Key (dieser wird auf jeden Fall noch ben&ouml;tigt).<br/><br/><a href="/faq/domains/so-nutzen-sie-strato-ssl/#Server" target="_blank">Weisen Sie nun das STRATO-SSL Zertifikat Ihrer Domain zu.</a><br/><br/>Sie haben nun den mehrere Angaben / Dateien. Sie ben&ouml;tigen folgende Dateien:</p><ul><li>Den Private-Key, der zusammen mit dem CSR erstellt wurde (z.B. key.pem)</li><li>Die Zertifikats-Datei aus der SSL-Verwaltung (z.B. cert.pem)</li><li>Das Root-Zertifikat und das Intermediate-Zertifikat kombiniert in einer Datei (z.B. chain.pem)</li></ul><p>Diese Dateien m&uuml;ssen auf dem Server vorliegen.</p><div class="sf-status info">.crt und .pem Dateien sind identisch, Sie k&ouml;nnen eine .crt Datei auch einfach umbenennen.</div><p><br/>Erzeugen Sie das Verzeichnis f&uuml;r die Zertifikats-Dateien</p><pre>$ sudo mkdir -p /var/snap/nextcloud/current/certs/custom/</pre><p><br/>Kopieren Sie die Dateien in das Verzeichnis. Beispielsweise:</p><pre>$ sudo cp *.pem /var/snap/nextcloud/current/certs/custom/</pre><p><br/>Nun die Zertifikate noch einbinden:</p><pre>$ sudo nextcloud.enable-https custom -s cert.pem key.pem chain.pem</pre><p>Ersetzen Sie die Dateinamen durch Ihre eigenen, achten Sie dabei auf Gro&szlig;- und Kleinschreibung.<br/><br/></p><p><strong>M&ouml;glichkeit 2: Let&rsquo;s Encrypt</strong></p><p>Die Absicherung mit einem SSL-Zertifikat von Let&rsquo;s Encrypt kann nur gemacht werden, wenn Nextcloud mit einer Domain verbunden wurde.<br/><br/>Gehen Sie sicher, dass die Ports 80 und 443 (f&uuml;r http und https) in der Firewall freigegeben wurden. Sie k&ouml;nnen die Ports so freigeben:</p><pre>$ sudo ufw allow 80,443/tcp</pre><p><br/>Nun k&ouml;nnen Sie das Zertifikat anfordern:</p><pre>$ sudo nextcloud.enable-https lets-encrypt</pre><p><br/>Pr&uuml;fen Sie die Voraussetzungen und best&auml;tigen mit &lsquo;y&rsquo;. Geben Sie danach noch eine E-Mail-Adresse f&uuml;r z.B. wichtige Mitteilungen oder eine Domain-Wiederherstellung ein. Als n&auml;chstes geben Sie den Domainnamen ein, den Sie mit dem Nextcloud-Server verbunden haben (ohne www).<br/><br/>Nun wird das Zertifikat abgerufen und bei Erfolg der Apache neu gestartet. Das Zertifikat steht nun zur Verf&uuml;gung.<br/><br/></p><p><strong>M&ouml;glichkeit 3: Selbst signiertes Zertifikat</strong></p><p>Wenn Sie Ihrem Nextcloud-Server keine Domain zugewiesen haben, k&ouml;nnen Sie die Weboberfl&auml;che dennoch sichern, indem Sie ein selbstsigniertes SSL-Zertifikat generieren. Dieses Zertifikat erm&ouml;glicht Zugriff auf die Weboberfl&auml;che &uuml;ber eine verschl&uuml;sselte Verbindung, kann aber die Identit&auml;t Ihres Servers nicht &uuml;berpr&uuml;fen. Daher zeigt Ihr Browser wahrscheinlich eine Warnung an.<br/><br/>So k&ouml;nnen Sie das selbstsignierte Zertifikat aktivieren:</p><pre>$ sudo nextcloud.enable-https self-signed</pre><h3><a id="nc-snap-wartung"></a>Betrieb und Wartung</h3><p>Sie k&ouml;nnen jetzt die Nextcloud-Seite aufrufen:<br/>https://&lt;Domain oder IP&gt;/<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudSnap01.big.png" alt="Next Cloud Login Snap" title="Next Cloud Login Snap" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Da Sie bei der Installation bereits ein Admin-Konto angelegt haben, werden Sie auf die Nextcloud-Anmeldeseite geleitet. Geben Sie die Anmeldedaten ein, die Sie bei der Installation verwendet haben.</p><p>Bei der ersten Anmeldung wird ein Fenster mit einer kurzen Einf&uuml;hrung und Links zu verschiedenen Nextcloud-Clients angezeigt, die f&uuml;r den Zugriff auf Ihren Nextcloud-Server verwendet werden k&ouml;nnen.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudSnap02.big.png" alt="Next Cloud Snap Clients" title="Next Cloud Snap Clients" class="image-loader img-fluid img jss_article_image my-3"></span></p><p><strong>Update von Nextcloud</strong></p><p>So k&ouml;nnen Sie die Nextcloud-Software auf der Kommandozeile aktualisieren;</p><pre>$ sudo sudo snap refresh nextcloud</pre><p><strong>Neustart von Nextcloud</strong></p><p>Manchmal kann es notwendig sein, die komplette Nextcloud-Software neu zu starten. Das geht so:</p><pre>$ sudo snap restart nextcloud</pre><h2><a id="nextcloud-plesk"></a>Die Installation in Plesk</h2><p>Plesk bringt eine eigene Erweiterung mit, &uuml;ber die Nextcloud installiert und verwaltet werden kann.</p><p>F&uuml;r diese Installation gehen wir davon aus, dass Sie Plesk auf Ihrem Server installiert und am Laufen haben.</p><p>Gehen sie in Plesk zu den Erweiterungen und suchen sie nach Nextcloud</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk01.big.png" alt="suche nach Nextcloud in Plesk" title="suche nach Nextcloud in Plesk" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>W&auml;hlen Sie das Ergebnis unter dem Eingabefeld aus.<br/><br/></p><div class="sf-status info">Wenn Sie den Men&uuml;punkt Erweiterungen zum ersten Mal aufrufen, m&uuml;ssen Sie einstellen, ob Sie privat oder gesch&auml;ftlich handeln. Etwaige Preise werden dann mit (privat) oder ohne (gesch&auml;ftlich) USt. angegeben. Die Nextcloud-Erweiterung ist kostenlos.</div><p><br/>Zur Installation der Erweiterung klicken Sie auf &ldquo;Kostenlos nutzen&rdquo;.<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk02.big.png" alt="Next Cloud in Plesk nutzen" title="Next Cloud in Plesk nutzen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Die Erweiterung wird nun installiert:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk03.big.png" alt="Next cloud Erweiterung wird installiert" title="Next cloud Erweiterung wird installiert" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Die Erweiterung kann nun durch Klick auf &ldquo;&Ouml;ffnen&rdquo; eingerichtet werden.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk04.big.png" alt="Die Erweiterung einrichten" title="Die Erweiterung einrichten" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Klicken Sie auf &ldquo;Install&rdquo;, um eine Nextcloud Instanz zu installieren.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk05.big.png" alt="Eine Instaz installieren" title="Eine Instaz installieren" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Nun k&ouml;nnen Sie einige Einstellungen f&uuml;r die Nextcloud-Installation vornehmen:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk06.big.png" alt="Einstellungen" title="Einstellungen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>W&auml;hlen Sie den Domainnamen aus und vergeben Sie den Benutzernamen und das Passwort f&uuml;r den Nextcloud-Administrator. Sie k&ouml;nnen auch den <strong>Subfolder</strong> bearbeiten oder komplett leer lassen, wenn die Domain oder Subdomain alleine f&uuml;r die Nextcloud genutzt werden soll. Der Klick auf <strong>Install</strong> startet die Installation.<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk07.big.png" alt="Installation startet" title="Installation startet" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Nach Abschluss der Installation finden Sie unter <strong>Websites &amp; Domains</strong> im Bereich der Domain, die Sie ausgew&auml;hlt haben, den Punkt <strong>Nextcloud</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk09.big.png" alt="Nextcloud in der Domain" title="Nextcloud in der Domain" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Dort gibt es eine &Uuml;bersicht &uuml;ber die Installation:</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudPlesk08.big.png" alt="Installations-&Uuml;bersicht" title="Installations-&Uuml;bersicht" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Dort finden Sie auch den Benutzernamen des Admin-Benutzers und die M&ouml;glichkeit, den Login aufzurufen. Auch die verschiedenen Apps sind hier verlinkt.<br/><br/>Wenn Sie sich als Administrator einloggen, wird die Einrichtung der Nextcloud abgeschlossen.<br/><br/></p><h2><a id="nextcloud-manuell"></a>Die manuelle Installation</h2><p><br/>Es ist auch eine manuelle Installation m&ouml;glich. Diese ist aufw&auml;ndiger, gibt aber auch mehr Kontrolle &uuml;ber die Installation und erlaubt (entsprechende Kenntnisse vorausgesetzt) auch ungew&ouml;hnliche Konfigurationen. In diesem Guide werden wir &ldquo;lediglich&rdquo; die manuelle&nbsp; Basisinstallation von Nextcloud abdecken. Wir werden hier keine Multi-Domain-Einrichtung des Apache (sogenannte Virtual Hosts) durchgehen. Der Server soll dediziert f&uuml;r die Nextcloud zur Verf&uuml;gung stehen.<br/><br/>Bei der manuellen Installation m&uuml;ssen die Komponenten einzeln installiert, konfiguriert und gestartet werden.<br/><br/>Gehen Sie sicher, dass Sie die <a href="#voraussetzungen">Vorbereitungen</a> abgeschlossen haben.<br/><br/>Als erstes installieren Sie alle erforderlichen Pakete f&uuml;r die Basisinstallation.</p><pre>$ sudo apt install apache2 libapache2-mod-fcgid \<br />&nbsp; php-fpm php-gd php-mysql php-curl php-mbstring php-intl php-gmp \<br />&nbsp; php-bcmath php-xml php-imagick php-zip libapache2-mod-fcgid \<br />&nbsp; mariadb-server<br />$ sudo a2enmod proxy_fcgi setenvif<br />$ sudo a2enconf php7.4-fpm<br />$ sudo systemctl reload apache2</pre><p>Nun sind die Pakete installiert und auch grunds&auml;tzlich am Laufen.<br/><br/>Wir verwenden hier eine Konfiguration, die von der offiziellen Anleitung abweicht und nutzen das FastCGI-Modul f&uuml;r PHP anstelle des mod_php. Der Grund ist, dass die Verwendung des Apache-Modules mod_php die Verwendung von http/2 indirekt ausschlie&szlig;t.<br/><br/></p><h3><a id="nc-manuell-mysql"></a>Der MySQL-Server</h3><p>Sichern Sie als erstes die MySQL-Installation:</p><pre>$ sudo mysql_secure_installation</pre><ul><li>Das aktuelle root-Passwort (f&uuml;r MySQL) ist leer.</li><li>Schalten Sie nicht zur unix_socket Authentifizierung um. Beantworten Sie diese Frage bitte mit <strong>nein</strong>.</li><li>Vergeben Sie ein neues Root-Passwort. Das neue Passwort gilt f&uuml;r den Datenbank-Benutzer &ldquo;root&rdquo; und nicht f&uuml;r den Systembenutzer.</li><li>Best&auml;tigen Sie danach die weiteren Vorauswahlen.</li></ul><p>Als n&auml;chstes ist es notwendig, einen Datenbank-Benutzer f&uuml;r die Nextcloud anzulegen. Dazu starten sie den lokalen MySQL-Client:</p><pre>$ sudo mysql</pre><p>Sie sind nun mit der Datenbank verbunden. Geben Sie folgende SQL-Befehle ein:</p><pre>CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';</pre><p>Ersetzen Sie username und password durch einen Datenbank-Benutzer f&uuml;r Nextcloud.</p><pre>CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</pre><pre>GRANT ALL PRIVILEGES ON nextcloud.* TO 'username'@'localhost';</pre><pre>FLUSH PRIVILEGES;</pre><pre>QUIT;</pre><h2><a id="nc-manuell-ssl"></a>Die SSL-Zertifikate</h2><p><strong>SSL-Dateien mit STRATO SSL</strong></p><p><a href="/faq/server/so-verwenden-sie-ein-strato-ssl-zertifikat-auf-ihrem-server/#ssl-in-linux" target="_blank">Erstellen Sie als erstes den CSR</a> und damit auch den Private Key (dieser wird auf jeden Fall noch ben&ouml;tigt).<br/><br/><a href="/faq/domains/so-nutzen-sie-strato-ssl/#Server" target="_blank">Weisen Sie nun das STRATO-SSL Zertifikat Ihrer Domain zu.</a></p><p>Wenn die Zuweisung erfolgreich abgeschlossen ist, k&ouml;nnen Sie sich die Dateien herunterladen und auf Ihren Server &uuml;bertragen.<br/><br/>Verschieben Sie die Dateien (Zertifikat, Private Key und Intermediate+Root Zertifikat) dann an einen zentralen Ort, an dem der Webserver diese auch erreichen kann. Wir empfehlen ein eigenes Verzeichnis unterhalb von <code>/etc/ssl/</code>, das genauso benannt ist wie die Domain.<br/><br/></p><p><strong>SSL-Dateien mit Let&rsquo;s Entrypt</strong></p><p>Installieren Sie als erstes das Paket certbot</p><pre>$ sudo apt-get install certbot</pre><p><br/>Rufen Sie nun das Zertifikat ab:</p><pre>$ sudo certbot certonly --webroot -w /var/www/html -d &lt;domain&gt;</pre><p><br/>Das Zertifikat findet sich bei erfolgreichem Abruf unter <code>/etc/letsencrypt/live/&lt;domain&gt;/</code><br/>Die Dateinamen sind <code>privkey.pem</code> f&uuml;r den Private-Key, <code>cert.pem</code> f&uuml;r das Zertifikat <code>chain.pem</code> f&uuml;r die kombinierten Intermediate und root-Zertifikate und <code>fullchain.pem</code> f&uuml;r eine Kombination aus dem Zertifikat, dem Intermediate-Zertifikat und dem Root-Zertifikat.<br/><br/>Bei der Installation wurde auch ein Timer aktiviert, so dass das Zertifikat automatisch rechtzeitig erneuert wird.<br/><br/><strong>SSL-Dateien bei einem selbst signierten Zertifikat</strong><br/>Erstellen Sie das Zertifikatsverzeichnis und wechseln dort hin:</p><p><code>$ sudo mkdir -p /etc/ssl/&lt;domain&gt;</code></p><p><code>$ cd /etc/ssl/&lt;domain&gt;</code></p><p><br/>Nun erstellen Sie das Zertifikat:</p><pre>$ sudo openssl req -newkey rsa:2048 -nodes -keyout privkey.pem -x509 -days 365 -out cert.pem</pre><p>Beantworten Sie die Fragen. Besonders wichtig ist der <strong>Common Name</strong>, da hier der Domainname eingetragen wird.<br/><br/>Das Zertifikat liegt in dem Verzeichnis in den Dateien <code>cert.pem</code> und <code>privkey.pem</code> vor. Sie k&ouml;nnen das mit <code>ls -l</code> nachpr&uuml;fen.<br/><br/>Gehen Sie wieder zur&uuml;ck in Ihr Heimatverzeichnis:</p><pre>$ cd</pre><p><br/>Das war es auch schon mit dem SSL-Zertifikat<br/><br/></p><h3><a id="nc-manuell-webserverssl"></a>SSL f&uuml;r den Webserver einstellen</h3><p>Aktivieren Sie die ben&ouml;tigten Apache-Module:</p><pre>$ sudo a2enmod ssl http2 headers</pre><p><br/>Starten Sie nun den Webserver neu:</p><pre>$ sudo apache2ctl configtest &amp;&amp; sudo service apache2 restart</pre><p><br/>Bearbeiten Sie bitte die Apache-Konfiguration wie folgt:</p><pre>$ sudoedit /etc/apache2/sites-available/000-default.conf</pre><pre>Erg&auml;nzen Sie die Datei mit folgendem Text:<br />&lt;VirtualHost *:443&gt;<br />&nbsp; SSLEngine on<br />&nbsp; SSLCertificateFile <em>&lt;Dateiname f&uuml;r das Zertifikat&gt;</em><br />&nbsp; SSLCertificateKeyFile <em>&lt;Dateiname f&uuml;r den Private-Key&gt;</em><br /><br />&nbsp; SSLProtocol All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1<br />&nbsp; SSLHonorCipherOrder On<br />&nbsp; SSLCompression off<br /><br />&nbsp; DocumentRoot /var/www/html/<br />&nbsp; &lt;IfModule mod_headers.c&gt;<br />&nbsp; Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"<br />&nbsp; &lt;/IfModule&gt;<br />&nbsp; Protocols h2 h2c http/1.1<br />&lt;/VirtualHost</pre><p>Bitte &auml;ndern Sie die Dateinamen f&uuml;r die Zertifikate ab. Die Angaben oben sind lediglich Platzhalter.<br/><br/>Jetzt gilt es noch den Webserver (Apache) so einzustellen, dass auch die .htaccess-Dateien funktionieren.</p><pre>$ sudoedit /etc/apache2/apache2.conf</pre><p>Suchen Sie nach diesem Block:</p><pre>&lt;Directory /var/www/&gt;<br />&nbsp; Options Indexes FollowSymLinks<br />&nbsp; AllowOverride None<br />&nbsp; Require all granted<br />&lt;/Directory</pre><p>Ersetzen Sie das <code>None</code> hinter AllowOverride durch <code>All</code> und speichern die Datei.<br/><br/>Starten Sie nun noch einmal den Webserver neu:</p><pre>$ sudo apache2ctl configtest &amp;&amp; sudo service apache2 restart</pre><p><br/>Als letztes gilt es noch eine wichtige Einstellung anzupassen. Bearbeiten Sie die zentrale php.ini.</p><pre>$ sudoedit /etc/php/7.4/fpm/php.ini</pre><p>Suchen Sie nach <code>memory_limit</code> und gehen sicher, das der Wert hinter dem = auf mindestens <code>512M</code> steht.<br/>Speichern Sie die Datei und starten den PHP-Dienst neu:</p><pre>$ sudo systemctl restart php7.4-fpm.service</pre><p><br/><strong>Der Funktionstest von PHP</strong></p><p>Erstellen Sie eine Testdatei</p><pre>$ sudoedit /var/www/html/info.php</pre><p>mit diesem Inhalt:</p><pre>&lt;?php phpinfo(); ?&gt;</pre><p><br/>Speichern Sie die Datei und rufen Sie danach mit dem Browser die Seite auf: <code>https://&lt;IP-Adresse oder Domainname&gt;/info.php</code></p><p>Es sollte die PHP-Info-Seite angezeigt werden. Bei einem selbst signierten Zertifikat wird eine Warnung angezeigt. Akzeptieren Sie das Risiko, Sie haben das Zertifikat ja eben selbst erstellt.<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell01.big.png" alt="PHP Info" title="PHP Info" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Wenn die Info ungef&auml;hr so angezeigt wird (die Versionsnummern k&ouml;nnen abweichen) l&auml;uft alles und sie k&ouml;nnen die Info-Datei wieder entfernen:</p><pre>$ sudo rm /var/www/html/info.php<br /><br /></pre><h3><a id="nc-manuell-install"></a>Nextcloud installieren</h3><p>Gehen Sie zu <a rel="nofollow" href="https://nextcloud.com/install/#instructions-server" target="_blank">https://nextcloud.com/install/#instructions-server</a>, &ouml;ffnen Sie den Punkt &ldquo;Archive&rdquo; und kopieren sich die Adresse f&uuml;r die .tar.bz2 Datei.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell02.big.png" alt="Adresse kopieren" title="Adresse kopieren" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Auf dem Server geben Sie dann ein:</p><pre>$ wget &lt;link-adresse&gt;</pre><p>Das Paket wird nun heruntergeladen. Pr&uuml;fen Sie nach, ob die Datei heruntergeladen wurde und wie der Dateiname lautet:</p><pre>$ ls -l</pre><p><br/>Entpacken Sie das Paket in Ihrem Heimatverzeichnis:</p><pre>$ tar -xvf &lt;Dateiname&gt;</pre><p><br/>Nun kopieren Sie die Dateien an den eigentlichen Ort:</p><pre>$ sudo cp -r --preserve=mode nextcloud/* nextcloud/.htaccess nextcloud/.user.ini /var/www/html/</pre><p><br/>Und nun noch die Datei-Eigent&uuml;merschaft korrigieren:</p><pre>$ sudo chown -R www-data:www-data /var/www/html</pre><h3><br/><a id="nc-manuell-assistent"></a>Der Installations-Assistent</h3><p>Jetzt k&ouml;nnen sie den Installations-Assistenten von Nextcloud aufrufen. L&ouml;schen Sie als erstes den Browser-Cache und geben dann als Adresse ein: <code>https://&lt;IP-Adresse oder Domain&gt;/</code><br/><br/>Es wird Ihnen nun der erste Schritt des Installations-Assistenten angezeigt:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell03.big.png" alt="Installations-Assistent" title="Installations-Assistent" class="image-loader img-fluid img jss_article_image my-3"></span><br/><br/></p><p>Die Daten f&uuml;r den Administrator der Nextcloud k&ouml;nnen Sie sich aussuchen. Wir empfehlen, den Administrator nicht f&uuml;r die t&auml;gliche Nutzung zu verwenden.<br/><br/>Beim Benutzernamen und Passwort f&uuml;r die Datenbank-Verbindung verwenden Sie die Daten, die Sie beim Anlegen des Datenbank-Benutzers weiter oben verwendet haben.<br/><br/>Weiter geht es mit dem n&auml;chsten Schritt (es kann einen Moment dauern, bis die Datenbank-Tabellen angelegt und auch alles weitere eingerichtet wurden):<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell04.big.png" alt="Empfohlene Next Cloud Apps" title="Empfohlene Next Cloud Apps" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Wir empfehlen, die Apps zu installieren. Es kann sein, dass die App f&uuml;r Collabra nicht installierbar ist, weil daf&uuml;r eine entsprechende Installation von Collabra fehlt. Danach ist die Einrichtung abgeschlossen. Sie k&ouml;nnen die Einf&uuml;hrung durchgehen. Sie finden auch hier die Links zu den Nextcloud Apps:</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell05.big.png" alt="Next Cloud Apps" title="Next Cloud Apps" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Und zum Abschluss wird Ihnen die Nutzung der Cloud erm&ouml;glicht:</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/NextCloudManuell06.big.png" alt="Beginn der nutzung" title="Beginn der nutzung" class="image-loader img-fluid img jss_article_image my-3"></span></p><h2><a id="nextcloud-ubuntu22"></a>&Auml;nderungen bei der Verwendung von Ubuntu 22.04</h2><h3><br/><a id="ubuntu22-docker"></a>Bei der Docker-Installation</h3><ul><li>Das Programm apt-key ist veraltet. Das Hinzuf&uuml;gen des GPG-Keys f&uuml;r das neue Repository bitte so durchf&uuml;hren:<br/><code>$ wget -qO- https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/trusted.gpg.d/docker.asc</code></li><li>Das Hinzuf&uuml;gen des Repositories sollte mit folgendem Kommando gemacht werden:<br/><code>$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"</code><br/><br/></li></ul><h3><a id="ubuntu22-snap"></a>Bei der Snap-Installation</h3><ul><li>Keine &Auml;nderungen<br/><br/></li></ul><h3><a id="ubuntu22-plesk"></a>Bei der Plesk-Installation</h3><ul><li>Keine &Auml;nderungen<br/><br/></li></ul><h3><a id="ubuntu22-manuell"></a>Bei der manuellen Installation</h3><ul><li>Ersetzen Sie <code>sudo a2enconf php7.4-fpm</code><br/>durch <code>sudo a2enconf php8.1-fpm</code></li><li>Ersetzen Sie die Versionsangaben bei der Bearbeitung der php.ini durch 8.1:<br/><code>$ sudoedit /etc/php/8.1/fpm/php.ini</code><br/><code>$ sudo systemctl restart php8.1-fpm.service</code><br/><br/></li></ul><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><p>[%navigation-item anker="nextcloud-ubuntu22" text="&Auml;nderungen bei der Verwendung von Ubuntu 22.04" %]</p><p>[%navigation-block %]</p><p>[%navigation-item anker="ubuntu22-docker" text="Bei der Docker-Installation" %]</p><p>[%navigation-item anker="ubuntu22-snap" text="Bei der Snap-Installation" %]</p><p>[%navigation-item anker="ubuntu22-plesk" text="Bei der Plesk-Installation" %]</p><p>[%navigation-item anker="ubuntu22-manuell" text="Bei der manuellen Installation" %]</p></div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="3901"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="3901"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Wie kann ich Nextcloud auf meinem Server installieren? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="3901"> <input type="hidden" name="headline" value="Wie kann ich Nextcloud auf meinem Server installieren?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/wie-kann-ich-nextcloud-auf-meinem-server-installieren/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

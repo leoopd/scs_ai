@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="In diesem Artikel werden die ersten Schritte erklärt, um Cyber Protect in der ServerCloud zu nutzen. Jetzt informieren!"><link rel="canonical" href="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/"><title> ServerCloud: Backup-Lösung | STRATO </title><meta property="og:title" content="ServerCloud: Backup-Lösung | STRATO"><meta name="og:description" content="In diesem Artikel werden die ersten Schritte erklärt, um Cyber Protect in der ServerCloud zu nutzen. Jetzt informieren!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '3708',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/3708/',
+            'econda_pageid'                : 'FAQ/3708/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_3708 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_3708:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/843.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/848/Backup.html"> Backup </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/853/Sicherheit.html"> Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/991/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/843.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/848/Backup.html"> Backup </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/853/Sicherheit.html"> Sicherheit </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/991/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #3708 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> Wie verwalte ich die Backup-Lösung der Server Cloud? </h1><p>In diesem Artikel werden Ihnen die ersten Schritte erkl&auml;rt, die erforderlich sind, um Cyber Protect in der Server Cloud zu nutzen. Dar&uuml;ber hinaus erfahren Sie, welche Backups Sie mit Cyber Protect erstellen k&ouml;nnen.<br/><br/></p><div class="sf-status info">F&uuml;r die Nutzung von Cyber Protect mit anderen Servern und Ger&auml;ten nutzen Sie bitte <a href="/faq/server/erste-schritte-und-haeufig-gestellte-fragen-zum-cyber-protect/" target="_blank">diesen Artikel</a></div><div class="article-navigation mb-3 mb-sm-5"> <span class="article-navigation-title d-none d-lg-block">Inhaltsverzeichnis</span> <a data-bs-toggle="collapse" rel="nofollow" href=".article-navigation-items" class="article-navigation-title d-block d-lg-none"> <span class="article-navigation-icons"> <i class="fa fa-plus-circle"></i> <i class="fa fa-minus-circle"></i> </span> Inhaltsverzeichnis </a> <ul class="collapse article-navigation-items d-lg-block"> <li class="my-2"><a href="#allgemeine-informationen-zu-backups-der-server-cloud" title="Allgemeine Informationen zu Backups der Server Cloud">Allgemeine Informationen zu Backups der Server Cloud</a></li><li class="my-2"><a href="#cloud-panel-uebersicht-ueber-den-bereich-backup-paket" title="Cloud Panel: &Uuml;bersicht &uuml;ber den Bereich Backup-Paket">Cloud Panel: &Uuml;bersicht &uuml;ber den Bereich Backup-Paket</a></li><li class="my-2"><a href="#backup-paket-aktivieren" title="Backup-Paket aktivieren">Backup-Paket aktivieren</a></li><li class="my-2"><a href="#cloud-backup-verwalten" title="Cloud Backup verwalten">Cloud Backup verwalten</a></li><ul class="article-navigation-items"><li class="my-2"><a href="#backup-konsole-oeffnen" title="Backup-Konsole &ouml;ffnen">Backup-Konsole &ouml;ffnen</a></li><li class="my-2"><a href="#zugangsdaten-fuer-die-backup-konsole-erhalten" title="Zugangsdaten f&uuml;r die Backup-Konsole erhalten">Zugangsdaten f&uuml;r die Backup-Konsole erhalten</a></li></ul><li class="my-2"><a href="#cyber-protection-agent-installieren" title="Cyber Protection Agent installieren">Cyber Protection Agent installieren</a></li><li class="my-2"><a href="#backup-strategie-entwickeln" title="Backup-Strategie entwickeln">Backup-Strategie entwickeln</a></li><li class="my-2"><a href="#schutzplan-auswaehlen-oder-konfigurieren" title="Schutzplan ausw&auml;hlen oder konfigurieren">Schutzplan ausw&auml;hlen oder konfigurieren</a></li> </ul></div><h2 id="allgemeine-informationen-zu-backups-der-server-cloud">Allgemeine Informationen zu Backups der Server Cloud</h2><p>Mit Cloud Backup k&ouml;nnen Sie Ihre Ihre Server der Server Cloud sichern und wiederherstellen. Hierbei haben Sie die M&ouml;glichkeit, folgende Backups zu erstellen:</p><ul><li>Vollst&auml;ndige Backups</li><li>Laufwerke &amp; Volumes</li><li>Ordner &amp; Dateien</li><li>Datenbanken</li></ul><div class="sf-status info">Sie k&ouml;nnen Ihre Daten nur auf dem Cloud Storage speichern.</div><p>Mit dem Backup-Paket k&ouml;nnen Sie Ihre Server der Server Cloud sichern und wiederherstellen. Die Verwaltung Ihrer Backups erfolgt mittels der Konsole f&uuml;r Cyber Protect. Um Backups durchf&uuml;hren zu k&ouml;nnen, m&uuml;ssen Sie den Cyber Protect Agent auf dem zu sichernden Server installieren. Anschlie&szlig;end ist es erforderlich, dass Sie den Server in der Cyber Protect Konsole registrieren.<br/><br/></p><h2 id="cloud-panel-uebersicht-ueber-den-bereich-backup-paket">Cloud Panel: &Uuml;bersicht &uuml;ber den Bereich Backup-Paket</h2><p>Im Bereich Backup-Paket sind die wichtigsten Angaben zu Ihren Backups aufgef&uuml;hrt:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/BackupServerCloud_02.big.png" alt="Backup Bereich" title="Backup Bereich" class="image-loader img-fluid img jss_article_image my-3"></span></p><p><strong>Backup-Paket:</strong> Paket, das Sie f&uuml;r Ihre Backups ausgew&auml;hlt haben. Aktuell bieten wir lediglich das &ldquo;Pay per Use&rdquo; Paket an.<br/><strong>Verwendet:</strong> Gr&ouml;&szlig;e des Speicherplatzes, der von Ihren Backups belegt wird.<br/><strong>Ger&auml;te:</strong> Ger&auml;te, von denen ein Backup erstellt werden kann.<br/><strong>Benachrichtigungseinstellungen:</strong> In diesem Bereich k&ouml;nnen Sie die Benachrichtigungseinstellungen konfigurieren, um E-Mail-Benachrichtigungen &uuml;ber den Status Ihrer Backups zu erhalten. Hierbei k&ouml;nnen w&auml;hlen, ob Sie &uuml;ber erfolgreiche Backups, fehlgeschlagene Backups oder &uuml;ber Backups, die mit Warnungen abgeschlossen werden, informiert werden m&ouml;chten. Dar&uuml;ber hinaus k&ouml;nnen Sie in diesem Bereich ausw&auml;hlen, ob Sie eine t&auml;gliche Zusammenfassung &uuml;ber Alarmmeldungen erhalten m&ouml;chten. Zus&auml;tzlich k&ouml;nnen Sie im Feld <strong>E-Mail-Adresse</strong>, die E-Mail-Adresse hinterlegen, an die Ihre Backup-Berichte versendet werden sollen.<br/><strong>Backup-Verwaltung:</strong>In diesem Bereich finden Sie die Links zur Backup-Konsole. F&uuml;r jedes Rechenzentrum ist ein Link zu einer separaten Backup-Konsole aufgef&uuml;hrt.</p><p>Mit der Backup-Konsole k&ouml;nnen Sie Ihre Backups individuell konfigurieren und verwalten. Im Rahmen der Konfiguration Ihrer Backups k&ouml;nnen Sie z. B. festlegen, ob der gesamte Server, einzelne Laufwerke oder einzelne Dateien gesichert werden sollen. Dar&uuml;ber hinaus k&ouml;nnen Sie mittels der Backup-Konsole einen Zeitplan definieren, die gew&uuml;nschte Aufbewahrungsdauer und den Komprimierungsgrad festlegen und die Verschl&uuml;sselung Ihrer Backups aktivieren. Ferner haben Sie die M&ouml;glichkeit, komplexe Backup-Routinen durch die Konfiguration von mehreren Backup-Pl&auml;nen abzubilden.<br/><strong>Backup Agent f&uuml;r Server:</strong> In diesem Bereich k&ouml;nnen Sie den Backup Agent f&uuml;r Windows und Linux herunterladen. Der Backup Agent ist eine Software, die ben&ouml;tigt wird, um Backups von Ihren Servern zu erstellen. Diese Software muss auf den zu sichernden Servern installiert werden. Der Backup Agent kann alternativ in der Backup Konsole heruntergeladen werden.<br/><strong>Verlauf:</strong> Im Bereich Verlauf werden alle Aktionen angezeigt, die Sie im Cloud Panel im Bereich <strong>Backup &gt; Backup-Paket</strong> durchgef&uuml;hrt haben.</p><h2 id="backup-paket-aktivieren">Backup-Paket aktivieren</h2><p>Wenn Sie noch kein Backup-Paket eingerichtet haben, m&uuml;ssen Sie dieses aktivieren, um Backups von Ihren Servern erstellen und verwalten zu k&ouml;nnen. Der Speicherplatz, den Ihre Backups insgesamt verbrauchen, wird in Ihrem Backup-Paket zentral abgerechnet. Ihre Backups k&ouml;nnen Sie in der Backup-Konsole individuell konfigurieren, die f&uuml;r jedes Rechenzentrum separat eingerichtet wird.</p><ol><li>Gehen Sie im Cloud Panel in den Bereich Backup &gt; Backup-Paket.</li><li>Um ein Backup-Paket zu aktivieren,klicken Sie auf das Plus-Symbol.</li><li>W&auml;hlen Sie das gew&uuml;nschte Backup-Paket aus.</li><li>Mit dem&nbsp; Pay-per-Use-Paket bezahlen Sie nur den Speicherplatz, den Sie nutzen.</li><li>Um Informationen zur Datenschutzerkl&auml;rung aufzurufen, klicken Sie auf hier.</li><li>Geben Sie die Benachrichtigungs-E-Mail-Adresse ein.</li><li>Klicken Sie auf Backup-Paket aktivieren.</li></ol><p><img data-image-loader="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/3708_-_Aktivierung_2.big.png" alt="Backup Paket aktivieren" title="Backup Paket aktivieren" class="image-loader img-fluid img jss_article_image my-3"></p><p>Das Backup-Paket wird aktiviert. Anschlie&szlig;end k&ouml;nnen Sie die Backup-Konsole &ouml;ffnen und den Backup-Agent f&uuml;r Ihre Server herunterladen.<br/><br/></p><h2 id="cloud-backup-verwalten">Cloud Backup verwalten</h2><p>Sie k&ouml;nnen Cloud Backup im Cloud Panel im Bereich<strong> Backup &gt; Backup Paket</strong> verwalten.<br/>In diesem Bereich k&ouml;nnen Sie folgenden Aktionen durchf&uuml;hren:</p><ul><li><strong>Benachrichtigungseinstellungen konfigurieren:</strong> Legen Sie fest an welche E-Mail-Adresse die E-Mail-Benachrichtigungen &uuml;ber den Status Ihrer Backups gesendet werden sollen. Ferner k&ouml;nnen Sie festlegen, ob Sie &uuml;ber erfolgreiche Backups, fehlgeschlagene Backups oder &uuml;ber Backups, die mit Warnungen abgeschlossen werden, informiert werden m&ouml;chten.</li><li><strong>Backup-Konsole &ouml;ffnen:</strong> In der Backup-Konsole k&ouml;nnen Sie Ihre Backups verwalten. Im Rahmen der Konfiguration Ihrer Backups k&ouml;nnen Sie z. B. festlegen, ob der gesamte Server, einzelne Laufwerke oder einzelne Dateien gesichert werden sollen. Dar&uuml;ber hinaus k&ouml;nnen Sie mittels der Backup-Konsole einen Zeitplan definieren, die gew&uuml;nschte Aufbewahrungsdauer und den Komprimierungsgrad festlegen und die Verschl&uuml;sselung Ihrer Backups aktivieren. Ferner haben Sie die M&ouml;glichkeit, komplexe Backup-Routinen durch die Konfiguration von mehreren Backup-Pl&auml;nen abzubilden.<br/>Dar&uuml;ber hinaus k&ouml;nnen Sie in diesem Bereich w&auml;hlen, ob die Backups Ihrer Ger&auml;te in Rechenzentren in Europa oder in den USA gespeichert werden sollen.<br/>F&uuml;r jedes Backupziel gibt es eine separate Backup-Konsole, in der Sie die zu sichernden Ger&auml;te, Ihre Backup-Pl&auml;ne und Ihr bereits erstellten Backups verwalten k&ouml;nnen. Diese Backup-Konsolen k&ouml;nnen Sie &uuml;ber die Oberfl&auml;che des Cloud Panels &ouml;ffnen.</li><li><strong>Backup Agent herunterladen:</strong> Der Backup Agent ist eine Software, die ben&ouml;tigt wird, um Backups von Ihren Servern zu erstellen. Diese Software muss auf den zu sichernden Servern installiert werden. Der Backup Agent kann in der Backup Konsole heruntergeladen werden.</li></ul><h3 id="backup-konsole-oeffnen">Backup-Konsole &ouml;ffnen</h3><p>Mit der Backup-Konsole k&ouml;nnen Sie Ihre Backups verwalten. Diese bietet Ihnen die M&ouml;glichkeit, folgende Aktionen durchzuf&uuml;hren:</p><ul><li>Workstations, Server, Mobilger&auml;te, Virtualisierungshosts oder Applikationen hinzuf&uuml;gen oder l&ouml;schen.</li><li>Schutzpl&auml;ne erstellen, bearbeiten oder l&ouml;schen</li><li>Backups verwalten</li><li>Backups wiederherstellen</li></ul><p>Um die Backup-Konsole zu &ouml;ffnen, klicken Sie im Bereich Backup-Verwaltung neben dem Standort, in dem sich Ihr Server befindet (z. B. Europa), auf<strong> Zugriff auf die Backup-Konsole</strong>.<br/>Weitere Informationen zur Backup-Konsole finden Sie in unseren <a href="/faq/server/erste-schritte-und-haeufig-gestellte-fragen-zum-cyber-protect/" target="_blank">FAQs</a> und bei <a rel="nofollow" href="https://www.acronis.com/de-de/support/documentation/AcronisCyberProtect_15/" target="_blank">Acronis</a>.</p><h3 id="zugangsdaten-fuer-die-backup-konsole-erhalten">Zugangsdaten f&uuml;r die Backup-Konsole erhalten</h3><p>Wenn Sie die Backup-Konsole &uuml;ber das Cloud Panel aufrufen, ben&ouml;tigen Sie keine Zugangsdaten. In einigen F&auml;llen ist jedoch erforderlich, dass Sie sich mit den Zugangsdaten in die Backup-Konsole einloggen. Dies ist z.B. notwendig, wenn Sie Dateien von einem Backup auf einen Server herunterladen m&ouml;chten.<br/><br/></p><p><strong>So identifizieren Sie den Benutzernamen: <br/></strong></p><ul><li>Rufen Sie sich das Cloud Panel auf</li><li>Klicken Sie in der Navigationsleiste links auf Backup &gt; Backup-Paket.</li><li>&Ouml;ffnen Sie die Backup-Konsole.</li><li>Klicken Sie rechts oben auf das Benuttzer-Symbol</li><li>Notieren Sie sich den Benutzernamen, der im folgenden Format angezeigt wird:<br/>NGCS_xxxxx_xxxx.admin</li></ul><p><strong>So legen Sie das Passwort f&uuml;r die Backup-Konsole fest:</strong></p><ul><li>Rufen Sie die URL <a rel="nofollow" href="https://mc-backup.strato.com/login" target="_blank">https://mc-backup.strato.com/login</a> in Ihrem Browser auf.</li><li>Geben Sie den Benutzernamen ein und klicken Sie auf FORTSETZEN.</li><li>Klicken Sie auf Kennwort vergessen? Klicken Sie auf NACHRICHT SENDEN.</li><li>Eine E-Mail mit weiteren Instruktionen wird an Ihre E-Mail-Adresse gesendet.</li><li>&Ouml;ffnen Sie die E-Mail und klicken Sie auf Change password.</li><li>Geben Sie das gew&uuml;nschte Passwort ein und wiederholen Sie dieses. Klicken Sie danach auf NEUES KENNWORT FESTLEGEN.</li></ul><p>Das Passwort wird gespeichert. Nun k&ouml;nnen Sie sich mit dem Benutzernamen und Ihrem Passwort unter der URL <a rel="nofollow" href="https://mc-backup.strato.com/login" target="_blank">https://mc-backup.strato.com/login</a> direkt in die Backup-Konsole einloggen.<br/><br/></p><h2 id="cyber-protection-agent-installieren">Cyber Protection Agent installieren</h2><p>Um Backups von Ihren existierenden Servern zu erstellen, m&uuml;ssen Sie auf diesen Ger&auml;ten den Acronis Cyber Protection Agent installieren. Diesen k&ouml;nnen Sie in der Backup-Konsole herunterladen.</p><p>Eine Anleitung, wie Sie den Acronis Cyber Protection Agent installieren, finden Sie hier: <a href="/faq/sicherheit/Wie-installiere-ich-den-Cyber-Protect-Agenten/" target="_blank">Wie installiere ich den Cyber Protect Agenten?</a></p><p>In manchen F&auml;llen ist im Rahmen der Registrierung die Eingabe des Benutzernamens und des Passworts der Backup Konsole erforderlich. Wie Sie die Zugangsdaten f&uuml;r die Backup-Konsole erhalten, wird <a href="#zugangsdaten">hier </a>beschrieben.<br/><br/></p><h2 id="backup-strategie-entwickeln">Backup-Strategie entwickeln</h2><p>Um Ihre Daten schnell, effizient und vollst&auml;ndig wiederherzustellen, sollten Sie eine Backup-Strategie entwickeln. Bei der Entwicklung der passenden Backup-Strategie sollten Sie verschiedene Faktoren ber&uuml;cksichtigen. Diese k&ouml;nnen je nach Anwendungsszenario eine sehr unterschiedliche Gewichtung haben.&nbsp; Insbesondere bei Servern sollten sie z. B. die gesetzlichen Vorgaben pr&uuml;fen. Wie Sie eine individuelle Backup-Strategie entwickeln, wird in <a href="/faq/sicherheit/was-ist-eine-backup-strategie/" target="_blank">diesem Artikel</a> erkl&auml;rt.<br/><br/></p><h2 id="schutzplan-auswaehlen-oder-konfigurieren">Schutzplan ausw&auml;hlen oder konfigurieren</h2><p>Nachdem Sie den Backup Agent auf Ihrem Ger&auml;t installiert haben, k&ouml;nnen Sie einen Schutzplan konfigurieren. Der Schutzplan ist erforderlich, damit regelm&auml;&szlig;ige Backups erstellt werden.</p><div class="sf-status info">Um komplexe Backup-Routinen abzubilden, k&ouml;nnen Sie auch mehrere Schutzpl&auml;ne f&uuml;r ein Ger&auml;t konfigurieren.</div><p>So erstellen Sie einen Schutzplan:</p><ul><li>Klicken Sie im Bereich <strong>Ger&auml;te &gt; Alle Ger&auml;te</strong> beim gew&uuml;nschten Ger&auml;t auf das <strong>Zahnradsymbol</strong>.</li><li>Klicken Sie auf <strong>Sch&uuml;tzen</strong>.</li><li>Klicken Sie auf <strong>Plan erstellen</strong>. Wenn Sie bereits einen Schutzplan erstellt haben, klicken Sie auf <strong>Plan hinzuf&uuml;gen</strong>.</li><li>Konfigurieren Sie den Schutzplan: <ul><li><strong>Backup-Quelle</strong>: In diesem Bereich legen Sie fest, was gesichert werden soll.</li><li><strong>Komplette Maschine</strong>: Wenn Sie diese Option ausw&auml;hlen, werden alle Laufwerke, inkl. Partitionierung gesichert. Mit diesem Backup kann ein ganzes System wiederhergestellt werden.</li><li><strong>Laufwerke/Volumes</strong>: Wenn Sie die Option Laufwerke/Volumes ausw&auml;hlen, werden einzelne oder mehrere, von Ihnen festgelegte Laufwerke/Volumes gesichert.</li><li><strong>Dateien/Ordner</strong>: Wenn Sie die Option Dateien/Ordner ausw&auml;hlen, werden nur bestimmte, von Ihnen festgelegte Dateien/Ordner gesichert.</li><li><strong>Systemzustand</strong>: Wenn Sie die Option Systemzustand ausw&auml;hlen, wird der vollst&auml;ndige Systemzustand des Servers gesichert. Ein Systemzustand ist der Zustand des Servers, der zu einem bestimmten Zeitpunkt gesichert wird. Diese vollst&auml;ndige Datensicherung beinhaltet z. B. das Betriebssystem, die Systemkonfiguration, Anwendungen, Anwendungsdaten und Datenbanken.</li><li><strong>Backup-Ziel</strong>: Legt fest, wo die Backups gespeichert werden sollen. Das Backup-Ziel kann nicht konfiguriert werden.</li><li><strong>Planung</strong>: In diesem Bereich legen Sie den Zeitplan f&uuml;r Ihre Backups fest. Um diese zu bearbeiten, klicken Sie auf das Intervall. Anschlie&szlig;end k&ouml;nnen Sie im Bereich Backup-Schema die gew&uuml;nschte Backup-Methode und das gew&uuml;nschte Intervall festlegen.</li><li><strong>Aufbewahrungsdauer</strong>: Legen Sie fest, wie lange Ihre Backups aufbewahrt werden sollen, bevor sie gel&ouml;scht werden. Um die voreingestellte Aufbewahrungsdauer zu &auml;ndern, klicken Sie auf das eingestellte Intervall. W&auml;hlen Sie anschlie&szlig;end das gew&uuml;nschte Intervall und definieren Sie, wann das Backup ausgef&uuml;hrt werden soll. Wenn Sie das Intervall St&uuml;ndlich w&auml;hlen, k&ouml;nnen Sie auch Minutenintervalle angeben.<br/>Bei sehr kurzen Abst&auml;nden kann ein Backup-Vorgang u.U. l&auml;nger dauern als das eingestellte Intervall. Wenn ein Backup nicht gestartet werden kann, weil eine vorherigen Backup-Vorgang noch l&auml;uft, dann wird das Backup in eine Warteschlange gestellt. Das Backup wird gestartet, sobald der vorherige Backup-Vorgang beendet oder gestoppt wird. Sie erhalten in diesem Fall eine Warnung, dass das Backup nicht wie geplant ausgef&uuml;hrt werden konnte. <br/>Wenn Sie den Zeitraum Monatlich w&auml;hlen, k&ouml;nnen Sie die gew&uuml;nschten Monate sowie die gew&uuml;nschten Tage des Monats und die gew&uuml;nschten Wochentage angeben.</li><li><strong>Verschl&uuml;sselung</strong>: F&uuml;r einen bereits vorhandenen Backup-Plan kann diese Einstellung nicht ge&auml;ndert werden. Erstellen Sie einen neuen Backup-Plan, wenn Sie andere Verschl&uuml;sselungseinstellungen verwenden wollen.</li><li><strong>Applikations-Backup</strong>: Ein Applikations-Backup ist ein Laufwerksbackup, bei dem zus&auml;tzlich die Metadaten der Applikationen gesichert werden. Mit diesen Metadaten k&ouml;nnen Sie diese Daten durchsuchen und wiederherstellen, ohne das komplette Laufwerk wiederherstellen zu m&uuml;ssen.</li><li><strong>Active Protection</strong>: Active Protection &uuml;berwacht die auf der gesch&uuml;tzten Maschine laufenden Prozesse in Echtzeit. Wenn ein fremder Prozess versucht, Dateien auf der Maschine zu verschl&uuml;sseln oder eine digitale Crypto-W&auml;hrung zu berechnen (&bdquo;sch&uuml;rfen&ldquo;), generiert Active Protection eine Alarmmeldung und f&uuml;hrt bestimmte, weitere Aktionen aus, sofern diese zuvor &uuml;ber eine entsprechende Konfiguration spezifiziert wurden. Zus&auml;tzlich verhindert die Selbstschutzfunktion (Self-Protection), dass die Prozesse, Registry-Eintr&auml;ge, ausf&uuml;hrbaren Dateien und Konfigurationsdateien der Backup-Software selbst sowie vorhandene Backups, die in lokalen Ordnern gespeichert sind, ver&auml;ndert werden k&ouml;nnen. Active Protection ist derzeit nur f&uuml;r Computer verf&uuml;gbar, auf denen Microsoft Windows 7 oder h&ouml;her installiert ist.</li><li><strong>Schwachstellenbewertung</strong>: Die Schwachstellenbewertung ist ein Prozess zum Identifizieren, Quantifizieren und Priorisieren von Schwachstellen, die in einem untersuchten Betriebssystem gefunden werden. Mit dem Schwachstellenbewertungsmodul k&ouml;nnen Sie Ihre Computer nach Schwachstellen/Verwundbarkeiten (wie Sicherheitsl&uuml;cken) scannen lassen und sicherstellen, dass alle installierten Applikationen und die verwendeten Betriebssysteme aktuell sind und korrekt arbeiten.</li><li>Um weitere Backup-Optionen zu &auml;ndern, klicken Sie auf&nbsp; das Zahnradsymbol und anschlie&szlig;end auf <strong>Backup-Optionen</strong>.</li></ul></li><li>Um die Konfiguration abzuschlie&szlig;en und den Backup-Plan zu erstellen, klicken Sie auf <strong>Erstellen</strong>.</li></ul><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true">Wie installiere ich den Cyber Protect Agenten?</div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="3708"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="3708"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> Wie verwalte ich die Backup-Lösung der Server Cloud? </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="3708"> <input type="hidden" name="headline" value="Wie verwalte ich die Backup-Lösung der Server Cloud?"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="py-3 clearfix"><h4>E-Mail</h4><p> Schreiben Sie uns per Kontaktformular. Unser Kundenservice steht Ihnen per E-Mail zur Seite. </p><div> <a href="/faq/help/mail.php?thema=158" class="redirect text-decoration-none redirect_a float-end" role="button">Zum Kontaktformular</a> </div></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/sicherheit/wie-verwalte-ich-die-backup-loesung-der-server-cloud/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>
