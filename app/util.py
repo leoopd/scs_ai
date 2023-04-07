@@ -32,4 +32,14 @@ def html_grabber(csv_file):
             with open(f'output/{name}.html', 'w') as h:
                 h.write(response.text)
 
-html_grabber(csv_file)
+# html_grabber(csv_file)
+
+def text_parser(file_path):
+    with open(file_path) as f:
+        soup = BeautifulSoup(f, 'html.parser')
+        articles = soup.find_all('article')
+        for article in articles:
+            print(article.text)
+            print()
+
+text_parser('output/cloud-speicher_2-Faktor-Authentifizierung_.html')
