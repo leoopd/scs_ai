@@ -38,11 +38,14 @@ def html_grabber(csv_file):
 def text_parser(file_path):
     with open(file_path) as f:
         soup = BeautifulSoup(f, 'html.parser')
-        articles = soup.find_all('article')
-        for article in articles:
-            article = re.sub(r'([^\w\s])\1+', r'\1 ', article.text)
-            article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', article)
-            article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', article)
-            print(article)
+        article = soup.find_all('article')
+
+        # Removes occurrences of punctuation (preserves one occurrence), removes extra spaces
+        # and inserts the missing spaces between words (can contain äöüßÜÖÄ) and after punctuation.
+        article = re.sub(r'([^\w\s])\1+', r'\1 ', article.text)
+        article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', article)
+        article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', article)
+        
+        return article
 
 text_parser('output/cloud-speicher_2-Faktor-Authentifizierung_.html')
