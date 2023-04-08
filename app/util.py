@@ -43,7 +43,7 @@ def text_parser(file_path):
         article = soup.find('article')
         if article:
             article = article.text
-            
+
             # Removes occurrences of punctuation (preserves one occurrence), removes extra spaces
             # and inserts the missing spaces between words (can contain äöüßÜÖÄ) and after punctuation.
             final_article = re.sub(r'([^\w\s])\1+', r'\1 ', article)
@@ -54,7 +54,7 @@ def text_parser(file_path):
         else:
             return ''
 
-def placeholder(folder_path):
+def parsing_folder_content(folder_path):
     articles = []
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
