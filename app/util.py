@@ -3,10 +3,12 @@ import csv
 import time
 import requests
 import re
+import os
 
 timestr = time.strftime('%Y%m%d-%H%M%S')
 sitemap_path = 'sitemap.xml'
 csv_file = 'links_20230406-235607.csv'
+folder_path = 'output'
 
 def sitemap_parser(sitemap_path):
     with open(sitemap_path) as f:
@@ -38,14 +40,28 @@ def html_grabber(csv_file):
 def text_parser(file_path):
     with open(file_path) as f:
         soup = BeautifulSoup(f, 'html.parser')
-        article = soup.find_all('article')
+        article = soup.find('article')
+        if article:
+            article = article.text
+            
+            # Removes occurrences of punctuation (preserves one occurrence), removes extra spaces
+            # and inserts the missing spaces between words (can contain äöüßÜÖÄ) and after punctuation.
+            final_article = re.sub(r'([^\w\s])\1+', r'\1 ', article)
+            final_article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', final_article)
+            final_article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', final_article)
 
-        # Removes occurrences of punctuation (preserves one occurrence), removes extra spaces
-        # and inserts the missing spaces between words (can contain äöüßÜÖÄ) and after punctuation.
-        article = re.sub(r'([^\w\s])\1+', r'\1 ', article.text)
-        article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', article)
-        article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', article)
-        
-        return article
+            return article
+        else:
+            return ''
 
-text_parser('output/cloud-speicher_2-Faktor-Authentifizierung_.html')
+def placeholder(folder_path):
+    articles = []
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+
+        article = text_parser(file_path)
+        if article:
+            articles.append(article)
+    return articles
+
+print(placeholder(folder_path))
