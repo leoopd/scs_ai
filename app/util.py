@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 import requests
+import re
 
 timestr = time.strftime('%Y%m%d-%H%M%S')
 sitemap_path = 'sitemap.xml'
@@ -39,7 +40,9 @@ def text_parser(file_path):
         soup = BeautifulSoup(f, 'html.parser')
         articles = soup.find_all('article')
         for article in articles:
-            print(article.text)
-            print()
+            article = re.sub(r'([^\w\s])\1+', r'\1 ', article.text)
+            article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', article)
+            article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', article)
+            print(article)
 
 text_parser('output/cloud-speicher_2-Faktor-Authentifizierung_.html')
