@@ -8,7 +8,7 @@ import os
 timestr = time.strftime('%Y%m%d-%H%M%S')
 sitemap_path = 'sitemap.xml'
 csv_file = 'links_20230406-235607.csv'
-folder_path = 'output'
+folder_path = 'html'
 
 def sitemap_parser(sitemap_path):
     with open(sitemap_path) as f:
@@ -32,7 +32,7 @@ def html_grabber(csv_file):
             link = row[0]
             name = link[26:].replace('/', '_')
             response = requests.get(link)
-            with open(f'output/{name}.html', 'w') as h:
+            with open(f'html/{name}.html', 'w') as h:
                 h.write(response.text)
 
 # html_grabber(csv_file)
@@ -64,4 +64,3 @@ def parsing_folder_content(folder_path):
             articles.append(article)
     return articles
 
-print(placeholder(folder_path))
