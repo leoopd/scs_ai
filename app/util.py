@@ -64,3 +64,11 @@ def parsing_folder_content(folder_path):
             articles.append(article)
     return articles
 
+def articles_to_csv(articles):
+    with open(f'csv/artiles_{timestr}.csv', 'w') as f:
+        writer = csv.writer(f, delimiter='#')
+        writer.writerow(['Category', 'Problem', 'Article'])
+        for article in articles:
+            writer.writerow([article])
+
+articles_to_csv(parsing_folder_content(folder_path))
