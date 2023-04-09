@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import csv
+import time
 import requests
 
 sitemap_path = 'sitemap.xml'

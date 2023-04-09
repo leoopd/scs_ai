@@ -1,10 +1,12 @@
 import csv
+from bs4 import BeautifulSoup
 import time
 import re
 import os
 
 csv_file = 'links_20230406-235607.csv'
 folder_path = 'html'
+timestr = time.strftime('%Y%m%d-%H%M%S')
 
 def text_parser(file_path):
     with open(file_path) as f:
@@ -19,7 +21,7 @@ def text_parser(file_path):
             final_article = re.sub(r'(\s+)([^\w\s])*\s*', r'\2 ', final_article)
             final_article = re.sub(r'(?<=[.,?!])(?=[^\s\d])(?!$)|(?<=[a-zäöüß])(?=[A-ZÜÖÄ])', r' ', final_article)
 
-            return article
+            return final_article
         else:
             return ''
 
@@ -28,16 +30,18 @@ def parsing_folder_content(folder_path):
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
 
+        category = filename[:filename.find('_')].capitalize()
+        title = filename[filename.find('_')+1:filename.find('.')].replace('-', ' ').strip('_')
         article = text_parser(file_path)
         if article:
-            articles.append(article)
+            articles.append([category, title, article])
     return articles
 
 def articles_to_csv(articles):
-    with open(f'csv/artiles_{timestr}.csv', 'w') as f:
+    with open(f'csv/artiles_{timestr}.csv', 'w', newline='') as f:
         writer = csv.writer(f, delimiter='#')
-        writer.writerow(['Category', 'Problem', 'Article'])
+        writer.writerow(['Category', 'Title', 'Article'])
         for article in articles:
-            writer.writerow([article])
+            writer.writerow([article[0], article[1], article[2]])
 
 articles_to_csv(parsing_folder_content(folder_path))
