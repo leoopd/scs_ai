@@ -9,6 +9,10 @@ folder_path = 'html'
 timestr = time.strftime('%Y%m%d-%H%M%S')
 
 def text_parser(file_path):
+    '''
+    Extracts the text-body of the given STRATO FAQ and returns it.
+    Returns an empty string if not possible.
+    '''
     with open(file_path) as f:
         soup = BeautifulSoup(f, 'html.parser')
         article = soup.find('article')
@@ -26,6 +30,10 @@ def text_parser(file_path):
             return ''
 
 def parsing_folder_content(folder_path):
+    '''
+    Calls text_parser() on every file in the specified folder, extracts category and title from the filename
+    and bundles it up in list that gets returned.
+    '''
     articles = []
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
@@ -38,6 +46,9 @@ def parsing_folder_content(folder_path):
     return articles
 
 def articles_to_csv(articles):
+    '''
+    Writes the list returned by parsing_folder_content() to a csv.
+    '''
     with open(f'csv/artiles_{timestr}.csv', 'w', newline='') as f:
         writer = csv.writer(f, delimiter='#')
         writer.writerow(['Category', 'Title', 'Article'])
