@@ -16,15 +16,6 @@ def sitemap_parser(sitemap_path):
         link_list = link_str.split('\n')
         return link_list
 
-# def link_writer(link_list):
-#     '''
-#     Writes the link list returned by sitemap_parser() to a csv.
-#     '''
-#     with open(f'links_{timestr}.csv', 'w', newline='') as f:
-#         writer = csv.writer(f)
-#         for link in link_list:
-#             writer.writerow([link])
-
 def html_grabber(link_list, dest_folder='html/'):
     '''
     Reads a list of links, downloads each webpage and saves it as an html file in the specified folder (default=/html).
