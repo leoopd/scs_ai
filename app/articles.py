@@ -49,7 +49,7 @@ def articles_to_csv(articles, dest_folder='faq_contents/'):
     '''
     Writes the list returned by parsing_folder_content() to a csv.
     '''
-    with open(f'csv/artiles_{timestr}.csv', 'w', newline='') as f:
+    with open(f'csv/articles_{timestr}.csv', 'w', newline='') as f:
         writer = csv.writer(f, delimiter='#')
         writer.writerow(['Category', 'Title', 'Article'])
         for article in articles:
