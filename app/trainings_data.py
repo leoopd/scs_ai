@@ -3,10 +3,10 @@ import json
 import time
 
 timestr = time.strftime('%Y%m%d-%H%M%S')
-file_path = 'csv/artiles_20230409-221317.csv'
-output_path = f'json/trainings_data_{timestr}.jsonl'
+file_path = 'faq_contents/articles_20230409-221317.csv'
+output_path = f'trainings_data/trainings_data_{timestr}.jsonl'
 
-def prompt_list_maker(file_path):
+def prompt_list_maker(file_path, category_filter=''):
     '''
     Reads in the csv file containing articles returned by articles_to_csv() in articles.py, extracts category, link and article and
     appends them to a list that gets returned. The list will have one element of the original list in one line, formatted
@@ -20,7 +20,13 @@ def prompt_list_maker(file_path):
             category = row[0]
             title = row[1]
             article = row[2]
-            prompt_list.append({"prompt": f"{category}, {title}'\n\n###\n\n", "completion": f"{article.replace(' War dieser Text hilfreich für Sie? ', ' ')}###"})
+            if not category_filter:
+                prompt_list.append({"prompt": f"{category}, {title}'\n\n###\n\n", "completion": f"{article.replace(' War dieser Text hilfreich für Sie? ', ' ')}###"})
+            else:
+                print(category)
+                print(category_filter)
+                if category_filter == category:
+                    prompt_list.append({"prompt": f"{category}, {title}'\n\n###\n\n", "completion": f"{article.replace(' War dieser Text hilfreich für Sie? ', ' ')}###"})
         return prompt_list
 
 def prompt_list_writer(prompt_list, output_path='trainings_data/'):
@@ -31,4 +37,4 @@ def prompt_list_writer(prompt_list, output_path='trainings_data/'):
         for element in prompt_list:
             f.write(json.dumps(element, ensure_ascii=False) + "\n")
 
-prompt_list_writer(prompt_list_maker(file_path), output_path)
+prompt_list_writer(prompt_list_maker(file_path, 'Domains'), f'trainings_data/subset_domains_{timestr}.jsonl')

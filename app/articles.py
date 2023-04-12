@@ -4,7 +4,7 @@ import time
 import re
 import os
 
-csv_file = 'links_20230406-235607.csv'
+csv_file = 'faq_contents/links_20230406-235607.csv'
 folder_path = 'html'
 timestr = time.strftime('%Y%m%d-%H%M%S')
 
