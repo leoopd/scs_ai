@@ -23,7 +23,7 @@ def prompt_list_maker(file_path):
             prompt_list.append({"prompt": f"{category}, {title}'\n\n###\n\n", "completion": f"{article.replace(' War dieser Text hilfreich für Sie? ', ' ')}###"})
         return prompt_list
 
-def prompt_list_writer(prompt_list, output_path):
+def prompt_list_writer(prompt_list, output_path='trainings_data/'):
     '''
     Writes the list of prompts returned by prompt_list_maker() and writes them to a jsonl file.
     '''

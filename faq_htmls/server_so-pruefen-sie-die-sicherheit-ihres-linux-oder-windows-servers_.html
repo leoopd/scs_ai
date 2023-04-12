@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="Besonders Server geraten immer wieder ins Visier von Angreifern. Hier erfahren Sie, wie die Sicherheit Ihres Linux- oder Windows-Servers prüfen."><link rel="canonical" href="https://www.strato.de/faq/server/so-pruefen-sie-die-sicherheit-ihres-linux-oder-windows-servers/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/server/so-pruefen-sie-die-sicherheit-ihres-linux-oder-windows-servers/"><title> Sicherheit Linux- und Windows-Server überprüfen | STRATO </title><meta property="og:title" content="Sicherheit Linux- und Windows-Server überprüfen | STRATO"><meta name="og:description" content="Besonders Server geraten immer wieder ins Visier von Angreifern. Hier erfahren Sie, wie die Sicherheit Ihres Linux- oder Windows-Servers prüfen."><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '441',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/441/',
+            'econda_pageid'                : 'FAQ/441/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_441 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_441:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/838.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/838.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #441 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> So prüfen Sie die Sicherheit Ihres Linux- oder Windows-Servers </h1><p>Besonders Server geraten immer wieder ins Visier von Angreifern, da sie genug Power haben, um damit im Verbund andere Ziele im Internet anzugreifen. Sind Sie sich nicht sicher, ob Sie bereits angegriffen wurden und Ihr Server kompromittiert ist, k&ouml;nnen Sie das mit dem folgenden Leitfaden selbst leicht nachpr&uuml;fen. Wenn Sie die Sicherheitstipps beherzigen und die Pr&uuml;fungen immer wieder mal ausf&uuml;hren, sind Sie auf der sicheren Seite. Noch ein Hinweis f&uuml;r Nutzer von Linux-Servern: in der Szene wird Linux als sichere Burg angesehen, bei der Sch&auml;dlinge keine Chance haben. F&uuml;r den Kern stimmt das. Aber aufgrund von Sicherheitsl&uuml;cken gab es in der Vergangenheit auch immer wieder Angriffe auf Linux-Systeme. Dazu kommt, dass viele Linux-Server auch als Datei-Server dienen. Gibt es dann verseuchte Windows-Dateien, sch&auml;digen diese zwar nicht das System, aber sie werden an andere Windows-Maschinen ausgeliefert. Gerade dieses falsche Verst&auml;ndnis sorgt daf&uuml;r, dass die meisten unentdeckten Server, die Sch&auml;dlinge ausliefern, mit Linux arbeiten.</p><p><br/>Durch das st&auml;ndige Anlegen von Backups haben Sie immer einen Trumpf in der Hinterhand, mit dem Sie schnell und ohne viel Aufwand reagieren k&ouml;nnen. Wenn Sie einen V-Server nutzen, steuern Sie &uuml;ber den Server-Login unter dem Men&uuml;punkt <strong>Backup &amp; Recovery -&gt; BackupControl</strong> alle Ihre Backups und haben sie auch online bereit f&uuml;r ein eventuelles Recovery. F&uuml;r dedizierte Server erstellen Sie komfortabel und flexibel Backuppl&auml;ne mit dem optionalen Produkt STRATO Managed Backup oder Sie nutzen den optional angebotenen FTP-Speicher zur Datensicherung.</p><h2><br/>Verd&auml;chtige Prozesse pr&uuml;fen</h2><p>Nicht jeder Angriff f&uuml;gt eine direkt sichtbar sch&auml;dliche Komponente in den Server ein. Manchmal wird nur versucht einen Prozess fernzusteuern. Daher k&ouml;nnen die auf dem Server laufenden Prozesse ein Indiz daf&uuml;r sein, dass etwas nicht stimmt. So pr&uuml;fen Sie Ihre Prozesse:</p><h3><br/>Bei Linux-Servern</h3><p>Unter Linux lassen sich die laufenden Prozesse am besten auf der Kommandozeile &uuml;berpr&uuml;fen. &Ouml;ffnen Sie dazu eine SSH-Kommandozeile auf Ihrem Server und rufen Sie dort die Liste der laufenden Prozesse mit dem Kommando</p><p><br/><em>sudo ps aux</em></p><p><br/>ab. Das vorangestellte Schl&uuml;sselwort &sbquo;sudo&rsquo; bewirkt, dass in den Administrator-Modus gewechselt wird, aus dem heraus auch mit Systemrechten laufende Prozesse in der &Uuml;bersicht dargestellt werden, die normalen Benutzerkonten verborgen bleiben. Da speziell bei neueren Kernel-Versionen die angezeigte Liste recht lang werden kann, ist es hilfreich, sie in eine Datei umzuleiten. Diese kann dann mit einem Dateibetrachter wie zum Beispiel &sbquo;less&rsquo; in Ruhe untersucht werden:</p><p><br/><em>sudo ps aux &gt; prozesse.txt</em><br/><em>less prozesse.txt</em></p><p><br/>Achten Sie bei der Untersuchung vor allem auf Programme, die aus ungew&ouml;hnlichen Pfaden wie etwa aus dem Verzeichnis Ihres Webauftritts heraus gestartet wurden. Den Aufrufpfad sehen Sie als letzten Parameter in jeder Zeile der Ausgabe. Kernelprozesse sind hier in eckigen Klammern ([]) eingeschlossen, normale Prozesse hingegen mit ihrem kompletten Pfad aufgef&uuml;hrt. Normalerweise finden sich Linux-Anwendungen in den Pfaden &sbquo;/bin&rsquo;, &sbquo;/sbin&rsquo;, &sbquo;/usr/bin&rsquo; und &sbquo;/usr/sbin&rsquo;. Programme, die beispielsweise mit f&uuml;hrenden Pfaden wie &sbquo;/usr/local/bin&rsquo;, &sbquo;/var/www&rsquo; oder &sbquo;/tmp&rsquo; erscheinen, sind hingegen eindeutig Kandidaten f&uuml;r eine genauere Untersuchung.</p><h3><br/>Bei Windows-Servern</h3><p>Loggen Sie sich <a href="/faq/server/remotedesktopverbindung-zu-windows-server/" target="_self">&uuml;ber RDP (Remote Desktop)</a> in Ihren Server ein, starten Sie den <strong>Server Manager</strong> und klicken Sie auf <strong>Lokaler Server.</strong> Dort haben Sie den ersten &Uuml;berblick &uuml;ber laufende Dienste, Ereignisse, Leistung und den Best Practice Analyzer. Auff&auml;lliges oder erste Hinweise finden sich hier. Etwas &uuml;bersichtlicher wird das Ganze mit dem kostenlosen Process Explorer aus den Windows Sysinternals, den Sie im <a rel="nofollow" href="https://docs.microsoft.com/nl-nl/sysinternals/downloads/process-explorer" target="_self">Microsoft Technet</a> bekommen. Dort erkennen Sie gleich voneinander abh&auml;ngige Prozesse, die das Windows-Server-System gestartet hat und fremde Prozesse. F&auml;llt ein Prozess auf, dann klicken Sie ihn mit der rechten Maustaste an und w&auml;hlen im Kontextmen&uuml; <strong>Check VirusTotal.</strong> Der Hash-Wert wird online gepr&uuml;ft und danach ein kleiner Hyperlink angezeigt. Ein Klick bringt Sie zur Auswertung des Prozesses und dessen Gef&auml;hrlichkeit &ndash; oder Harmlosigkeit.</p><h3><br/>Monitoring als Fr&uuml;hwarnsystem</h3><p>Den im Server-Paket verf&uuml;gbaren Monitoring-Service k&ouml;nnen Sie auch als Fr&uuml;hwarnsystem nutzen. Ben&ouml;tigt ein Dienst oder Prozess sehr viele Ressourcen, dann meldet Ihnen dies das Monitoring. Nat&uuml;rlich steckt noch viel mehr in dem Service, da er etwa auch &uuml;ber alle Fehler per SMS oder Mail informiert.</p><h2><br/>Sie meinen der Server ist kompromittiert?</h2><p>Ein kurzer Check Ihres Servers zeigt Ihnen schnell, ob er von einem Sch&auml;dling befallen ist. Meist ist dem nicht so, aber zur Sicherheit k&ouml;nnen Sie folgende Schritte ausf&uuml;hren.</p><h3><br/>Bei Linux-Servern</h3><p>Auch f&uuml;r Linux gibt es Virenscanner, die sich kostenlos von den bekannten Herstellern beziehen lassen. Die meisten Distributionen haben aber auch die Freeware-L&ouml;sung ClamAV im Paket &ndash; allerdings wird diese Software in der Regel nicht automatisch installiert. Um sie einzurichten, ist jedoch meist nur ein Befehl auf der SSH-Kommandozeile notwendig:</p><p><br/><strong>RedHat/CentOS:</strong><br/><em>yum install clamav clamd</em></p><p><br/><strong>Debian/Ubuntu:</strong><br/><em>apt-get install clamav clamav-freshclam</em></p><p><br/>Um mit der so installierten Version einen Scan der gesamten Festplatte durchzuf&uuml;hren, geben Sie den folgenden Befehl ein:</p><p><br/><em>clamscan &ndash;ri /</em></p><h3><br/>Bei Windows-Servern</h3><p>Ein Schnellcheck funktioniert am besten &uuml;ber einen unkomplizierten, aber guten Online-Virenscanner, wie etwa von <a rel="nofollow" href="https://www.f-secure.com/de/home/free-tools/online-scanner" target="_self">F-Secure</a>. Damit der Check funktioniert, m&uuml;ssen Sie lediglich einen kleinen Webloader herunterladen. Sobald Sie den Link anklicken, fordert Sie der Internet Explorer auf, die F-Secure-Webadresse als vertrauensw&uuml;rdig einzustufen. Nachdem Sie das getan haben, m&uuml;ssen Sie den Download des Webloaders erneut starten und das Programm ausf&uuml;hren. Der restliche Sicherheitsscan funktioniert dann automatisch. Der Scanner wird dabei nicht installiert, sondern nur lokal ausgef&uuml;hrt.</p><p><br/>Wollen Sie einen Virenscanner auf dem Server installieren, dann m&uuml;ssen Sie normalerweise eine passende L&ouml;sung daf&uuml;r kaufen. Die bekannten Free-Antivirus-Pakete funktionieren nicht mit dem Windows-Server-Betriebssystem. Seit neuestem bietet aber <a rel="nofollow" href="https://id.avast.com/sso#/sign-in" target="_self">Avast einen Business-Dienst</a>, mit dem Sie kostenlos eine Sicherheitsl&ouml;sung auf Ihrem Windows-Server installieren k&ouml;nnen. Sie m&uuml;ssen sich dazu lediglich ein Konto bei Avast anlegen. Danach steht Ihnen das Dashboard einer Cloud-L&ouml;sung zur Verf&uuml;gung. Auf der Oberfl&auml;che w&auml;hlen Sie dann &bdquo;Neues Ger&auml;t&ldquo; und schicken sich den Installations-Link per Mail zum Server. Oder Sie laden sich die Installationsdatei herunter und kopieren sie per Hand auf den Server. Nach einer kurzen Installation steht Ihnen der Avast Basisschutz zur Seite. Die Windows-Firewall bleibt nat&uuml;rlich weiterhin aktiv und versieht ihren Dienst.</p><h3><br/>Tools f&uuml;r den Notfall</h3><p>Ist Ihr Server befallen und Sie wollen versuchen ihn zu bereinigen, dann k&ouml;nnen Ihnen folgende Tools n&uuml;tzlich sein. Alle diese Tools unterst&uuml;tzen das Betriebssystem Microsoft Server.<br/>1. <a rel="nofollow" href="https://www.microsoft.com/de-de/download/malicious-software-removal-tool-details.aspx" target="_blank">Malicious Software Removal Tool von Microsoft </a><br/>2. <a rel="nofollow" href="https://support.kaspersky.com/kvrt2015?icid=kvrt_support" target="_blank">Kaspersky Virus Removal Tool</a><br/>3. <a rel="nofollow" href="https://www.bitdefender.com/blog/labs/rootkit-remover/" target="_blank">Bitdefender Rootkit Remover</a></p><h2><br/>M&ouml;gliche Sicherheitsl&uuml;cken</h2><p><br/>Die auf dem Windows- oder Linux-Server installierten Software-Pakete und Dienste (qmail, Apache, FTP, MySQL, etc.) weisen leider immer wieder Sicherheitsl&uuml;cken auf. Bei besonders wichtigen L&uuml;cken informiert Sie STRATO immer umgehend. Dennoch sollten Sie auch Sorgfalt walten lassen und selbst regelm&auml;&szlig;ig updaten.</p><h3><br/>1. Betriebssystem aktuell halten</h3><p>F&uuml;r Linux- und Windows-Server gibt es immer wieder wichtige Betriebssystem-Updates, die Sie ausf&uuml;hren sollten. Sie m&uuml;ssen dazu wenig unternehmen: STRATO bietet Ihnen die f&uuml;r Ihren Server-Typ verf&uuml;gbaren Updates an.</p><h3><br/>Bei Linux-Servern</h3><p>Einen Linux-Server aktuell zu halten, ist relativ einfach, da die Anbieter der diversen Distributionen (RedHat, Debian, Ubuntu) auf Sicherheitsl&uuml;cken rasch reagieren und entsprechend aktualisierte Pakete zeitnah anbieten. Im Gegensatz zu Windows erfolgen das Herunterladen und die Installation jedoch nicht automatisch, sondern nur bei manuellem Aufruf durch den Anwender.</p><p><br/><strong>RedHat/CentOS:</strong><br/><em>yum update</em></p><p><br/><strong>Debian/Ubuntu:</strong><br/><em>apt-get update &amp;&amp; apt-get upgrade</em></p><p><br/><strong>Achtung:</strong> Beim Einsatz von Plesk oder anderen Management-L&ouml;sungen f&uuml;r Ihren Web-Server kann es vorkommen, dass bei der Aktualisierung des Betriebssystems Komponenten ausgetauscht werden, die f&uuml;r den Betrieb der Verwaltungssoftware notwendig sind. Pr&uuml;fen Sie daher vorab, ob zuerst ein Update Ihres Verwaltungspakets durchgef&uuml;hrt werden muss, bevor Sie die Aktualisierung des Betriebssystems starten.</p><h3><br/>Bei Windows-Servern</h3><p>Admins empfehlen ihren Kollegen gerne den Windows Server Update Services. Der ist aber bei STRATO-Servern nicht n&ouml;tig, denn Sie bekommen die wichtigen und vor allem passenden Updates angeboten und m&uuml;ssen nichts extra suchen. Sobald Sie sich in Ihren Server einloggen, teilt Ihnen das System automatisch mit, wenn der Windows-Update-Service wichtige Updates hat. Sie werden bereitgestellt und k&ouml;nnen dann von Ihnen installiert werden. Eventuell sind dabei Neustarts des Systems n&ouml;tig.</p><h3><br/>2. Aktuelle Dienste checken &amp; updaten</h3><p>Der Server ist nur Mittel zum Zweck. Es sind die wichtigen Dienste wie PHP oder MySQL, die Webseiten am Laufen halten. Sie waren aber in der Vergangenheit auch immer wieder Ziel von Angriffen, da sie Schwachstellen hatten oder schlecht konfiguriert waren. Hier ein paar Tipps:</p><h3><br/>Bei Linux-Servern</h3><p>Die zentralen Dienste wie Web-Server (Apache, Nginx) oder die zum Erzeugen der Webseiten genutzten Programmiersprachen (PHP, Python, Ruby) weisen selbst auch immer wieder Sicherheitsl&uuml;cken auf, die Angreifern einen Hebel zum Eindringen ins System bieten. Auch hier greifen die oben genannten Paket-Aktualisierungen der Distributionen in der Regel recht schnell. Anders sieht es jedoch aus, wenn ein Generationswechsel stattfindet, wie beispielsweise von PHP 5.6 zu PHP 7.0 oder von Apache 2.2 zu Apache 2.4. Hier ziehen die Distributionen in der Regel nicht so schnell oder gar nicht nach, da insbesondere bei Versionen mit &bdquo;Long Term Support&ldquo; (LTS) die Kompatibilit&auml;t zu der urspr&uuml;nglich ausgelieferten Variante erhalten bleiben soll oder muss.</p><p><br/>Hier hilft dann nur das Ausweichen auf alternative Paketquellen, wie etwa <a rel="nofollow" href="https://www.dotdeb.org/" target="_self">www.dotdeb.org</a> f&uuml;r Debian/Ubuntu oder die <a rel="nofollow" href="https://docs.fedoraproject.org/en-US/epel/" target="_blank">EPEL-Repositories f&uuml;r RedHat/CentOS</a>.</p><h3><br/>Bei Windows-Servern</h3><p>Ein Update von PHP ist auf einem Windows-Server schnell gemacht mit Hilfe des Webplattform-Installers. Sobald Sie nach &bdquo;PHP&ldquo; suchen, bekommen Sie die installierte Version angezeigt und alle Versionen, die noch verf&uuml;gbar sind. Wollen Sie etwa von einem PHP 5.3.x auf 5.6.x updaten, dann w&auml;hlen Sie einfach die Schaltfl&auml;che <strong>Hinzuf&uuml;gen</strong>. Eventuell fehlende Erweiterungspakete, die aber unerl&auml;sslich sind, f&uuml;gt der Webplattform-Installer in den Installations- &bdquo;Einkaufswagen&ldquo; automatisch hinzu. Genauso gehen Sie bei MySQL vor, allerdings sollten Sie zuvor unbedingt die Datenbanken sichern. Eventuell m&uuml;ssen Sie die vorhandene MySQL-Version erst deinstallieren, bevor Sie die neue Version aufspielen k&ouml;nnen.</p><h3><br/>3. Installierte Software checken</h3><p>Auf den meisten Webservern ist recht wenig zus&auml;tzliche Software installiert. Meist arbeiten aber verschiedene Content-Management-Systeme (kurz CMS) darauf, wie Wordpress, Joomla oder Typo3. Da sie mit ihren Services die Webseiten abbilden, werden eventuell vorhandene Sicherheitsl&uuml;cken oft als erstes angegriffen. Das wissen nat&uuml;rlich auch die CMS-Entwickler und bieten immer wieder gefixte Updates an. Das Update eines CMS funktioniert ohne Fachkenntnisse &ndash; Sie m&uuml;ssen es nur regelm&auml;&szlig;ig machen.</p><p><br/>Egal, welches CMS Sie auf einem Windows- oder Linux-Server nutzen, das Verfahren ist bei allen fast identisch. Loggen Sie sich einfach in die Verwaltungsoberfl&auml;che von Wordpress, Joomla oder Typo3 ein. Gleich auf der ersten Seite mit der Zusammenfassung (Dashboard) bekommen Sie die Updates angeboten. Meist reicht es, einen angebotenen Link anzuklicken und ein Update-Assistent leitet Sie durch den Vorgang. Danach m&uuml;ssen Sie im seltensten Fall den Server neu starten. Aber auch hier gilt: vor dem Update sollte ein zeitnahes Backup gemacht worden sein.</p><h3><br/>4. Offene Ports pr&uuml;fen</h3><p>Sowohl Linux- wie auch Windows-Server arbeiten in der Standard-Konfiguration mit einer Reihe von aktivierten Diensten und Einstellungen, die in einem lokalen Netzwerk durchaus sinnvoll sind &ndash; beim Betrieb als Webserver jedoch vollkommen &uuml;berfl&uuml;ssig und teilweise sogar gef&auml;hrlich. Diese Dienste kommunizieren &uuml;ber so genannte Ports mit Gegenstellen im LAN oder Internet. Bekannte Ports f&uuml;r im Internet notwendige Dienste sind beispielsweise Port 80 f&uuml;r HTTP, 443 f&uuml;r HTTPS, 21 f&uuml;r FTP und 22 f&uuml;r SSH. Andere Ports wie beispielsweise 25 (SMTP &ndash; Mailversand) oder 111 (RPCBIND) sollten aus dem Internet heraus nicht zug&auml;nglich sein, um deren missbr&auml;uchliche Nutzung zu unterbinden.</p><p><br/>Pr&uuml;fen Sie daher, ob Ihr Server unn&ouml;tig offene Ports hat. Wenn Sie das manuell machen wollen, dann empfiehlt sich das Tool NMAP f&uuml;r Linux und Zenmap (NMAP mit grafischer Oberfl&auml;che) f&uuml;r Windows. Hinweise dazu, wie Sie Zugriffsm&ouml;glichkeiten auf Ihren Server &uuml;ber bestimmte Ports verwalten k&ouml;nnen, finden Sie unter anderem in folgendem FAQ-Artikel: <a href="/faq/server/einrichtung-einer-firewall-auf-ihrem-strato-server/" target="_self">Hinweise zur Einrichtung einer Firewall.</a></p><h3><br/>NMap/Zenmap</h3><p>Wollen Sie selbst einen Test auf offene Ports durchf&uuml;hren, verwenden Sie am besten das auf <a rel="nofollow" href="https://nmap.org/" target="_self">NMAP.org</a> erh&auml;ltliche Standardtool NMap (Linux/Mac OS) oder sein Windows-Pendant Zenmap. Bei letzterem handelt es sich um eine mit einer grafischen Benutzeroberfl&auml;che versehene Version von NMap. Die Ausf&uuml;hrung von NMap oder Zenmap sollte immer auf einem anderen Rechner als dem Server, idealerweise einem PC in Ihrem Unternehmen oder bei Ihnen zuhause stattfinden. So stellen Sie sicher, dass das Tool Ihren Server so sieht, wie er sich auch einem Angreifer aus dem Internet pr&auml;sentiert.</p><h3><br/>Linux/Mac OS</h3><p>Nach der Installation &uuml;ber den integrierten Paketmanager (Linux) oder &uuml;ber Homebrew (Mac OS) erfolgt der Aufruf von NMap einfach &uuml;ber die Kommandozeile. Ein einfaches Beispiel w&auml;re etwa:</p><p><br/><em>sudo nmap &ndash;v</em> &lt;ip-adresse ihres Servers&gt;</p><p><br/>Sie erhalten nach einer Weile eine Liste mit den von NMap gefundenen Ports, wobei zwischen &bdquo;open&ldquo;, also aus dem Internet erreichbar, und &bdquo;filtered&ldquo; &ndash; also erreichbar aber vom Server verworfen &ndash; unterschieden wird. Von Interesse sind hier vor allem Ports, die als &bdquo;open&ldquo; markiert sind, denen Sie aber keinen von Ihnen genutzten Dienst zuordnen k&ouml;nnen.</p><h3><br/>Windows</h3><p>Besorgen Sie sich bei <a rel="nofollow" href="https://nmap.org/" target="_self">NMAP.org</a> das Software-Paket Zenmap und installieren Sie es auf einem Windows-PC &ndash; nicht auf dem Server. Das Tool ist das normale NMAP, allerding inklusive einer komfortablen Benutzeroberfl&auml;che. Danach ben&ouml;tigen Sie nur noch die IP-Adresse Ihres Servers und k&ouml;nnen so alle Ports von &bdquo;au&szlig;en&ldquo; pr&uuml;fen. Ist alles gut eingestellt, so ergibt sich nach einem intensiven Scan, dass etwa Port 80 und 3389 offen sind. Das sind einmal der Port f&uuml;r HTTP und einmal der Port f&uuml;r den Windows Remotedesktop. Zenmap stellt die gefundenen Ports in gr&uuml;ner Schrift dar, damit man sieht, dass diese offen sind. Gleichzeitig bekommen Sie Zusatzinfos, welche Applikation oder welcher Dienst den Port benutzt. Eine Liste von standardisierten Ports und wozu sie genutzt werden bietet auch <a rel="nofollow" href="https://de.wikipedia.org/wiki/Liste_der_standardisierten_Ports" target="_blank">Wikipedia</a>. Ist ein Port unn&ouml;tig ge&ouml;ffnet, dann m&uuml;ssen Sie einfach die Windows-Firewall-Regeln &uuml;berpr&uuml;fen und die entsprechende Ein- oder Ausgangsregel anpassen oder deaktivieren.</p><h3><br/>5. Kurze Profi-Tipps f&uuml;r noch mehr Sicherheit</h3><p>Mit ein paar einfachen Tipps erh&ouml;hen Sie die Sicherheit bei der Nutzung Ihres Webservers.</p><p><br/><strong>1) Nur lange Passworte sind sicher</strong></p><p><br/>Nicht alle Programme und Online-Zug&auml;nge erlauben den Einsatz von kryptographischen Schl&uuml;sseln, sondern viele sind nach wie vor auf das gute alte Passwort angewiesen. Viele Anwender glauben immer noch, dass es bei der Wahl eines Passworts darauf ankommt, eine m&ouml;glichst kryptische Zeichenkombination zu w&auml;hlen. Dies mag zu Zeiten berechtigt gewesen sein, in denen ein Passwort auf sechs oder acht Stellen beschr&auml;nkt war, da ein Angreifer durch den Einsatz von Sonderzeichen gezwungen war, wesentlich mehr m&ouml;gliche Kombinationen zu probieren.</p><p><br/>Mittlerweile unterst&uuml;tzen fast alle Systeme Passw&ouml;rter mit 128 oder 256 Zeichen. Da jedes zus&auml;tzliche Zeichen eine Vervielfachung der m&ouml;glichen Kombinationen bedeutet, ist ein vorgeblich einfaches aber l&auml;ngeres Passwort deutlich sicherer als ein kurzes, komplexes Passwort. Es empfiehlt sich daher, statt des kryptischen Passworts &sbquo;xz&amp;%Af5!&rsquo;, das vermutlich sowieso schnell auf einer Haftnotiz unter der Tastatur landet, lieber einen einfach zu merkenden Satz wie &sbquo;DerTagistsch&ouml;n,ichkannimRegengehn!&rsquo; zu verwenden. Gegebenenfalls erweitern Sie ihn um ein beliebiges Datum, um die Anforderung &bdquo;muss eine Zahl enthalten&ldquo; vieler Passwort-Pr&uuml;froutinen zu erf&uuml;llen.</p><h3><br/>Bei Linux-Servern</h3><p><br/><strong>2) SSH-Zugang nur per Key</strong></p><p><br/>Die bevorzugte Verwaltungsmethode eines Linux-Servers ist &uuml;ber die Kommandozeile mittels des Protokolls SSH. Die meisten Anwender verwenden hier das voreingestellte Passwort, wie es bei der Erstinstallation des Systems vorgegeben wird. Dies hat den Nachteil, dass dank steigender Rechenleistung und so genannter Rainbow-Tables (Tabellen mit den verschl&uuml;sselten Werten f&uuml;r bereits geknackte Passw&ouml;rter) ein Brute-Force-Angriff gute Aussicht auf Erfolg hat &ndash; gen&uuml;gend Ausdauer beim Angreifer vorausgesetzt.</p><p><br/>Moderne Linux-Distributionen verhindern daher zumindest den Login des Root-Users per Kombination aus Username und Passwort komplett und erwarten stattdessen, dass sich der Admin per kryptographischer Schl&uuml;sseldatei (SSH-Key) identifiziert. Diese Methode k&ouml;nnen Sie auch f&uuml;r normale Benutzerkonten &uuml;bernehmen. Wie das geht, ist in diesem Artikel n&auml;her beschrieben.</p><p><br/><strong>3) Angriffsversuche erkennen</strong></p><p><br/>Die meisten Linux-Distributionen bieten im Umfang ihrer Paket-Quellen einige Tools, mit deren Hilfe sich Angriffe nicht nur erkennen, sondern oft auch gleich unterbinden lassen. Allerdings erfordern diese Werkzeuge manuelle Konfiguration, weshalb sie nicht automatisch installiert werden. Ein n&uuml;tzlicher Helfer ist &sbquo;psad&rsquo;. Es ist in der Lage, Angriffe anhand von Zugriffen auf die Ports Ihres Servers und der dabei verwendeten Muster zu erkennen. Seine Konfiguration ist unter <a rel="nofollow" href="https://www.digitalocean.com/community/tutorials/how-to-use-psad-to-detect-network-intrusion-attempts-on-an-ubuntu-vps" target="_blank">diesem Link in englischer Sprache ausf&uuml;hrlich beschrieben (ab &bdquo;Configure psad to Detect Scans).</a></p><p><br/><strong>4) Manipulierte Dateien erkennen</strong></p><p><br/>Ebenfalls Bestandteil der meisten Linux-Distributionen ist das Hilfsprogramm &sbquo;tripwire&rsquo;. Mit seiner Hilfe lassen sich die Inhalte von wichtigen Verzeichnissen auf Ver&auml;nderungen &uuml;berwachen und bei einer festgestellten Manipulation eine Nachricht an beliebige Email-Adressen versenden. Die Konfiguration von Tripwire ist allerdings ein wenig aufw&auml;ndig. Unter <a rel="nofollow" href="https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps" target="_blank">diesem Link finden Sie ein englisches Tutorial</a>, welches die Konfiguration gut beschreibt.</p><h3><br/>Bei Windows-Servern</h3><p><br/><strong>5) Anzahl der Anfragen pro IP-Adresse festlegen:</strong> Sie k&ouml;nnen den Zugriff f&uuml;r Webserver-Hacker erschweren. Nutzen Sie das Microsoft IIS Modul Dynamische IP-Einschr&auml;nkungen, welches Sie &uuml;ber den Webplattform-Installer einspielen. Mit Hilfe dieses Tools k&ouml;nnen Sie festlegen, wie viele Anfragen von einer IP-Adresse gleichzeitig an Ihren Server gestellt werden d&uuml;rfen. Au&szlig;erdem k&ouml;nnen Sie angeben, wie viele Anfragen maximal von einer IP-Adresse in einem gewissen Zeitraum erfolgen d&uuml;rfen. So verhindern Sie etwa massenhafte Versuche bei der Passwort-Eingabe. Zumindest dann, wenn der Angriff von einzelnen oder wenigen IP-Adressen und nicht &uuml;ber ein gr&ouml;&szlig;eres Botnet geschieht.</p><p><br/><strong>6) Nutzername f&uuml;r Server-Login &auml;ndern:</strong> Es ist der Klassiker, dass der Anmeldename am Server &bdquo;Administrator&ldquo; ist und dann folgt oft ein gutes, kompliziertes Passwort. Angreifer m&uuml;ssen sich dann nur auf das Passwort konzentrieren, da sie ja die H&auml;lfte des Logins bereits kennen. &Auml;ndern Sie daher den Nutzernamen des Administratorkontos! Das erh&ouml;ht die Schwierigkeit f&uuml;r Hacker ungemein.</p><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="441"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="441"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> So prüfen Sie die Sicherheit Ihres Linux- oder Windows-Servers </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="441"> <input type="hidden" name="headline" value="So prüfen Sie die Sicherheit Ihres Linux- oder Windows-Servers"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-pruefen-sie-die-sicherheit-ihres-linux-oder-windows-servers/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-pruefen-sie-die-sicherheit-ihres-linux-oder-windows-servers/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

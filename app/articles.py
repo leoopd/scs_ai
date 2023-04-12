@@ -45,7 +45,7 @@ def parsing_folder_content(folder_path):
             articles.append([category, title, article])
     return articles
 
-def articles_to_csv(articles, dest_folder='csv/'):
+def articles_to_csv(articles, dest_folder='faq_contents/'):
     '''
     Writes the list returned by parsing_folder_content() to a csv.
     '''

@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="de" class="h-100"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="/faq/assets/ext/bootstrap5/bootstrap.min.css?v=025df1ec88740cad5ff14bb3380da6dd" rel="stylesheet"><link href="/faq/assets/ext/fontawesome/css/all.min.css?v=6cb5a85b30082e3d59d7e371e002ce8d" rel="stylesheet"><link href="/faq/assets/css/master/master.css?v=ab253ead7348c1fc4de84faec77bbd2d" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="author" content="STRATO AG, Customer-Care IT"><meta name="DC.language" content="de" scheme="DCTERMS.RFC3066"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="cache-control" content="public"><meta name="theme-color" content="#ff8800"/><link rel="shortcut icon" href="/faq/img/favicon.ico" type="image/x-icon"/><link rel="icon" href="/faq/img/favicon.ico" type="image/x-icon"/><meta name="description" content="In diesem Artikel erklären wir Ihnen, wie Sie eine 2. IP-Adresse für Ihren Server bestellen und manuell anbinden können. Erfahren Sie mehr!"><link rel="canonical" href="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/"/><meta property="og:locale" content="DE_de"><meta property="og:site_name" content="STRATO AG"><meta property="og:type" content="website"><meta property="og:url" content="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/"><title> Konfigurieren der 2. IP-Adresse für Ihren Server | STRATO </title><meta property="og:title" content="Konfigurieren der 2. IP-Adresse für Ihren Server | STRATO"><meta name="og:description" content="In diesem Artikel erklären wir Ihnen, wie Sie eine 2. IP-Adresse für Ihren Server bestellen und manuell anbinden können. Erfahren Sie mehr!"><link href="/faq/assets/css/show.css?v=3b50dbe0c3fbc869dd366c44c3787bf6" rel="stylesheet"><link href="/faq/assets/css/article_image.css?v=ccc46d696227bab757948bd4579516eb" rel="stylesheet"><script src="/faq/assets/js/errorlogging.js"></script><script>
+        window.template_vars = {
+            'uri_cookiecookie'             : '/orca/trkn',
+            'language'                     : 'de',
+            'id'                           : '1608',
+            'uri_auth_ksb'                 : 'https://www.strato.de/faq/auth/ksb',
+            'uri_home'                     : 'https://www.strato.de/faq/',
+            'search_autocomplete_minimum'  : '1',
+            'search_autocomplete_jscache'  : '1',
+            'uri_handle'                   : 'https://www.strato.de/faq',
+            'search_value'                 : '',
+            'page_next'                    : '',
+            'page_total'                   : '',
+            'contact_phone_before_mail'    : '',
+            'ems_attach_max'               : '',
+            'ems_attach_filetypes'         : '',
+            'country'                      : 'de',
+            'help_attach_max'              : '6',
+            'ksb_logged_in'                : '',
+            'request_help_send'            : '',
+            'jss_accept_video_text'        : 'Beim Abspielen externer Videos werden Daten an YouTube übertragen. Dazu benötigen wir Ihre Zustimmung. Weitere Informationen finden Sie in unserer',
+            'jss_accept_video_text_link'   : 'Datenschutzerklärung',
+            'jss_accept_video_text_button' : 'Zustimmen und schließen',
+            'jss_uri_privacy_policy'       : 'https://www.strato.de/datenschutz/',
+            'if_piwik'                     : '1',
+            'piwik_host_php'               : 'https://metrics.strato.de/matomo.php',
+            'piwik_site_id'                : '71',
+            'piwik_host_js'                : '/assets/storefront/ksb/ext/scripts/matomo.js',
+            'if_econda'                    : '1',
+            'econda_content'               : 'FAQ/1608/',
+            'econda_pageid'                : 'FAQ/1608/',
+            'econda_siteid'                : 'faq.strato.de',
+            'econda_langid'                : 'de',
+            'econda_countryid'             : 'DE',
+            'econda_search'                : '',
+            'econda_words'                 : '',
+            'econda_count'                 : '',
+            'if_google_analytics'          : '1',
+            'if_google_tag_manager'        : '1',
+            'google_analytics_domain'      : 'strato.de',
+            'google_analytics_group'       : 'FAQ DE',
+            'google_analytics_ua'          : 'UA-40858965-1',
+            'google_tag_manager'           : 'GTM-TJR5HR2',
+        };
+    </script></head><body class="d-flex flex-column h-100"><header><nav class="navbar navbar-expand-lg pt-4 pb-4"><div class="container"> <a href="/faq/" class="navbar-brand"> <img class="d-none d-lg-inline" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white.svg" alt=""><img class="d-inline d-lg-none" aria-hidden="true" src="/faq/assets/img/logo/strato_logo_white_xs.svg" alt=""><span class="d-none d-xl-inline"> Hilfe &amp; Kontakt </span> </a> <div class="float-end"><menu class="d-flex"><li><span data-bs-toggle="collapse" data-bs-target="#head_topics"> <i class="fa fa-cube"></i> <span class="d-none d-lg-inline">Themenübersicht</span><span class="d-block d-lg-none">Themen</span> <i class="fa fa-chevron-down"></i> <i class="fa fa-chevron-up"></i> </span><style>
+            ul#head_topics>li>a.activate_class_1608 {
+                background-color: var(--background-hero);
+            }
+
+            ul#head_topics>li>a.activate_class_1608:hover {
+                background-color: var(--background-hover);
+            }
+        </style><ul class="collapse" data-bs-parent="menu" id="head_topics"><li><style>
+                        .menu_3  {
+                            mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/3.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/3/Vertrag-und-Rechnung.html" class="activate_class_3"> <span class="menu_3"></span> Vertrag und Rechnung </a> </li><li><style>
+                        .menu_163  {
+                            mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/163.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/163/E-Mail.html" class="activate_class_163"> <span class="menu_163"></span> E-Mail </a> </li><li><style>
+                        .menu_263  {
+                            mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/263.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/263/Hosting-und-Domains.html" class="activate_class_263"> <span class="menu_263"></span> Hosting und Domains </a> </li><li><style>
+                        .menu_413  {
+                            mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/413.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/413/HiDrive.html" class="activate_class_413"> <span class="menu_413"></span> HiDrive </a> </li><li><style>
+                        .menu_528  {
+                            mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/528.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/528/Datenbanken.html" class="activate_class_528"> <span class="menu_528"></span> Datenbanken </a> </li><li><style>
+                        .menu_623  {
+                            mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/623.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/623/Webshops.html" class="activate_class_623"> <span class="menu_623"></span> Webshops </a> </li><li><style>
+                        .menu_723  {
+                            mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/723.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/723/Homepage-Baukasten.html" class="activate_class_723"> <span class="menu_723"></span> Homepage-Baukasten </a> </li><li><style>
+                        .menu_803  {
+                            mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/803.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/803/Server.html" class="activate_class_803"> <span class="menu_803"></span> Server </a> </li><li><style>
+                        .menu_1160  {
+                            mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1160.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1160/Cyber-Protect.html" class="activate_class_1160"> <span class="menu_1160"></span> Cyber Protect </a> </li><li><style>
+                        .menu_1029  {
+                            mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1029.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1029/Office-365.html" class="activate_class_1029"> <span class="menu_1029"></span> Office 365 </a> </li><li><style>
+                        .menu_1048  {
+                            mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1048.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1048/Online-Marketing.html" class="activate_class_1048"> <span class="menu_1048"></span> Online-Marketing </a> </li><li><style>
+                        .menu_1091  {
+                            mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                            -webkit-mask: url("/faq/assets/img/path/1091.svg") no-repeat center / contain;
+                        }
+                    </style> <a href="https://www.strato.de/faq/path/1091/Verdaechtige-E-Mail-Phishing.html" class="activate_class_1091"> <span class="menu_1091"></span> Verdächtige E-Mail (Phishing) </a> </li></ul></li><li> <a href="#" role="button" tabindex="-1" data-bs-toggle="modal" data-bs-target="#contact-dialog"> <i class="fas fa-phone me-2"></i> <span class="nav-main-item">Kontakt</span> </a> </li><li> <a class="jss_login" href="/apps/CustomerService" tabindex="-1"> <i class="fa-solid fa-right-to-bracket me-2"></i> <span class="nav-main-item">Login</span> </a> <a class="jss_logout d-none" role="button"> <i class="fa-solid fa-right-from-bracket me-2"></i> <i class="fa-solid fa-spinner fa-spin me-2 d-none"></i> <span class="nav-main-item">Logout</span> </a> </li><li class="d-block d-lg-none"><span data-bs-toggle="collapse" data-bs-target="#head_mainmenu"> <i class="fas fa-bars"></i> Menü </span><div class="collapse" data-bs-parent="menu" id="head_mainmenu"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/858.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></div></li></menu><script>
+    document.addEventListener( 'click', function ( event ) {
+        var selector = 'menu > li > ul.collapse.show, menu > li > div.collapse.show';
+
+        document.querySelectorAll( selector ).forEach( function ( collapse_element ) {
+            return new bootstrap.Collapse( collapse_element ).hide();
+        });
+
+    });
+</script></div></div></nav><nav class="bg-white pt-1 pb-1 mb-3"><div class="container"><div class="d-flex justify-content-between"><div class="d-none d-lg-block align-self-center w-50"><ol class="breadcrumb mb-0"><li class="breadcrumb-item"> <a href="https://www.strato.de/faq/"> Startseite </a> </li><div id="breadcrumbs"></div></ol></div><form id="search_form" name="search" autocomplete="off" class="search_field flex-fill" method="POST" action="https://www.strato.de/faq/search/article"><div class="input-group"> <input type="text" class="form-control" placeholder="Suchbegriff eingeben .."  name="search" value=""> <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="fas fa-magnifying-glass"></i> </button> </div><div id="autocomplete_div" class="col-md-12 col-sm-12 col-xs-12 d-none position-relative"><ul id="autocomplete_list" class="list-group w-100 position-absolute"></ul></div></form></div></div></nav></header><main class="container"><noscript><p class="sf-status warning"> Die vollständigen Funktionen dieser Seite stehen nur bei aktiviertem JavaScript zur Verfügung. Bitte aktivieren Sie JavaScript in Ihrem Browser und rufen Sie die Seite erneut auf. </p></noscript><div class="row mb-5"><aside class="col-3 d-none d-lg-block"><ul class="mb-4 bg-white shadow"><li> <a class="fw-bold jss_submenu_back" href="https://www.strato.de/faq/path/858.html" title="Zurück"> <i class="fa fa-chevron-left"></i> Zurück </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/808/Grundlegende-Fragen.html"> Grundlegende Fragen </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/813/Erste-Schritte.html"> Erste Schritte </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/818/Domain-und-SSL.html"> Domain und SSL <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/833/FTP-und-Traffic.html"> FTP und Traffic </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/838/Plesk.html"> Plesk </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/843/Backup-und-Sicherheit.html"> Backup und Sicherheit <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/858/IP-Konfiguration.html"> IP Konfiguration </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/863/Managed-Server.html"> Managed Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/898/Linux-Server.html"> Linux Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/918/Windows-Server.html"> Windows Server <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/938/Servercloud.html"> Servercloud <div class="flex-grow-1 d-flex align-items-center justify-content-end"> <i class="fa fa-chevron-right"></i> </div> </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/943/Haeufige-Probleme.html"> Häufige Probleme </a> </li><li> <a class="d-flex " href="https://www.strato.de/faq/path/986/Managed-Backup.html"> Managed Backup </a> </li></ul></aside><section class="col"><div id="jss_article_forward_success" class="border border-start-5 bg-white border-success p-3 my-3 d-none"> E-Mail wurde erfolgreich versandt. </div><div class="float-end text-end mt-4"><div class="text-warning"> FAQ #1608 </div><div id="article_edit" class="d-none"> <a href="#" target="_blank"> <i class="fa-solid fa-pen-to-square"></i> Artikel editieren </a> </div><div id="article_forward" class="d-none"> <a href="#forward_modal" data-bs-toggle="modal" data-bs-target="#forward_modal"> <i class="fa-solid fa-share"></i> Artikel weiterleiten </a> </div></div><article class="mb-5 text-break"><h1> So konfigurieren Sie Ihre 2.IP-Adresse </h1><p>In diesem Artikel erkl&auml;ren wir Ihnen, wie Sie eine 2. <a href="/server/ip-adresse/" target="_blank">IPv4-Adresse</a> f&uuml;r Ihren Server bestellen und anschlie&szlig;end unter den verschiedenen Betriebssystemen manuell einbinden.</p><p>F&uuml;r Server, die &uuml;ber das Cloud Panel verwaltet werden (Serverklasse CP), nutzen Sie bitte diesen <a href="/faq/server/oeffentliche-ip-adressen-im-cloud-panel/" target="_blank">FAQ-Artikel</a>.</p><p>F&uuml;r die Server Cloud und eine Beschreibung, was mit IP-Adressen hier m&ouml;glich ist, ziehen Sie bitte diese Artikel zur <a href="/faq/server/Wie-ist-das-Cloud-Panel-aufgebaut/" target="_blank">Einrichtung im Cloud Panel</a> und diesen Artikel zur <a href="/faq/server/Wie-ist-das-Cloud-Panel-aufgebaut/" target="_blank">Einbindung auf Ihren Servern der Server Cloud</a> zu Rate.</p><h2>Inhalt</h2><ul><li><span><a href="#Die-V-Server" target="_self">Die V-Server</a><br/><br/></span></li><li><span><a href="#Bestellung-der-2-IP-Adresse" target="_self">Bestellung der 2. IP-Adresse</a><br/><br/></span></li><li><span><a href="#IP-Einbinden-CentOS" target="_self">Anbinden der 2. IP-Adresse an Ihren Linux Server (CentOS 7 &amp; 8 mit dem Network Manager)</a><br/><br/></span></li><li><span><a href="#IP-Einbinden-Debian">Anbinden der 2. IP-Adresse an Ihren Linux Server (Debian und Ubuntu 16 mit dem Networking-Service)</a><br/><br/></span></li><li><span><a href="#IP-Einbinden-Ubuntu">Anbinden der 2. IP-Adresse an Ihren Linux Server (Ubuntu 18 und 20 mittels Netplan)</a><br/><br/></span></li><li><span><a href="#IP-Einbinden-Win2012">Anbinden der 2. IP-Adresse an Ihren Windows-Server 2012 (D-Klasse)</a><br/><br/></span></li><li><span><a href="#IP-Einbinden-Plesk">Die 2. IP-Adresse unter Plesk einrichten<br/><br/></a></span><ul><li><span><a href="#Plesk-IP-neu-einlesen">Die Adresse wurde bereits dem System hinzugef&uuml;gt</a></span></li></ul></li></ul><h2><a id="Die-V-Server"></a>Die V-Server</h2><p>Bei einem <strong>V-Server Linux</strong> muss auf dem Server selbst nichts eingestellt werden. Die Konfiguration der IP-Adressen wird von der Virtualisierung vorgegeben. Es ist lediglich ein Neustart des Servers notwendig. Danach ist die 2. IP-Adresse auf dem Server eingerichtet und einsatzbereit.<br/><br/>Bei einem <strong>V-Server Windows (V-Klasse und VC-Klasse)</strong> besteht aktuell nicht die M&ouml;glichkeit eine 2.IP-Adresse zu bestellen oder einzurichten.<br/><br/></p><h2><a id="Bestellung-der-2-IP-Adresse"></a>Bestellung der 2. IP-Adresse</h2><p>Wenn Sie eine 2. IP-Adresse auf einem Server konfigurieren wollen, m&uuml;ssen Sie diese zun&auml;chst bestellen.Loggen Sie sich bitte dazu in Ihr <a href="/apps/CustomerService#/skl" target="_blank">STRATO Kunden-Login</a> mit Ihrer Kundennummer und dem dazugeh&ouml;rigen Passwort ein. Dort klicken Sie in der &Uuml;bersicht Ihrer Pakete auf <strong>Starten</strong> bei Ihrem Serverpaket, um in Ihr <a rel="nofollow" href="https://login.stratoserver.net/login?strato_locale=de&amp;data=eyJleHBpcmVzIjoxNjMyOTAwMDY2LCJwYXJhbXMiOnsiY2xpZW50X2lkIjoic2VydmVybG9naW4iLCJyZWRpcmVjdF91cmkiOiJodHRwczpcL1wvY29uZmlnLnN0cmF0by5kZVwvYXV0aFwvY2hlY2siLCJyZXNwb25zZV90eXBlIjoiY29kZSIsInN0cmF0b19sb2NhbGUiOiJkZSJ9LCJyZXF1ZXN0X2lkIjoiWDhBZE1aM1ZRUW9MVnFTNUxuWXI4SWhoamZFNnZMNHh1aEd2WnZqcyJ9--44eb87d7805655d338371a58ad3ec2c4be58ab7a" target="_blank">STRATO Server-Login</a> zu gelangen. Sollten Sie direkt in Ihr Paket gelangen, w&auml;hlen Sie bitte <strong>Einstellungen verwalten</strong> aus.<br/><br/>Unter den Men&uuml;punkten <strong>Mein Server / Server-Erweiterungen</strong> k&ouml;nnen Sie weitere IP-Adressen bestellen.</p><p>Dieser taucht im Men&uuml; <strong>Netzwerk</strong> als Artikel&nbsp;<strong>1 zus&auml;tzliche IPv4-Adresse</strong> oder als <strong>2. IP-Adresse</strong> auf. W&auml;hlen Sie den Artikel mit der von Ihnen gew&uuml;nschten Vertragslaufzeit aus und bestellen diesen.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-bestellen-01.big.png" alt="2. IP-Adresse bestellen Nr.1" title="2. IP-Adresse bestellen Nr.1" class="image-loader img-fluid img jss_article_image my-3"></span></p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-bestellen-02.big.png" alt="2. IP-Adresse bestellen Nr.2" title="2. IP-Adresse bestellen Nr.2" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Die Einrichtung Ihrer 2. IP-Adresse ben&ouml;tigt in der Regel 15-30 Minuten. Sobald Ihre 2. IP-Adresse vollst&auml;ndig eingerichtet ist, erscheint diese in Ihrem <a rel="nofollow" href="https://login.stratoserver.net/login?strato_locale=de&amp;data=eyJleHBpcmVzIjoxNjMyOTAwMDY2LCJwYXJhbXMiOnsiY2xpZW50X2lkIjoic2VydmVybG9naW4iLCJyZWRpcmVjdF91cmkiOiJodHRwczpcL1wvY29uZmlnLnN0cmF0by5kZVwvYXV0aFwvY2hlY2siLCJyZXNwb25zZV90eXBlIjoiY29kZSIsInN0cmF0b19sb2NhbGUiOiJkZSJ9LCJyZXF1ZXN0X2lkIjoiWDhBZE1aM1ZRUW9MVnFTNUxuWXI4SWhoamZFNnZMNHh1aEd2WnZqcyJ9--44eb87d7805655d338371a58ad3ec2c4be58ab7a" target="_blank">STRATO Server-Login</a> unter dem Men&uuml;punkt <strong>Netzwerk &amp; Last / IP-Adressen</strong>.</p><p><span id="image_success_placeholder"><span id="image_success_placeholder"><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/2021-06-04_00_08_39-2021-06-03_23_55_45-STRATO_Server-Login.big.png" alt="IP-Adressen im Server-Login" title="IP-Adressen im Server-Login" class="image-loader img-fluid img jss_article_image my-3"></span></span></span></p><p>Die folgenden Schritte zum manuellen Anbinden der 2. IP-Adresse an Ihren Server unterscheiden sich je nach Betriebssystem.</p><h2><a id="IP-Einbinden-CentOS"></a>Anbinden der 2. IP-Adresse an Ihren Linux Server (CentOS 7 &amp; 8 mit dem Network Manager)</h2><p>Die Netzwerk-Konfiguration geschieht bei CentOS 7 und CentOS 8 &uuml;ber den Network-Manager. Wir verwenden hier das Kommando <code>nmcli</code>.<br/><br/></p><p>Als erstes pr&uuml;fen wir die momentane Konfiguration und finden heraus, auf welches Ger&auml;t und mit welchem Namen die Verbindung eingerichtet ist.<br/><code># nmcli connection show</code><br/><code>NAME&nbsp; UUID&nbsp; TYPE&nbsp; DEVICE</code><br/><code>eth0&nbsp; 03da7500-xxxx-xxxx-xxxx-xxxxxxxxxxxx&nbsp; ethernet&nbsp; eth0</code><br/>Im oberen Beispiel ist der Name der Verbindung <strong>eth0</strong>.<br/><br/></p><p>Jetzt tragen wir die zus&auml;tzliche IP-Adresse und die zugeh&ouml;rigen Daten ein:<br/><code># nmcli connection modify &lt;Verbindungsname&gt; +ipv4.addresses &lt;IPv4-Adresse&gt;/32</code><br/><br/>Nun noch die Konfiguration aktivieren und neu laden<br/><code># nmcli connection up &lt;Verbindungsname&gt;</code><br/><code># nmcli connection reload</code><br/><br/>Jetzt die Einstellungen pr&uuml;fen:<br/><code># nmcli connection show &lt;Verbindungsname&gt;</code><br/><br/>Als letztes noch sicherheitshalber markieren, dass diese Einstellungen beim Start geladen werden:<br/><code># nmcli connection modify &lt;Verbindungsname&gt; connection.autoconnect yes</code><br/><br/>Ein letzter check, um die IP-Konfiguration anzuzeigen:<br/><code># ip address</code></p><p>Die 2. IP-Adresse wird jetzt ebenfalls bei der prim&auml;ren Schnittstelle mit angezeigt.</p><h2><a id="IP-Einbinden-Debian"></a>Anbinden der 2. IP-Adresse an Ihren Linux Server (Debian und Ubuntu 16 mit dem Networking-Service)</h2><p>Unter Debian und Ubuntu 16 ist die Datei <code>/etc/network/interfaces</code> die zentrale Anlaufstelle f&uuml;r die Netzwerk-Einrichtung. &Auml;ndern Sie die Datei nach folgendem Schema ab (&Auml;nderungen sind fett markiert):<br/>&nbsp;<br/><code># This file describes the network interfaces available on your system</code><br/><code># and how to activate them. For more information, see interfaces(5).</code><br/><code>source /etc/network/interfaces.d/*</code><br/><code># The loopback network interface</code><br/><code>auto lo</code><br/><code>iface lo inet loopback</code><br/><br/><code># The primary network interface</code><br/><strong><code>auto eth0</code></strong><br/><code>allow-hotplug eth0</code><br/><code>iface eth0 inet dhcp</code><br/><br/><strong><code>auto eth0:0</code></strong><br/><strong><code>allow-hotplug eth0:0</code></strong><br/><strong><code>iface eth0:0 inet static</code></strong><br/><strong><code>&nbsp; address &lt;zweite IP Adresse&gt;/32</code></strong><br/><br/><strong><code># The secondary network interface</code></strong><br/><code>allow-hotplug eth1</code><br/><code>iface eth1 inet dhcp</code><br/>&nbsp;<br/>Wenn Sie die &Auml;nderungen vorgenommen haben starten Sie den Networking-Dienst neu:<br/><code>systemctl restart networking.service</code></p><div class="sf-status info">Es kann eventuell einige Minuten Dauern bis der Neustart des Dienstes abgeschlossen ist und die SSH-Verbindung wieder funktioniert.</div><p>Ein letzter check, um die IP-Konfiguration anzuzeigen:<br/><code># ip address</code></p><p>Die 2. IP-Adresse wird jetzt ebenfalls bei der prim&auml;ren Schnittstelle mit angezeigt.</p><h2><a id="IP-Einbinden-Ubuntu"></a>Anbinden der 2. IP-Adresse an Ihren Linux Server (Ubuntu 18 und 20 mittels Netplan)</h2><p>Seit Ubuntu 18.04 LTS wird die Netzwerkkonfiguration &uuml;ber netplan vorgenommen (sie auch unseren <a href="/faq/server/netzwerkkonfiguration-mit-netplan-fuer-dedizierte-server-mit-ubuntu-1804/" target="_blank">FAQ-Artikel</a> dazu).<br/><br/>Lassen Sie sich das Einstellungs-Verzeichnis f&uuml;r netplan anzeigen:<br/><code># ls /etc/netplan/</code><br/><code>01-netcfg.yaml</code><br/><br/>Legen Sie eine Sicherung der Einstellungen an und bearbeiten Sie die gefundene Datei (in der Regel 01-netcfg.yaml):<br/><code># cp /etc/netplan/01-netcfg.yaml /root</code><br/><code># nano /etc/netplan/01-netcfg.yaml</code><br/><br/>Den Bereich f&uuml;r die erste Schnittstelle (hier eth0) so &auml;ndern (&Auml;nderungen gegen&uuml;ber dem Original in fett):<br/><code>network:</code><br/><code>&nbsp; version: 2</code><br/><code>&nbsp; renderer: networkd</code><br/><code>&nbsp; ethernets:</code><br/><code>&nbsp; eth0:</code><br/><code>&nbsp; dhcp4: yes</code><br/><code>&nbsp; <strong>addresses:[ &lt;2.IP-Adresse&gt;/32 ]</strong></code><br/><code>&nbsp; eth01:</code><br/><code>&nbsp; dhcp4: yes</code></p><div class="sf-status info">Bitte verwenden Sie f&uuml;r die Einr&uuml;ckungen nicht die &lt;Tab&gt; Taste sondern nur die &lt;Leer&gt;-Taste.</div><p><br/>Testen Sie nun die Konfiguration:<br/><code># netplan try</code><br/><br/>Sie haben nun Zeit, die Erreichbarkeit Ihres Servers &uuml;ber die zweite IP-Adresse zu pr&uuml;fen. Wenn alles in Ordnung ist best&auml;tigen Sie die Einstellungen mit der Enter-Taste. Bleibt die Best&auml;tigung aus, werden die alten Einstellungen wieder aktiviert.</p><div class="sf-status info">Auch wenn die alten Einstellungen wieder reaktiviert wurden, bleiben die &Auml;nderungen in der Einstellungsdatei bestehen. Bei einem Neustart w&uuml;rde der Server versuchen diese zu aktivieren.</div><p>Ein letzter check, um die IP-Konfiguration anzuzeigen:<br/><code># ip address</code></p><p>Die 2. IP-Adresse wird jetzt ebenfalls bei der prim&auml;ren Schnittstelle mit angezeigt.</p><h2><a id="IP-Einbinden-Win2012"></a>Anbinden der 2. IP an Ihren Windows-Server 2012</h2><p>Um Ihre zugewiesene 2. IP-Adresse auf dem Server einzurichten, m&uuml;ssen einige manuelle Einstellungen vorgenommen werden. Gehen Sie hierzu bitte wie folgt vor:</p><p>Loggen Sie sich auf Ihren Server ein. (&Uuml;ber <strong>Start / Alle</strong> <strong>Programme /</strong> <strong>Zubeh&ouml;r /</strong> <strong>Remotedesktopverbindung</strong>)</p><p>Auf Ihrem Windows-Server gelangen Sie jetzt &uuml;ber <strong>Start (linker unterer Button mit 4 Kacheln)</strong> <strong>/</strong> <strong>Systemsteuerung / Netzwerkstatus und &ndash;aufgaben anzeigen (im Bereich Netzwerk und Internet) / Ethernet </strong>zum Fenster <strong>Status von Ethernet</strong>. Klicken Sie hier bitte auf den Button <strong>Eigenschaften</strong>.</p><p>Klicken Sie jetzt bitte <strong>Internetprotokoll Version 4 (TCP/IPv4)</strong> an und w&auml;hlen Sie erneut den <strong>Eigenschaften</strong>-Button, um zu den Eigenschaften von Internetprotokoll (TCP/IPv4) zu gelangen.</p><p><img data-image-loader="/faq/new_images/1608/de/6005586178d61654515bb8c77c72c383.png" class=" image-loader img-fluid img jss_article_image my-3" data-image-alone="/faq/new_images/1608/de/a6005586178d61654515bb8c77c72c383.png" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-7.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC"></p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/1608/de/4f7dd1df2a0f7cd7c44c7d71a4c732fd.png" class=" image-loader img-fluid img jss_article_image my-3" data-image-alone="/faq/new_images/1608/de/a4f7dd1df2a0f7cd7c44c7d71a4c732fd.png" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-8.png"></p><p>In der Standardkonfiguration werden die IP Adresse und die DNS-Serveradressen automatisch bezogen. Bei der Nutzung einer zweiten IP Adresse muss die Konfiguration manuell vorgenommen werden.</p><p>Markieren Sie bitte die Option <strong>Folgende IP-Adresse verwenden</strong>.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label=""><strong>IP-Adresse:</strong></td><td width="50%" data-label="">Geben Sie hier die erste IP-Adresse Ihres Servers ein.</td></tr><tr><td width="50%" data-label=""><strong>Subnetzmaske:</strong></td><td width="50%" data-label="">Geben Sie als Subnetzmaske bitte <strong>255.255.255.255</strong> ein.</td></tr><tr><td width="50%" data-label=""><strong>Standardgateway:</strong></td><td width="50%" data-label="">Den Standardgateway finden Sie folgenderma&szlig;en heraus. Klicken Sie erneut auf <strong>Start (linker unterer Button mit 4 Kacheln)</strong> <strong> Windows PowerShell </strong>und geben dort <strong>ipconfig /all </strong>ein. Im Bereich <strong>Ethernet-Adapter Ethernet </strong>finden Sie den Standardgateway.</td></tr></tbody></table></div><p>Markieren Sie nun bitte die Option <strong>Folgende DNS-Serveradressen verwenden</strong>.</p><div class="table-responsive"><table class="table table-striped table-bordered table-hover on-mobile-text-left"><tbody><tr><td width="50%" data-label=""><strong>Bevorzugter DNS-Server:</strong></td><td width="50%" data-label="">Auch diesen finden Sie &uuml;ber <strong>ipconfig /all </strong>heraus. Ebenfalls im Bereich <strong>Ethernet-Adapter Ethernet </strong>finden Sie den Punkt <strong>DNS-Server</strong>. W&auml;hlen Sie den ersten der drei aufgef&uuml;hrten Server und tragen Sie ihn als bevorzugten DNS-Server ein.</td></tr><tr><td width="50%" data-label=""><strong>Alternativer DNS-Server:</strong></td><td width="50%" data-label="">Tragen Sie hier bitte einen der anderen beiden DNS Server ein, die Ihnen &uuml;ber <strong>ipconfig /all </strong>angezeigt werden.</td></tr></tbody></table></div><p>Nachdem Sie Ihre Eingabe mit <strong>OK</strong> abgeschlossen haben, erhalten Sie die Warnung, dass der Standardgateway sich nicht in dem Subnetz befindet, das von der IP-Adresse und der Subnetzmaske definiert wurde. Bitte best&auml;tigen Sie diese Meldung mit <strong>Ja</strong>.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-9.png" data-image-alone="/faq/new_images/1608/de/a2c9c389ee9868c800d8a422f8872ca3b.png" data-image-loader="/faq/new_images/1608/de/2c9c389ee9868c800d8a422f8872ca3b.png"></p><p>Starten Sie nun bitte Ihren Server neu. Auf dem Desktop gibt es daf&uuml;r standardm&auml;&szlig;ig ein Icon namens <strong>Reboot Server</strong>.</p><p>&Ouml;ffnen Sie jetzt wieder wie oben beschrieben das Fenster <strong>Internetprotokoll Version 4 (TCP/IPv4)</strong> und klicken Sie bitte nun auf den Button <strong>Erweitert</strong>.</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" data-image-loader="/faq/new_images/1608/de/4f7dd1df2a0f7cd7c44c7d71a4c732fd.png" class=" image-loader img-fluid img jss_article_image my-3" data-image-alone="/faq/new_images/1608/de/a4f7dd1df2a0f7cd7c44c7d71a4c732fd.png" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-8.png"></p><p>Im folgenden Fenster klicken Sie bitte auf den Button IP-Adressen <strong>Hinzuf&uuml;gen</strong>...</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-11.png" class=" image-loader img-fluid img jss_article_image my-3" data-image-alone="/faq/new_images/1608/de/a61e90e59394586afb236662b1ffb8aa4.png" data-image-loader="/faq/new_images/1608/de/61e90e59394586afb236662b1ffb8aa4.png"></p><p>Geben Sie jetzt Ihre 2. IP-Adresse ein und verwenden Sie dabei das Subnetz <strong>255.255.255.255</strong></p><p><strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVAjXY2gAAACCAIHdQ2r0AAAAAElFTkSuQmCC" class=" image-loader img-fluid img jss_article_image my-3" data-image-alone="/faq/new_images/1608/de/af1b9c284d8420d6ba442325e764b1007.png" data-image-loader="/faq/new_images/1608/de/f1b9c284d8420d6ba442325e764b1007.png" alt="Server: 2. IP-Adresse Suse 9 &amp; 11.x-12.png"></strong></p><p>Beenden Sie schlie&szlig;lich Ihre Eingabe mit einem Klick auf <strong>Hinzuf&uuml;gen</strong>. Auch nach einem Neustart Ihres Servers bleibt die 2. IP aktiv.</p><h2><a id="IP-Einbinden-Plesk"></a>Die 2. IP-Adresse unter Plesk einrichten</h2><p>Um die IP-Adresse mittels Plesk zu Ihrem Server hinzuzuf&uuml;gen, melden Sie sich bitte als erstes in Plesk an und gehen dann zu <strong>Tools &amp; Einstellungen</strong> und rufen unter der &Uuml;berschrift <strong>Tools &amp; Ressourcen</strong> den Punkt <strong>IP-Adressen</strong> auf.<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-plesk-01.big.png" alt="IP-Adressen in Plesk einstellen" title="IP-Adressen in Plesk einstellen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>In der &Uuml;bersicht &uuml;ber Ihre IP-Adressen klicken Sie auf <strong>IP-Adresse hinzuf&uuml;gen</strong>.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-plesk-02.big.png" alt="Plesk: IP-Adresse hinzuf&uuml;gen" title="Plesk: IP-Adresse hinzuf&uuml;gen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>W&auml;hlen sie die Schnittstelle aus, auf der auch Ihre prim&auml;re IP-Adresse angelegt ist und tragen Sie die zweite IP-Adresse aus dem Server-Login ein:<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-plesk-03.big.png" alt="Plesk: IP-Adresse eingeben" title="Plesk: IP-Adresse eingeben" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Nach der Best&auml;tigung mit OK gelangen Sie wieder zur &Uuml;bersicht der IP-Adressen. Ihre IP-Adresse wird nun aufgef&uuml;hrt.</p><p><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-plesk-04.big.png" alt="Plesk: IP-Adresse wird angezeigt" title="Plesk: IP-Adresse wird angezeigt" class="image-loader img-fluid img jss_article_image my-3"></span></p><h3><a id="Plesk-IP-neu-einlesen"></a>Die Adresse wurde bereits dem System hinzugef&uuml;gt</h3><p>Wenn Sie die IP-Adresse bereits manuell zu Ihrem System hinzugef&uuml;gt haben oder Sie einen unserer V-Server Linux haben, brauchen Sie in der &Uuml;bersicht der IP-Adressen lediglich auf <strong>IP neu lesen</strong> zu klicken.<br/><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/1608-plesk-05.big.png" alt="Plesk: IP neu einlesen" title="Plesk: IP neu einlesen" class="image-loader img-fluid img jss_article_image my-3"></span></p><p>Sie k&ouml;nnen auch die <a rel="nofollow" href="https://docs.plesk.com/de-DE/obsidian/administrator-guide/serveradministration/ipadressverwaltung.59410/" target="_blank">Anleitung von Plesk</a> zu Rate ziehen.</p><div id="mcePasteBin"  contenteditable="false"><div contenteditable="true"><span id="image_success_placeholder"><img data-image-loader="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/2021-06-04_00_08_39-2021-06-03_23_55_45-STRATO_Server-Login.big.png" alt="IP-Adressen im Server-Login" title="IP-Adressen im Server-Login" class="image-loader img-fluid img jss_article_image my-3"></span></div></div><div class="my-5" data-eventcategory="feedback" data-eventaction="seen"><h6> War dieser Text hilfreich für Sie? </h6> <button disabled class="btn btn-success feedback-tracking-success d-none"> <i class="fa-solid fa-check"></i> </button> <button class="btn btn-primary feedback-tracking me-1" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="up" data-eventvalue="1608"> <i class="fa-solid fa-thumbs-up"></i> </button> <button class="btn btn-outline-secondary feedback-tracking" data-eventcategory="feedback" data-eventaction="click" data-eventlabel="down" data-eventvalue="1608"> <i class="fa-solid fa-thumbs-down"></i> </button> </div><script>
+    document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+        element.addEventListener( 'click', function() {
+            document.querySelectorAll( '.feedback-tracking' ).forEach( function( element ) {
+                element.classList.add( 'd-none' );
+            });
+            document.querySelector( '.feedback-tracking-success' ).classList.remove( 'd-none' );
+        });
+    });
+</script></article><div class="image-fullscreen-background d-none"></div><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+            element.addEventListener( 'click', function( event ){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                event.target.classList.toggle( 'active' );
+            });
+        });
+
+        document.querySelectorAll( '.image-fullscreen-background' ).forEach( function( element ) {
+            element.addEventListener( 'click', function(){
+                document.querySelector( '.image-fullscreen-background' ).classList.toggle( 'd-none' );
+                document.querySelector( 'body' ).classList.toggle( 'overflow-hidden' );
+                document.querySelectorAll( '.jss_article_image' ).forEach( function( element ) {
+                    element.classList.remove( 'active' );
+                });
+            });
+        });
+    });
+</script><div class="modal" tabindex="-1" id="forward_modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Artikel per E-Mail empfehlen </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </div><div class="modal-body"><h6> So konfigurieren Sie Ihre 2.IP-Adresse </h6><div id="jss_article_forward_error" class="border border-start-5 bg-light border-danger p-3 my-3 d-none"> Es ist ein Fehler aufgetreten. </div><div class="mb-3"> <label for="email" class="form-label">E-Mail Adresse des Empfängers</label> <input type="email" class="form-control" id="email" name="email" placeholder=""> </div><div class="mb-3"> <label for="text" class="form-label">Nachricht an den Empfänger (optional)</label> <textarea class="form-control" id="text" name="text" rows="5"></textarea></div> <input type="hidden" name="token" value=""> <input type="hidden" name="article_id" value="1608"> <input type="hidden" name="headline" value="So konfigurieren Sie Ihre 2.IP-Adresse"> </div><div class="modal-footer"><div class="flex-grow-1 text-end"> <button type="button" class="btn btn-outline-secondary col-12 col-lg-auto" data-bs-dismiss="modal"> Schließen </button> <button id="jss_article_forward_wait" disabled="" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0 d-none"> <i class="fa-solid fa-spin fa-spinner"></i> Senden </button> <button id="jss_article_forward_send" type="button" class="btn btn-primary col-12 col-lg-auto mt-2 my-lg-0"> <i class="fa fa-send"></i> Senden </button> </div></div></div></div></div><style>
+    .jss_top {
+        background-color: #f8f8f8;
+    }
+</style> <button onclick="to_top();" class="jss_top btn btn-outline-secondary position-fixed bottom-0 end-0 mb-1 me-1 mb-lg-5 me-lg-5"> <i class="fa-solid fa-arrow-up"></i> </button> <script>
+    function to_top() {
+        document.querySelector( '.jss_top' ).addEventListener( 'click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    };
+
+    document.addEventListener( 'scroll', function() {
+        var offset = document.querySelector( 'body' ).scrollTop;
+
+        if ( offset >= 50 ) {
+            document.querySelector( '.jss_top' ).classList.remove( 'd-none' );
+        }
+        else {
+            document.querySelector( '.jss_top' ).classList.add( 'd-none' );
+        }
+    });
+</script></section></div></main><footer class="footer mt-auto footer-strato"><div class="container-fluid bg--brand px-0"><div class="container text-white text-center text-md-start user-select-none"><div class="d-md-flex flex-md-row"><div class="py-2 py-md-4 flex-md-grow-1"> <a href="/faq/"> <img src="/faq/assets/img/logo/strato_logo_white.svg" alt="" width="120px"> </a> </div><div class="align-middle p-sm-2 py-2 py-md-4 mt-md-1 d-md-flex"><div>Copyright 2022 STRATO AG</div><div class="d-none d-md-inline px-1">|</div><div class="d-md-inline-block"><span> <a target="_blank" href="https://www.strato.de/datenschutz/">Datenschutzerklärung</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/agb/">AGB</a> <span class="px-1">|</span></span><span> <a target="_blank" href="https://www.strato.de/impressum/">Impressum</a> <span class="px-1">|</span></span><span> <a href="#cookie_settings_modal" data-bs-toggle="modal" role="button">Cookie-Einstellungen</a> </span></div></div></div></div></div></footer><form name="redirect" action="/faq/redirect.php" method="post" class="d-none"><input name="id" value="158"></form><div id="econda_div"></div><div id="analytic_div"></div><script src="/faq/assets/ext/bootstrap5/bootstrap.bundle.min.js?v=d2b0d31f74e62440ea1a557f126d0c64"></script><script>
+    var redirects = document.querySelectorAll( '.redirect' );
+    redirects.forEach( function ( redirect ) {
+        redirect.addEventListener( 'click', function ( e ) {
+            var id = e.target.dataset.id;
+
+            document.querySelector( 'form[name=redirect] input[name=id]').value = id;
+            document.querySelector( 'form[name=redirect]' ).submit();
+        });
+    });
+</script><div class="modal fade" id="contact-dialog" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Kontakt </h5> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button> </div><div class="modal-body"><div><h4>Service-Hotline</h4><div class="d-none d-lg-block my-3"><i class="fas fa-lg fa-phone me-2"></i> 030 / 300 146 0</div><div class="d-block d-lg-none my-3"><a rel="nofollow" href="tel:030 / 300 146 0"><i class="fas fa-phone"></i> 030 / 300 146 0</a></div><div class="my-3"><span class="d-block"> Mo-Fr 08:00 - 20:00 Uhr </span><span> Sa-So 10:00 - 18:30 Uhr </span></div><p> Sie benötigen Ihre Kundennummer und Ihre Service-PIN zur Identifizierung. Ihre Service-PIN finden Sie in Ihrem Kundenlogin rechts oben neben Ihrer Kundennummer. </p></div><div class="pt-3"><h4>24/7 Hotline</h4><p><div class="d-none d-lg-block"><i class="fas fa-phone"></i> 0800 / 800 700 1</div><div class="d-block d-lg-none"><a rel="nofollow" href="tel:0800 / 800 700 1"><i class="fas fa-phone"></i> 0800 / 800 700 1</a></div></p><p>Für nur 10 €/Monat erreichen Sie uns rund um die Uhr.</p></div></div><div class="modal-footer"> <button type="button" class="btn btn-outline-secondary float-end" data-bs-dismiss="modal">Schließen</button> </div></div></div></div><style>
+    .jss_cookie_consent_decline,
+    .jss_cookie_consent_settings,
+    .jss_cookie_consent_agree,
+    a.popover-dynamic-tooltip{
+        color: #07b;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .ele-checkbox {
+        height: 44px;
+        width: 136px;
+        border-radius: 23px;
+        background-color: #eee;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        float: right;
+    }
+
+    .ele-checkbox:before,
+    .ele-checkbox:after {
+        position: absolute;
+        top: 3px;
+        content: "";
+        display: inline-block;
+
+        height: 40px;
+        width: 64px;
+        border-radius: 23px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .ele-checkbox:before {
+        left: 5px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAIAAADEEvsIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI5M0I0QUJEM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI5M0I0QUJFM0QzNTExRUE5MUVBRTExOUQ5MzQ4QjE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjkzQjRBQkIzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjkzQjRBQkMzRDM1MTFFQTkxRUFFMTE5RDkzNDhCMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5inzqJAAAA2klEQVR42lTQ2Q6CMBAF0KHUKGswUsCI8f//CyObRUMJoJRaBAXmoQ/NaXrvKJTS5nFLigbbx9NhB+P0ZXrNmdBJ6FsIUF/GCa25EO3zdr03k4hy9hbQVVmUMADc1i8+Pf862G+qgnViuuO86wFpXkh0FWZHZ6Fg0w0c+R0AsoLzwsFChJ5MBAMaTsvba2uGDTKKHxqS3mu+Qh2Lpx4DGrv8c8wz90VVtky6sfzLukeaNoAMx9yin/BOxFCXPVTdkQtW5MahpXHeYsd3DQT/lWdxCaZPbMk/AgwA+pt55jPx7KwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox:after {
+        right: 4px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCMkU2NkZGM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCMkU2NzAwM0QzNTExRUFCRThFRDg0Mzc2OTIyNUI3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0IyRTY2RkQzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0IyRTY2RkUzRDM1MTFFQUJFOEVEODQzNzY5MjI1QjciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nFPbeAAAAsklEQVR42ozR2Q6CMBAF0GEoLixRIgom8v8fJiYoiJEtSm2xYFxIWvVmHvpw7vRhtCzL4Hs4vTQwmhgIQH7RKtkdCgrE9jYrh/xBW/G8lWlsWPgP7aKhbmC3m+VxdKzBXIa+g3KqW17o24BQ7qO0Zi2wKtnGBVfRfg/hlPHn56wWhcakuZSKILpBMBtr78JZRTstZrpYfxZU9KFBUpDRlx4WFBSGt+wL5HQl7lxxh7sAAwAUB1536RaA4wAAAABJRU5ErkJggg==');
+    }
+
+    .ele-checkbox input {
+        display: none;
+    }
+
+    .ele-checkbox .ele-checkbox--state {
+        position: absolute;
+        top: 3px;
+        right: 64px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox .ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAIAAAAmzuBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1MkUyRjgzM0QzMzExRUFCNThBRkIwREJGNzlEMkMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1MkUyRjg0M0QzMzExRUFCNThBRkIwREJGNzlEMkMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjUyRTJGODEzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjUyRTJGODIzRDMzMTFFQUI1OEFGQjBEQkY3OUQyQzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQVncAAAA/klEQVR42mL4/+/fh02bblhZfb969T8M/H758m5Y2LPGxn+/fzN82rPnvKDgGQaGK2pq365cgUjf8fcHipxlZX3W0sL07dy5v+/fMzAw/Lh1615Q0Oe9ex+mpX3YuBEo8v/379+PHzMAzXlaVwfUgYmAJgHNYwAai1URRBooywBx2q8nT66bm8OlLwgLfzl5EiLFgOw0ZAR3OCNQGu40IGDm5f37+TOEzaGmprRuHXMGB8eb2bMhQkIRESpbtzJxc385eBDI/fP27c979xiAAXVVWxto7L2IiN9v3iA7HBhOH3fsALkDGBKvpkyBSEMAUNGbRYu+HD8ODHGAAAMAXB/ZK5nr25EAAAAASUVORK5CYII=');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        width: 68px;
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        z-index: 1;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state {
+        right: 1px;
+        transition: right 0.5s;
+    }
+
+    .ele-checkbox input:checked+.ele-checkbox--state:after {
+        content: "";
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJENUNFNkE2M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJENUNFNkE3M0QzMzExRUFBODNCQTE4OTQ0ODdCMDY1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ1Q0U2QTQzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ1Q0U2QTUzRDMzMTFFQUE4M0JBMTg5NDQ4N0IwNjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4ehhHsAAAA8klEQVR42mL8//8/A17w+9+Pr7/f8bNLMjIwMuFX+u33+6kX/KqOKGy8W/Of4T8LfqWzLodff7cbyN71oFuSW4uJGKVAwM7CI8AuBVJ96c2WooMia26XAO3CqpSLVTBFZ7m6oCPj9bd7pl8K+vHnEyMjk5NsXqha3/ffHzCVagu7A9ksH3+9+P33O5D1//+/fY8nAbW9+/EYq1IgYPwHVPRo0trbpX///0ZzOppSIGAChqKTXF6wajczIyt+pSDVIPMxNGBVygB2LhQAnbTn4YTMPawFBwSvvNnxHxtgRI55YAjeen+Al1VUikcHayQABBgAr92fBqK1XfwAAAAASUVORK5CYII=');
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state {
+        right: 1px;
+        opacity: 1;
+    }
+
+    .ele-checkbox input:disabled+.ele-checkbox--state:after {
+        content: "";
+        background-color: #f5f5f5;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAIAAAAyIHCzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDQzJBRDA1M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDQzJBRDA2M0QzOTExRUFBQzlDQUM3RkUyMkFFOTIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0NDMkFEMDMzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NDMkFEMDQzRDM5MTFFQUFDOUNBQzdGRTIyQUU5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76sJsLAAAAuElEQVR42ozRXQuCMBQG4OM0RA00WiCBQkH9/9/TTRgW4UeQuZnatBmFFVv5wmAXz8t2OAohBH6mLPJrBbY95nftHz3F++hSQ5ThlYfRANoCtLc82R4LNIA+oiB1hLqf0DgIUwrmbO1jCVUt7PlTHZXpLkwoa4GReBMkUoqNbsqmZs3rdUZ5oTLrTEh5kOEuXFtX+sJZRjvNjzNfvhdk9KkFBRHt9UdBQr93yQugHUpt4ljiPdwFGACdv2lskClBYwAAAABJRU5ErkJggg==')
+    }
+
+    a .more_info {
+        display: none;
+    }
+
+    a.collapsed .more_info {
+        display: inherit;
+    }
+
+    a .less_info {
+        display: inherit;
+    }
+
+    a.collapsed .less_info {
+        display: none;
+    }
+
+    /* mobile screen */
+    @media (max-width: 415px) {
+        .ele-checkbox {
+            height: 25px;
+            width: 70px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before,
+        .ele-checkbox:after {
+            top: 2px;
+            height: 23px;
+            width: 32px;
+            border-radius: 11px;
+        }
+
+        .ele-checkbox:before {
+            left: 3px;
+        }
+
+        .ele-checkbox:after {
+            right: 2px;
+        }
+
+        .ele-checkbox .ele-checkbox--state {
+            top: 3px;
+            right: 32px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox .ele-checkbox--state:after {
+            height: 23px;
+            border-radius: 10px;
+            width: 34px;
+            top: -2px;
+            right: 1px;
+        }
+
+        .ele-checkbox input:checked+.ele-checkbox--state {
+            right: 1px;
+            transition: right 0.5s;
+        }
+
+        .ele-checkbox input:disabled+.ele-checkbox--state {
+            right: 1px;
+        }
+    }
+</style><div class="modal fade" id="cookie_initial_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalToggleLabel"> Cookies auf strato.de </h5></div><form name="initial_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/" type="hidden"/> <div class="modal-body"><p> Wir sammeln Informationen von Besuchern, um unsere Seite zu optimieren und individuelle Angebote zu unterbreiten. Wir brauchen Ihre Zustimmung, um dafür Cookies (auch von Drittanbietern) zu verwenden. Technisch notwendige Cookies werden auch bei der Auswahl von <span class="jss_cookie_consent_decline">ablehnen</span> gesetzt. Ihre Einstellungen können Sie am Seitenende unter <span class="jss_cookie_consent_settings">Einstellungen</span> ändern. Mit Klick auf <span class="jss_cookie_consent_agree">Zustimmen und schließen</span> akzeptieren Sie alle Cookies und die Übermittlung Ihrer Daten in <a tabindex="0" class="popover-dynamic-tooltip" data-tooltip-id="12471" data-toggle="popover" rel="popover" data-original-title="" title="">Drittländer <i class="fa fa-info-circle fa-lg" rel="popover"></i></a>. </p><div id="jss_popover-content-cookie" class="d-none"> Drittländer sind Länder außerhalb der Europäischen Union. Mit Ihrer Zustimmung werden Daten in die USA übertragen. Die USA ist ein Drittland mit unzureichendem Datenschutzniveau. Dort besteht das Risiko, dass Behörden auf die Daten zugreifen, ohne dass ein richterlicher Beschluss vorliegt. </div><p> <a href="https://www.strato.de/datenschutz/" class="btn-link text-decoration-none" target="_blank"> Datenschutzerklärung <i class="fas fa-arrow-up-right-from-square"></i> </a> &nbsp;|&nbsp; <a href="https://www.strato.de/impressum/" class="btn-link text-decoration-none" target="_blank"> Impressum <i class="fas fa-arrow-up-right-from-square"></i> </a> </p><br></div><div class="modal-footer justify-content-between"> <button type="button" id="jss_open_settings_modal" data-bs-target="#cookie_settings_modal" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-outline-secondary float-start"> Einstellungen </button> <button id="jss_consent_all_initial_modal" class="btn btn-primary float-end"> Zustimmen und schließen </button> </div></form></div></div></div><div class="modal fade" id="cookie_settings_modal" aria-hidden="true" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> Cookie-Einstellungen </h5> <button type="button" class="btn-close" id="jss_cookie_settings_modal_close_btn" data-bs-dismiss="modal" aria-label="Close"></button> </div><form id="" name="settings_cookieform" action="" method="POST" class="m-0 p-0"> <input id="redirect_consent" name="redirect_url" value="https://www.strato.de/faq/server/so-konfigurieren-sie-ihre-2ip-adresse/" type="hidden"/> <div class="modal-body"><ul class="list-unstyled"><li class="mb-5"><h3 class="clearfix"> <label for="name1" class="ele-checkbox"> <input type="checkbox" id="name1" name="notwendig" checked disabled> <span class="ele-checkbox--state"></span> </label> Notwendig </h3><div class="collapse w-75" id="notwendig"> Technisch erforderliche Cookies ermöglichen die Navigation auf unserer Website. Grundfunktionen wie die Darstellung und Auswahl von Produkten, das Befüllen des Warenkorbs oder der Login sind ohne sie nicht möglich. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#notwendig" role="button" aria-expanded="false" aria-controls="notwendig"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name2" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name2" name="statistik"> <span class="ele-checkbox--state"></span> </label> Statistik </h3><div class="collapse w-75" id="statistik"> Wir setzen Cookies ein, um Ihr Nutzerverhalten besser zu verstehen und Sie bei Ihrer Navigation auf unserer Internetseite zu unterstützen. Wir nutzen diese Daten außerdem, um die Website noch besser an Ihre Bedürfnisse anzupassen. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#statistik" role="button" aria-expanded="false" aria-controls="statistik"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li class="mb-5"><h3 class="clearfix"> <label for="name3" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name3" name="marketing"> <span class="ele-checkbox--state"></span> </label> Marketing </h3><div class="collapse w-75" id="marketing"> Wir speichern Informationen dazu, wie Sie unsere Internetseite nutzen, um bessere Angebote im Rahmen von Kampagnen und Direktmarketingaktionen zu schnüren. Die Verantwortung dafür und die Kontrolle über die Datenverarbeitung liegen bei uns. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#marketing" role="button" aria-expanded="false" aria-controls="marketing"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li><li><h3 class="clearfix"> <label for="name4" class="ele-checkbox"> <input type="checkbox" class="check-all" id="name4" name="partner"> <span class="ele-checkbox--state"></span> </label> Partnerschaften </h3><div class="collapse w-75" id="partner"> Wir setzen Cookies ein, um Ihnen auch außerhalb unserer Webseite individuelle Produkt- und Serviceangebote anzuzeigen. In diesem Zusammenhang werden Informationen über Ihr Nutzerverhalten an Partnerunternehmen übermittelt, um personalisierte Inhalte von uns oder diesen Partnern passend zu Ihren Interessen anzuzeigen. Diese Kampagnen können von uns oder unseren Partnern ausgewertet, nachgehalten und abgerechnet werden. Andere werbende Unternehmen können Cookies dieser Kategorie ebenfalls auslesen und Ihnen personalisierte Inhalte anzeigen. Für die über unsere Verarbeitung hinausgehende Verwendung Ihrer Daten liegt die Verantwortung bei diesen Unternehmen und erfolgt ohne unsere Mitwirkung. </div> <a class="btn-link text-decoration-none collapsed" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner"> <span class="more_info"> Mehr Informationen <i class="fas fa-chevron-down"></i> </span><span class="less_info"> Weniger Informationen <i class="fas fa-chevron-up"></i> </span> </a> </li></ul></div><div class="modal-footer"> <a role="button" id="jss_back_to_cookie_initial_modal" class="d-none btn btn-link text-decoration-none flex-grow-1 flex-lg-grow-0" data-bs-target="#cookie_initial_modal" data-bs-toggle="modal" data-bs-dismiss="modal"> Zurück </a> <div class="flex-grow-1 text-end"> <button id="jss_consent_checked" class="btn btn-outline-secondary col-12 col-lg-auto"> Auswahl bestätigen </button> <button id="jss_consent_all_settings_modal" class="btn btn-primary col-12 col-lg-auto my-2 my-lg-0"> Alle auswählen </button> </div></div></form></div></div></div><script src="/faq/assets/js/breadcrumb.js?v=756240dab0ac67ead574428248b2e75d"></script><script src="/faq/assets/js/article_forward.js?v=a92f92b1d0617f3c887e8f8c4d745a8e"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        breadcrumb( 'article', window.template_vars.id );
+
+        // document.querySelectorAll( 'article table' ).forEach( function( element ) {
+        //     element.classList.add( 'table table-hover table-striped' );
+        // });
+
+        function text_to_selector( selector, text ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.innerText = text;
+            });
+        }
+
+        function url_to_selector( selector, url ) {
+            document.querySelectorAll( selector ).forEach( function ( element ) {
+                element.dataset.href = url;
+            });
+        }
+
+        text_to_selector( ".jss_accept_video_text", window.template_vars.jss_accept_video_text );
+        text_to_selector( ".jss_accept_video_text_link", window.template_vars.jss_accept_video_text_link );
+        text_to_selector( ".jss_accept_video_text_button", window.template_vars.jss_accept_video_text_button );
+        url_to_selector( ".jss_uri_privacy_policy", window.template_vars.jss_uri_privacy_policy );
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function(){
+        article_forward.init({
+            uri_forward_send : 'https://www.strato.de/faq/forward/send'
+        });
+    });
+</script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var video_consent_background = document.querySelectorAll( '.responsive-video-consent-background' );
+        var video_consent_overlay    = document.querySelectorAll( '.responsive-video-consent' );
+        var jss_accept_video         = document.querySelectorAll( '.jss_accept_video' );
+
+        if ( jss_accept_video ) {
+            if ( localStorage.getItem( "video_accept" ) === "1" ) {
+                video_consent_background.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.add( 'd-none' );
+                });
+            }
+            else {
+                video_consent_background.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+                video_consent_overlay.forEach( function( element ){
+                    element.classList.remove( 'd-none' );
+                });
+
+                jss_accept_video.forEach( function( element ) {
+                    element.addEventListener('click', function () {
+                        localStorage.setItem( "video_accept", "1" );
+                        video_consent_background.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                        video_consent_overlay.forEach( function( element ){
+                            element.classList.add( 'd-none' );
+                        });
+                    })
+                });
+            }
+        }
+    });
+</script><script>
+    /* Entferne diese Elemente aus der Ansicht */
+    document.addEventListener( 'DOMContentLoaded', function(){
+        const els = document.querySelectorAll('[contenteditable="true"]');
+        for (let i=0; i<els.length; i++) {
+            els[i].classList.add('d-none')
+        }
+    });
+</script><script src="/faq/assets/js/optimization.js?v=5280438d72f9fcba31ca1d1670c27dac"></script><script>
+    tracking.init();
+</script><script src="/faq/assets/js/logout.js?v=05631fa78a708c620d59bf98669d5eda"></script><script src="/faq/assets/js/search_autocomplete.js?v=8acd14e46ba7d5079054fcf77e7e6ac6"></script><script src="/faq/assets/js/cookie_overlay.js?v=a95998769aa52ae19571302205f862de"></script><script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        logout.init({
+            ksb:  window.template_vars.uri_auth_ksb,
+        });
+
+        document.addEventListener( 'show.bs.collapse', function() {
+            autoclose();
+        });
+
+        document.querySelector('main, footer').addEventListener( 'click', function() {
+            autoclose();
+            autocomplete_close();
+        });
+
+        function autoclose() {
+            var open_navbars = document.querySelectorAll( '.navbar-collapse.collapse.show' );
+
+            if ( open_navbars.length !== 0 ) {
+                open_navbars.forEach( function( navbar ) {
+                    new bootstrap.Collapse( navbar );
+                });
+            }
+        }
+
+        function autocomplete_close() {
+            var open_autocomplete = document.querySelector( '#autocomplete_div' );
+            open_autocomplete.classList.add( 'd-none' );
+        }
+    });
+
+    function image_loader() {
+        var img = [].slice.call( document.getElementsByClassName("image-loader img-fluid img jss_article_image my-3") );
+        for( var i in img ) {
+            let attr = img[i].getAttribute("data-image-loader");
+            if( attr != null ) {
+                img[i].setAttribute( "src", attr );
+            }
+        }
+    }
+
+    image_loader();
+</script></body></html>

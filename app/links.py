@@ -16,7 +16,7 @@ def sitemap_parser(sitemap_path):
         link_list = link_str.split('\n')
         return link_list
 
-def html_grabber(link_list, dest_folder='html/'):
+def html_grabber(link_list, dest_folder='faq_htmls/'):
     '''
     Reads a list of links, downloads each webpage and saves it as an html file in the specified folder (default=/html).
     '''
