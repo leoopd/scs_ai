@@ -20,3 +20,5 @@ def scs_ai():
 
     return render_template('ai_template.html', output=ai_output)
 
+if __name__ == '__main__':
+    app.run()
