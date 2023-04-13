@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OpenAI Model</title>
+</head>
+<body>
+	<form action="/process" method="POST">
+		<label for="user_input">Enter your prompt:</label><br>
+		<input type="text" id="user_input" name="user_input"><br>
+		<input type="submit" value="Submit">
+	</form>
+	{% if output %}
+		<p>{{ output }}</p>
+	{% endif %}
+</body>
+</html>
