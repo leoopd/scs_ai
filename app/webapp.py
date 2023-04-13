@@ -1,9 +1,18 @@
 from flask import Flask, request, render_template
 import openai
 
+# Key will only need to be exposed once and can (and has to!) be deleted after that.
+# openai.api_key=''
+
 app = Flask(__name__)
 
-@app.route('/scsai', methods=['POST'])
+# Will display the configured webpage
+@app.route('/scsai')
+def page():
+    return render_template('ai_template.html')
+
+# Will process the webapp with the model and settings specified.
+@app.route('/scsai_processing', methods=['POST'])
 def scs_ai():
     user_input = request.form['user_input']
 
@@ -21,4 +30,4 @@ def scs_ai():
     return render_template('ai_template.html', output=ai_output)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
