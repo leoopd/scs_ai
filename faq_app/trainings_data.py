@@ -3,8 +3,8 @@ import json
 import time
 
 timestr = time.strftime('%Y%m%d-%H%M%S')
-file_path = 'faq_contents/articles_20230409-221317.csv'
-output_path = f'trainings_data/trainings_data_{timestr}.jsonl'
+file_path = 'faq_app/faq_contents/articles_20230409-221317.csv'
+output_path = f'faq_app/trainings_data/trainings_data_{timestr}.jsonl'
 
 def prompt_list_maker(file_path, category_filter=''):
     '''
@@ -37,4 +37,4 @@ def prompt_list_writer(prompt_list, output_path='trainings_data/'):
         for element in prompt_list:
             f.write(json.dumps(element, ensure_ascii=False) + "\n")
 
-prompt_list_writer(prompt_list_maker(file_path, 'Domains'), f'trainings_data/subset_domains_{timestr}.jsonl')
+prompt_list_writer(prompt_list_maker(file_path, 'Domains'), f'faq_app/trainings_data/trainings_data_{timestr}.jsonl')

@@ -4,8 +4,8 @@ import time
 import re
 import os
 
-csv_file = 'faq_contents/links_20230406-235607.csv'
-folder_path = 'html'
+csv_file = 'faq_app/faq_contents/links_20230406-235607.csv'
+folder_path = 'faq_app/faq_htmls'
 timestr = time.strftime('%Y%m%d-%H%M%S')
 
 def text_parser(file_path):
@@ -49,7 +49,7 @@ def articles_to_csv(articles, dest_folder='faq_contents/'):
     '''
     Writes the list returned by parsing_folder_content() to a csv.
     '''
-    with open(f'csv/articles_{timestr}.csv', 'w', newline='') as f:
+    with open(f'faq_app/faq_contents/articles_{timestr}.csv', 'w', newline='') as f:
         writer = csv.writer(f, delimiter='#')
         writer.writerow(['Category', 'Title', 'Article'])
         for article in articles:

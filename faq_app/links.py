@@ -3,7 +3,7 @@ import csv
 import time
 import requests
 
-sitemap_path = 'sitemap.xml'
+sitemap_path = 'faq_app/sitemap.xml'
 timestr = time.strftime('%Y%m%d-%H%M%S')
 
 def sitemap_parser(sitemap_path):
@@ -23,7 +23,7 @@ def html_grabber(link_list, dest_folder='faq_htmls/'):
     for link in link_list:
         name = link[26:].replace('/', '_')
         response = requests.get(link)
-        with open(f'html/{name}.html', 'w') as h:
+        with open(f'faq_app/faq_contents/{name}.html', 'w') as h:
             h.write(response.text)
 
 html_grabber(sitemap_parser(sitemap_path))
