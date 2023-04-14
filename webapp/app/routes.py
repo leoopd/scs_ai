@@ -1,10 +1,12 @@
-from Flask import request, render_template
+from flask import Flask, request, render_template
 import openai
+
+app = Flask(__name__)
 
 # Will display the configured webpage
 @app.route('/scsai')
 def page():
-    return render_template('ai_template.html')
+    return render_template('webapp/templates/ai_template.html')
 
 # Will process the webapp with the model and settings specified.
 @app.route('/scsai_processing', methods=['POST'])
@@ -22,7 +24,7 @@ def scs_ai():
 
     ai_output = response.choices[0].text.strip()
 
-    return render_template('ai_template.html', output=ai_output)
+    return render_template('webapp/templates/ai_template.html', output=ai_output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8001, debug=False)
