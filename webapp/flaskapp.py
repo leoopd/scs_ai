@@ -3,7 +3,7 @@ import openai
 import os
 
 # Key will only need to be exposed once and can (and has to!) be deleted after that.
-# openai.api_key=''
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 app = Flask(__name__)
 
@@ -11,21 +11,21 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def scs_ai():
     if request.method == 'POST':
-        user_input = request.form['user_input']
-        output = f'You entered {user_input}'
+        user_input = 'Domains, ' + request.form['user_input'] + '\'\\n\\n###\\n\\n'
+        # output = f'You entered {user_input}'
 
-        # response = openai.Completion.create(
-        #     engine='scs-faq-domains-2023-04-13-09-28-43',
-        #     prompt=user_input,
-        #     temperature=0,
-        #     max_tokens=1000,
-        #     n=1,
-        #     stop=[" ###"]
-        # )
+        response = openai.Completion.create(
+            engine='curie:ft-personal:scs-faq-domains-2023-04-13-09-28-43',
+            prompt=user_input,
+            max_tokens=300,
+            n=1,
+            stop=[" ###"],
+            frequency_penalty=1
+        )
 
-        # output = response.choices[0].text.strip()
+        output = response.choices[0].text.strip()
 
-        return render_template('ai_template.html', output=output)
+        return render_template('ai_template.html', output=output, user_input=user_input)
     else:
         return render_template('ai_template.html')
 
