@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>OpenAI Model: <br> <span style="font-weight:normal">scs-faq-domains-2023-04-13-09-28-43</span></title>
+        <title>scs-faq-domains</title>
         <style>
                 body {
                         font-family: 'Roboto', sans-serif;
@@ -46,7 +46,7 @@
                         margin-bottom: 1rem;
                         text-align: center;
                 }
-                input[type="submit"] {
+                button {
                         padding: 0.5rem 1rem;
                         border: none;
                         border-radius: 0.5rem;
@@ -56,7 +56,7 @@
                         cursor: pointer;
                         transition: background-color 0.3s ease-in-out;
                 }
-                input[type="submit"]:hover {
+                button:hover {
                         background-color: #0077cc;
                 }
                 .response {
@@ -74,8 +74,12 @@
                 <form method="POST">
             <label for="user_input">Enter your prompt:</label>
             <input type="text" id="user_input" name="user_input" placeholder="Domains ...'\n\n###\n\n"><br>
-            <input type="submit" value="Submit">
+            <button type="submit" id="submit_button">Submit</button>
         </form>
+
+        <script>
+            document.getElementById('submit_button').addEventListener('click', function() {this.style.display = 'none'});
+        </script>
 
                 {% if output %}
                 <p class="response">---------------<br><br>Prompt:</p>
