@@ -71,21 +71,26 @@
     <h1 style="margin-top: 90px;">scs-faq-domains-2023</h1><br>
 
         <div class="container">
-                <form method="POST">
-            <label for="user_input">Enter your prompt:</label>
-            <input type="text" id="user_input" name="user_input" placeholder="Domains ...'\n\n###\n\n"><br>
-            <button type="submit" id="submit_button">Submit</button>
-        </form>
+            <form method="POST">
+				<label for="user_input">Enter your prompt:</label>
+				<input type="text" id="user_input" name="user_input"><br>
+				<button type="submit" id="prompt_button">Submit</button>
+        	</form>
 
         <script>
-            document.getElementById('submit_button').addEventListener('click', function() {this.style.display = 'none'});
+            document.getElementById('prompt_button').addEventListener('click', function() {this.style.display = 'none'});
         </script>
 
                 {% if output %}
                 <p class="response">---------------<br><br>Prompt:</p>
                         <p class="response">{{ user_input }}</p>
                         <p class="response">---------------<br><br>Response:</p>
-                        <p class="response">{{ output }}</p>
+                        <p class="response">{{ output }}<br><br>---------------<br><br></p>
+						<form method="POST">
+							<label for="user_rating">How helpful was the response on a scale from 1 (not at all) to 10 (solved the request)?</label>
+							<input type="text" id="user_input" name="user_input" placeholder="1-10"><br>
+							<button type="submit" id="rating_button">Submit</button>
+						</form>
                 {% endif %}
         </div>
 </body>
