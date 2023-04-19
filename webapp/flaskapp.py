@@ -1,8 +1,9 @@
 from flask import Flask, request, render_template
 import openai
 import os
+import sqlite3
 
-# Key will only need to be exposed once and can (and has to!) be deleted after that.
+# The OpenAI Key is stored in ~/.zshrc
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 app = Flask(__name__)
@@ -14,7 +15,7 @@ def scs_ai():
 
         # If user fills the prompt-textbox create a response, return it and write user_input
         # and response to the database.
-        if user_input:
+        if 'user_input' in response.form:
             user_input = 'Domains, ' + request.form['user_input'] + '\'\\n\\n###\\n\\n'
 
             response = openai.Completion.create(
@@ -27,14 +28,34 @@ def scs_ai():
             )
             
             output = response.choices[0].text.strip()
+            user_rating = None
 
-            return render_template('ai_template.html', output=output, user_input=user_input)
+            connection = sqlite3.connect('conversations.db')
+            cursor = connection.cursor()
+            cursor.execute("""
+                INSERT INTO conversations (prompt, response) 
+                VALUES (?, ?)
+                """, (user_input, output))
+            connection.commit()
+            connection.close()
+
+            # If user fills the rating-textbox write the rating to the database.
+            if user_rating in request.form:
+                user_rating = int(request.form['user_rating'])
+                connection = sqlite3.connect('conversations.db')
+                cursor = connection.cursor()
+                cursor.execute("""
+                    UPDATE conversations
+                    SET rating = ?
+                    WHERE prompt = ? AND response = ?
+                """, (user_rating, user_input, output))
+                connection.commit()
+                connection.close()
+
+            return render_template('ai_template.html', output=output, user_input=user_input, user_rating=user_rating)
         else:
             return render_template('ai_template.html')
-
-        # If user fills the rating-textbox write the rating to the database.
-        if user_rating:
-            
+    return render_template('ai_template.html')         
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
